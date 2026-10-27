@@ -10,6 +10,7 @@
   --navy-2:    #141C3A;  /* slightly lighter navy for layering */
   --gold:      #C9A04E;
   --gold-lt:   #E8C878;
+  --gold-dk:   #8E6B2E;  /* gold for TEXT on light backgrounds (readable contrast) */
 
   /* Coastal */
   --ocean:     #1F5F7A;

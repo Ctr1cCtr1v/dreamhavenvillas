@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="section page-404">
+  <div class="container container--narrow center">
+    {{ partial "sparkle.html" }}
+    <p class="eyebrow eyebrow--center">Page not found</p>
+    <h1>Looks like you've wandered off the map</h1>
+    <p class="lead">The page you're looking for isn't here, but your Florida getaway still is.</p>
+    <div class="btn-row">
+      <a class="btn btn--lg" href="{{ site.Home.RelPermalink }}">Back to home</a>
+      <a class="btn btn--lg btn--ocean" href="{{ site.Params.bookingURL }}">{{ site.Params.bookingButtonText }}</a>
+    </div>
+    <ul class="footer-links page-404__links">
+      {{- range site.Menus.main }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}

@@ -36,6 +36,16 @@ params:
   latitude: 28.30885
   longitude: -81.64318
 
+  # --- Search engines ------------------------------------------------
+  # true = ask Google etc. NOT to list the site yet (use while it still has
+  # placeholder content). Set to false at launch.
+  noindex: true
+
+  # --- Visitor stats (optional, privacy-friendly; leave "" for off) ---
+  analytics:
+    goatcounter: ""   # your GoatCounter code, e.g. "dreamhavenvillas"
+    cloudflare: ""    # Cloudflare Web Analytics token
+
   # --- Social links (leave blank "" to hide) ------------------------
   social:
     instagram: ""

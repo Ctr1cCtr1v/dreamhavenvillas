@@ -96,6 +96,23 @@ You never need to make phone or desktop sizes. The site does that automatically.
 
 ---
 
+## Link previews (when someone texts or posts the link)
+
+Each page's preview uses that page's banner photo with your logo band along
+the bottom, made automatically. To pick a different photo for a page, add
+`share_image: pool/your-photo.jpg` to the top section of that page's file in
+`content/`. The home page uses the hero photo.
+
+After changing a preview photo, Facebook and iMessage may show the old one for
+a while. Facebook's "Sharing Debugger" can refresh it.
+
+## Search engines & visitor stats (hugo.yaml)
+
+- `noindex: true` keeps the site out of Google while it has placeholders.
+  **Set it to `false` at launch.**
+- `analytics:` add a GoatCounter code or Cloudflare Web Analytics token to see
+  visitor counts. Both are free and privacy-friendly. Leave them `""` for off.
+
 ## Previewing changes on your computer
 
 ```

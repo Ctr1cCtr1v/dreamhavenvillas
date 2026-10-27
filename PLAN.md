@@ -161,6 +161,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 - Favicon (from logo sparkle), 404 page, accessibility and performance pass. Optional privacy-friendly analytics.
 
 ### Phase 8 — Launch
+- Set `noindex: false` in hugo.yaml so search engines can list the site (it's true while placeholders are up).
 - Enable Pages, custom domain, DNS records at registrar, enforce HTTPS, verify domain.
 
 ### Phase 9 — Real content
@@ -178,7 +179,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 - [x] Phase 4 — Gallery
 - [x] Phase 5 — Resort & Explore
 - [x] Phase 6 — Book Direct & FAQ
-- [ ] Phase 7 — Polish
+- [x] Phase 7 — Polish
 - [ ] Phase 8 — Launch
 - [ ] Phase 9 — Real content
 
@@ -193,6 +194,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 | Photos | Placeholders now → personal photos → professional shoot next week |
 | Home facts (baths, sleeps, sq ft, bed config, pool/spa, game room…) | TODO |
 | Guest reviews to feature | TODO |
+| Visitor stats (GoatCounter / Cloudflare) | Optional — off; add a code in hugo.yaml → params.analytics |
 | "Save" claim (specific % or general) | TODO |
 | GitHub repo | ✅ github.com/Ctr1cCtr1v/dreamhavenvillas (public), Pages via Actions |
 | Stack confirmed (Hugo) | ✅ |

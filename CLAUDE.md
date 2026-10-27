@@ -18,6 +18,8 @@ Marketing + direct-booking site for a luxury private 8-bedroom vacation rental a
 - Content lives in `data/*.yaml` and `content/*.md`. Templates in `layouts/` must not hard-code copy.
 - Booking URL and contact info are defined once in `hugo.yaml`. Never duplicate them.
 - Unknown facts are marked `TODO:`; placeholder images are clearly labeled.
+- Text colors on light backgrounds must pass WCAG AA. Use `--gold-dk` (not `--gold`) for gold text on white/cream.
+- SEO/share: head.html builds per-page OG images (page image + brand/share-band.png overlay, 1200×630 JPG). `params.noindex` gates indexing until launch. VacationRental JSON-LD lives in `_partials/schema-rental.html`; FAQPage JSON-LD in faq.html.
 - Colors/fonts are CSS variables in `assets/css/theme.css`; components live in `assets/css/site.css` (bundled together in head.html). Reuse existing components (.section, .section-head, .split, .grid--N, .card, .tile, .stats, .checklist, .quote, .book-band, .page-hero, .btn variants, sparkle partial) before adding new ones. Brand is gold on midnight navy (see `assets/images/brand/`) over a coastal palette.
 - Images go through Hugo image processing (responsive sizes + WebP, lazy-loaded).
 - Owner is not a developer: keep data files simple, commented, and documented in `EDITING.md`.

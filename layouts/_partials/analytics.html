@@ -1,0 +1,12 @@
+{{/* Optional, privacy-friendly visitor stats. Off unless a code is set in
+     hugo.yaml → params.analytics. Never loads during local preview. */}}
+{{- if hugo.IsProduction }}
+  {{- with site.Params.analytics }}
+    {{- with .goatcounter }}
+<script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    {{- end }}
+    {{- with .cloudflare }}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ . }}"}'></script>
+    {{- end }}
+  {{- end }}
+{{- end }}

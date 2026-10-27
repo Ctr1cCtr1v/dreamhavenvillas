@@ -1,0 +1,28 @@
+{{/* schema.org VacationRental listing for search engines. Built from
+     hugo.yaml + data/villa.yaml; any stat still marked TODO is left out. */}}
+{{- $p := site.Params }}
+{{- $num := dict }}
+{{- range hugo.Data.villa.stats }}
+  {{- $v := replace (string .value) "," "" }}
+  {{- if findRE `^[0-9]+(\.[0-9]+)?$` $v }}{{ $num = merge $num (dict .label (float $v)) }}{{ end }}
+{{- end }}
+{{- $acc := dict "@type" "Accommodation" "additionalType" "EntirePlace" }}
+{{- with index $num "Bedrooms" }}{{ $acc = merge $acc (dict "numberOfBedrooms" .) }}{{ end }}
+{{- with index $num "Bathrooms" }}{{ $acc = merge $acc (dict "numberOfBathroomsTotal" .) }}{{ end }}
+{{- with index $num "Sleeps" }}{{ $acc = merge $acc (dict "occupancy" (dict "@type" "QuantitativeValue" "value" .)) }}{{ end }}
+{{- with index $num "Sq Ft" }}{{ $acc = merge $acc (dict "floorSize" (dict "@type" "QuantitativeValue" "value" . "unitCode" "FTK")) }}{{ end }}
+{{- $amen := slice }}
+{{- range hugo.Data.amenities }}{{ range .items }}{{ if not (hasPrefix . "TODO") }}{{ $amen = $amen | append (dict "@type" "LocationFeatureSpecification" "name" . "value" true) }}{{ end }}{{ end }}{{ end }}
+{{- $data := dict
+  "@context" "https://schema.org"
+  "@type" "VacationRental"
+  "name" site.Title
+  "description" $p.description
+  "url" site.Home.Permalink
+  "address" (dict "@type" "PostalAddress" "streetAddress" $p.address.street "addressLocality" $p.address.city "addressRegion" $p.address.state "postalCode" $p.address.zip "addressCountry" "US")
+  "geo" (dict "@type" "GeoCoordinates" "latitude" $p.latitude "longitude" $p.longitude)
+  "containsPlace" $acc
+}}
+{{- with .image }}{{ $data = merge $data (dict "image" (slice .Permalink)) }}{{ end }}
+{{- with $amen }}{{ $data = merge $data (dict "amenityFeature" .) }}{{ end }}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>

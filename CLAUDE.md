@@ -7,6 +7,8 @@ Marketing + direct-booking site for a luxury private 8-bedroom vacation rental a
 ## Conventions
 - Hugo 0.168 with the new template layout (`layouts/home.html`, `layouts/page.html`, `layouts/_partials/`). Use `hugo.Data` (not `site.Data`). Deployed by `.github/workflows/deploy.yml`; keep its HUGO_VERSION in sync with local.
 - Responsive images: always use `partial "img.html" (dict "src" "<folder>/<file>.jpg" "alt" …)`. Paths are relative to `assets/images/`.
+- Hugo `cond` evaluates both branches. Never put image processing (`.Resize`, etc.) inside `cond`; use if/else.
+- Reusable partials: `photo-grid.html` (lightbox-ready, `data-lightbox` groups), `book-band.html` (text from data/home.yaml), `page-hero.html`, `sparkle.html`.
 - Gallery auto-loads every image in the folders listed in `data/gallery.yaml`.
 - Content lives in `data/*.yaml` and `content/*.md`. Templates in `layouts/` must not hard-code copy.
 - Booking URL and contact info are defined once in `hugo.yaml`. Never duplicate them.

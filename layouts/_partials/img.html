@@ -15,7 +15,8 @@
       {{- $srcset = $srcset | append (printf "%s %dw" $r.RelPermalink .) }}
     {{- end }}
   {{- end }}
-  {{- $fallback := cond (gt $img.Width 1200) ($img.Resize "1200x webp") ($img.Resize (printf "%dx webp" $img.Width)) }}
+  {{- $fallback := $img }}
+  {{- if gt $img.Width 1200 }}{{ $fallback = $img.Resize "1200x webp" }}{{ else }}{{ $fallback = $img.Resize (printf "%dx webp" $img.Width) }}{{ end }}
   <img src="{{ $fallback.RelPermalink }}"
        srcset="{{ delimit $srcset ", " }}"
        sizes="{{ $.sizes | default "100vw" }}"

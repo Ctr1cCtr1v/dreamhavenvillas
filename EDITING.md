@@ -12,7 +12,7 @@ You never need to touch code to update the site. Words live in text files in
 | Booking link, email, phone, management company, social links | `hugo.yaml` (under `params`) |
 | Menu items | `hugo.yaml` (under `menus`) |
 | Home page headline, paragraphs, photos | `data/home.yaml` |
-| Bedrooms, baths, sleeps, room-by-room details | `data/villa.yaml` |
+| Bedrooms, baths, sleeps, room-by-room details, house info & rules | `data/villa.yaml` (the sleeping-arrangements table builds itself from the bedrooms list) |
 | Amenity checklist | `data/amenities.yaml` |
 | Windsor at Westside resort perks | `data/resort.yaml` |
 | Attractions, drive times, map pins | `data/attractions.yaml` |
@@ -39,7 +39,7 @@ The `.yaml` files are simple `label: value` lists. A few rules:
     This is a long paragraph that can
     wrap across several lines.
   ```
-- If a value contains a colon `:`, wrap it in quotes: `"Check-in: 4 PM"`.
+- If a value contains a colon `:`, wrap it in quotes: `"Check-in: 4 PM"`. (Otherwise the site shows odd text like `map[...]`.)
 
 ---
 

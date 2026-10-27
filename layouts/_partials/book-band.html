@@ -1,0 +1,23 @@
+{{/* "Book direct & save" band. Text lives in data/home.yaml → book_band,
+     so every page that shows this band stays in sync. */}}
+{{- with hugo.Data.home.book_band }}
+<section class="book-band">
+  <div class="book-band__media">{{ partial "img.html" (dict "src" .image "alt" "") }}</div>
+  <div class="container book-band__body reveal">
+    <p class="eyebrow">{{ .eyebrow }}</p>
+    <h2>{{ .heading }}</h2>
+    <p class="lead">{{ .text }}</p>
+    {{- with .points }}
+    <ul class="book-points">
+      {{- range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{- end }}
+    <div class="btn-row">
+      <a class="btn btn--lg" href="{{ site.Params.bookingURL }}">{{ site.Params.bookingButtonText }}</a>
+      {{- if ne $.RelPermalink ("book/" | relURL) }}
+      <a class="btn btn--lg btn--outline" href="{{ "book/" | relURL }}">Why book direct?</a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}

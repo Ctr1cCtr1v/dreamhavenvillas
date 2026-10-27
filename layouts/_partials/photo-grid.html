@@ -1,0 +1,32 @@
+{{/*
+  Photo grid: one large photo + up to two smaller ones; a "+N" badge shows
+  when there are more. Every photo links to a large version and carries
+  data-lightbox so the gallery viewer can open the whole set.
+
+  Usage: {{ partial "photo-grid.html" (dict "photos" .photos "name" .name "group" "living-room") }}
+  Optional: sizes (for the large photo)
+*/}}
+{{- $photos := .photos | default slice }}
+{{- $name := .name }}
+{{- $group := .group | default (urlize $name) }}
+{{- $count := len $photos }}
+{{- if $count }}
+<div class="photo-grid photo-grid--{{ cond (ge $count 3) 3 $count }}">
+  {{- range $i, $src := $photos }}
+    {{- with resources.Get (printf "images/%s" $src) }}
+      {{- $big := . }}
+      {{- if gt .Width 2000 }}{{ $big = .Resize "2000x webp" }}{{ else }}{{ $big = .Resize (printf "%dx webp" .Width) }}{{ end }}
+      {{- $alt := printf "%s — photo %d" $name (add $i 1) }}
+      <a class="photo-grid__item{{ if ge $i 3 }} is-hidden{{ end }}" href="{{ $big.RelPermalink }}"
+         data-lightbox="{{ $group }}" data-caption="{{ $name }}">
+        {{- if lt $i 3 }}
+          {{ partial "img.html" (dict "src" $src "alt" $alt "sizes" (cond (eq $i 0) ($.sizes | default "(min-width: 860px) 40vw, 100vw") "(min-width: 860px) 20vw, 50vw")) }}
+          {{- if and (eq $i 2) (gt $count 3) }}<span class="photo-grid__more">+{{ sub $count 3 }} photos</span>{{ end }}
+        {{- end }}
+      </a>
+    {{- else }}
+      {{- warnf "photo-grid: image not found assets/images/%s" $src }}
+    {{- end }}
+  {{- end }}
+</div>
+{{- end }}

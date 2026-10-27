@@ -2,25 +2,27 @@
 #  AMENITY CHECKLIST — grouped by category, shown on The Villa page.
 #  Add or delete lines freely. Common items are pre-filled as a starting
 #  point — delete any the home does NOT have.
+#  ⚠ If an item contains a colon ( : ), wrap it in quotes:
+#      - "Pool heat: available for a fee"
 # =====================================================================
 
 - category: Pool & Outdoor
   items:
     - Private pool              # TODO: heated? (extra fee?)
-    - TODO: Spa / hot tub?
-    - TODO: Covered / screened lanai
-    - TODO: Outdoor dining & lounge chairs
+    - TODO — Spa / hot tub?
+    - TODO — Covered / screened lanai
+    - TODO — Outdoor dining & lounge chairs
 
 - category: Entertainment
   items:
-    - TODO: Game room (list games — pool table, arcade, air hockey…)
+    - TODO — Game room (list games — pool table, arcade, air hockey…)
     - Smart TVs
     - High-speed Wi-Fi
 
 - category: Kitchen & Dining
   items:
     - Fully equipped kitchen
-    - TODO: Dining seats for ___
+    - TODO — Dining seats for ___
     - Coffee maker
     - Dishwasher
 
@@ -32,11 +34,11 @@
 
 - category: Family Friendly
   items:
-    - TODO: Pack 'n play / high chair
-    - TODO: Themed kids' rooms
+    - TODO — Pack 'n play / high chair
+    - TODO — Themed kids' rooms
 
 - category: Parking & Access
   items:
     - Gated resort community
-    - TODO: Garage / driveway parking
-    - TODO: Keyless entry
+    - TODO — Garage / driveway parking
+    - TODO — Keyless entry

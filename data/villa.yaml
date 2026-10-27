@@ -1,56 +1,92 @@
 # =====================================================================
 #  THE VILLA — property details page
-#  Fill in every TODO. Remove a line entirely to hide it on the site.
+#  Fill in every TODO. Delete a line entirely to hide it on the site.
+#  Photos: paths inside assets/images/ — the FIRST photo is the big one.
 # =====================================================================
 
+# Key numbers bar at the top of the page (order = order shown)
 stats:
-  bedrooms: 8
-  bathrooms: "TODO"      # e.g. "5.5"
-  sleeps: "TODO"         # e.g. 16
-  square_feet: "TODO"    # e.g. "3,900"
-  pool: Private pool     # TODO: e.g. "Heated pool & spa"
-  parking: "TODO"        # e.g. "2-car garage + driveway"
+  - { value: "8",     label: Bedrooms }
+  - { value: "TODO",  label: Bathrooms }     # e.g. "5.5"
+  - { value: "TODO",  label: Sleeps }        # e.g. "16"
+  - { value: "TODO",  label: Sq Ft }         # e.g. "3,900"
+  - { value: Private, label: Pool }          # e.g. "Heated Pool & Spa"
+  - { value: Gated,   label: Resort }
 
-overview: >-
-  TODO: A 2–3 paragraph description of the home as a whole — layout, style,
-  what makes it special.
+overview:
+  heading: A home built for big getaways
+  # Separate paragraphs with a blank line.
+  text: |-
+    TODO: Describe the home as a whole — the layout, the style, and what makes
+    it special. Two or three short paragraphs work best.
+
+    TODO: Second paragraph — e.g. how the floor plan keeps families together
+    while giving everyone their own space.
 
 # ---------------------------------------------------------------------
-#  ROOMS — shown in this order. Copy a block to add a room.
-#  beds: list each bed, e.g. "King", "Queen", "2 Twins", "Bunk (Twin/Twin)"
-#  photos: first photo is the main one
+#  SHARED SPACES — living areas, kitchen, game room, outdoors.
+#  Copy a block (from "- name:" down) to add another space.
 # ---------------------------------------------------------------------
-rooms:
+spaces:
   - name: Living Room
+    tagline: TODO — one short line, e.g. "Gather, relax, and plan tomorrow's adventure"
     floor: First floor
-    description: TODO
-    features: [TODO]
-    photos: [living/placeholder-living-1.jpg, living/placeholder-living-2.jpg, living/placeholder-living-3.jpg]
+    description: >-
+      TODO: Describe the living room — seating, TV, natural light, how it
+      connects to the pool and kitchen.
+    features: [TODO feature, TODO feature, TODO feature]
+    photos:
+      - living/placeholder-living-1.jpg
+      - living/placeholder-living-2.jpg
+      - living/placeholder-living-3.jpg
 
   - name: Kitchen & Dining
+    tagline: TODO — e.g. "Family feasts, made easy"
     floor: First floor
-    description: TODO
-    features: [TODO]
-    photos: [kitchen/placeholder-kitchen-1.jpg, kitchen/placeholder-kitchen-2.jpg, kitchen/placeholder-dining.jpg]
+    description: >-
+      TODO: Describe the kitchen and dining — appliances, island seating,
+      dining table size.
+    features: [TODO feature, TODO feature, TODO feature]
+    photos:
+      - kitchen/placeholder-kitchen-1.jpg
+      - kitchen/placeholder-kitchen-2.jpg
+      - kitchen/placeholder-dining.jpg
 
   - name: Game Room
+    tagline: TODO — e.g. "Where friendly rivalries begin"
     floor: TODO
-    description: TODO
-    features: [TODO]
-    photos: [game-room/placeholder-game-room-1.jpg, game-room/placeholder-game-room-2.jpg]
+    description: >-
+      TODO: Describe the game room — which games, seating, TV.
+    features: [TODO game, TODO game, TODO game]
+    photos:
+      - game-room/placeholder-game-room-1.jpg
+      - game-room/placeholder-game-room-2.jpg
 
   - name: Pool & Lanai
+    tagline: TODO — e.g. "Your own private resort"
     floor: Outdoors
-    description: TODO
-    features: [TODO]
-    photos: [pool/placeholder-pool-1.jpg, pool/placeholder-pool-2.jpg, pool/placeholder-pool-3.jpg, pool/placeholder-pool-4.jpg]
+    description: >-
+      TODO: Describe the pool area — size, heated?, spa?, screened enclosure,
+      sun exposure, lounge and dining furniture.
+    features: [TODO feature, TODO feature, TODO feature]
+    photos:
+      - pool/placeholder-pool-1.jpg
+      - pool/placeholder-pool-2.jpg
+      - pool/placeholder-pool-3.jpg
+      - pool/placeholder-pool-4.jpg
 
-  - name: Bedroom 1 — Primary Suite
+# ---------------------------------------------------------------------
+#  BEDROOMS — also builds the "Sleeping Arrangements" table automatically.
+#  beds: list each bed, e.g. [King] or [Queen, Twin] or ["Bunk (Twin over Twin)"]
+#  bath: e.g. "Private en-suite" / "Shared hall bath" / "Jack-and-Jill"
+# ---------------------------------------------------------------------
+bedrooms:
+  - name: Primary Suite
     floor: TODO
     beds: [TODO]
-    bath: TODO           # e.g. "Private en-suite with walk-in shower"
-    description: TODO
-    features: [TODO]
+    bath: TODO
+    description: TODO — what makes this room special.
+    features: [TODO, TODO]
     photos: [bedrooms/placeholder-bedroom-1.jpg]
 
   - name: Bedroom 2
@@ -110,16 +146,19 @@ rooms:
     photos: [bedrooms/placeholder-bedroom-8.jpg]
 
 # ---------------------------------------------------------------------
-#  HOUSE INFO
+#  HOUSE INFO — "Good to know" panel. Delete a line to hide it.
 # ---------------------------------------------------------------------
 house_info:
-  check_in: "TODO"        # e.g. "4:00 PM"
-  check_out: "TODO"       # e.g. "10:00 AM"
-  minimum_stay: "TODO"
-  pets: "TODO"
-  smoking: No smoking
-  events: "TODO"
-  wifi: "TODO"            # e.g. "High-speed fiber, 1 Gbps"
+  - { label: Check-in,      value: "TODO" }   # e.g. "4:00 PM"
+  - { label: Check-out,     value: "TODO" }   # e.g. "10:00 AM"
+  - { label: Minimum stay,  value: "TODO" }
+  - { label: Parking,       value: "TODO" }   # e.g. "2-car garage + driveway for 2"
+  - { label: Wi-Fi,         value: "TODO" }   # e.g. "High-speed fiber"
+  - { label: Pets,          value: "TODO" }
+  - { label: Smoking,       value: Not permitted }
+  - { label: Events,        value: "TODO" }
 
 house_rules:
-  - TODO
+  - TODO — house rule
+  - TODO — house rule
+  - TODO — house rule

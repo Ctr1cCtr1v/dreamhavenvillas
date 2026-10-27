@@ -5,7 +5,6 @@ eyebrow: Luxury 8-Bedroom Pool Villa
 intro: Every room, every detail — your home base for the perfect Florida getaway.
 image: exterior/placeholder-front-1.jpg
 layout: villa
-# Room details, stats and amenities live in data/villa.yaml and data/amenities.yaml
+# Everything on this page comes from data/villa.yaml and data/amenities.yaml.
+# Optional: text written below the dashes appears after the amenity list.
 ---
-
-TODO: Optional extra prose for The Villa page.

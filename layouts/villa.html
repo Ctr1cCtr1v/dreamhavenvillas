@@ -1,0 +1,169 @@
+{{/* The Villa — property details. All content: data/villa.yaml + data/amenities.yaml */}}
+{{ define "main" }}
+{{- $v := hugo.Data.villa }}
+{{ partial "page-hero.html" . }}
+
+{{/* ---- In-page jump menu ---- */}}
+<nav class="subnav" aria-label="On this page">
+  <div class="container subnav__inner">
+    <a href="#overview">Overview</a>
+    {{ with $v.spaces }}<a href="#spaces">Spaces</a>{{ end }}
+    {{ with $v.bedrooms }}<a href="#bedrooms">Bedrooms</a>{{ end }}
+    {{ with hugo.Data.amenities }}<a href="#amenities">Amenities</a>{{ end }}
+    {{ with $v.house_info }}<a href="#good-to-know">Good to Know</a>{{ end }}
+  </div>
+</nav>
+
+{{/* ---- Overview ---- */}}
+<section class="section" id="overview">
+  <div class="container">
+    {{- with $v.stats }}
+    <div class="stats reveal">
+      {{- range . }}
+      <div class="stat"><div class="stat__value">{{ .value }}</div><div class="stat__label">{{ .label }}</div></div>
+      {{- end }}
+    </div>
+    {{- end }}
+    {{- with $v.overview }}
+    <div class="overview reveal">
+      <div>
+        <p class="eyebrow">Overview</p>
+        <h2>{{ .heading }}</h2>
+      </div>
+      <div class="overview__text">{{ .text | markdownify }}</div>
+    </div>
+    {{- end }}
+  </div>
+</section>
+
+{{/* ---- Shared spaces ---- */}}
+{{- with $v.spaces }}
+<div id="spaces">
+  {{- range $i, $s := . }}
+  <section class="section {{ if modBool $i 2 }}section--cream{{ end }}" id="{{ urlize $s.name }}">
+    <div class="container split space {{ if not (modBool $i 2) }}split--flip{{ end }}">
+      <div class="reveal">{{ partial "photo-grid.html" (dict "photos" $s.photos "name" $s.name) }}</div>
+      <div class="reveal">
+        {{ with $s.floor }}<p class="eyebrow">{{ . }}</p>{{ end }}
+        <h2>{{ $s.name }}</h2>
+        {{ with $s.tagline }}<p class="space__tagline">{{ . }}</p>{{ end }}
+        {{ with $s.description }}<p>{{ . }}</p>{{ end }}
+        {{- with $s.features }}
+        <ul class="checklist checklist--2">
+          {{- range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+  {{- end }}
+</div>
+{{- end }}
+
+{{/* ---- Bedrooms ---- */}}
+{{- with $v.bedrooms }}
+<section class="section section--cream" id="bedrooms">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Sleeping Arrangements</p>
+      <h2>{{ len . }} bedrooms, room for everyone</h2>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table class="sleep-table">
+        <thead><tr><th scope="col">Room</th><th scope="col">Beds</th><th scope="col">Bath</th><th scope="col">Floor</th></tr></thead>
+        <tbody>
+          {{- range . }}
+          <tr>
+            <th scope="row"><a href="#{{ urlize .name }}">{{ .name }}</a></th>
+            <td data-label="Beds">{{ delimit (.beds | default slice) ", " }}</td>
+            <td data-label="Bath">{{ .bath }}</td>
+            <td data-label="Floor">{{ .floor }}</td>
+          </tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid bedrooms">
+      {{- range . }}
+      <article class="card bedroom reveal" id="{{ urlize .name }}">
+        <div class="card__media">{{ partial "photo-grid.html" (dict "photos" .photos "name" .name "sizes" "(min-width: 1080px) 25vw, (min-width: 600px) 50vw, 100vw") }}</div>
+        <div class="card__body">
+          {{ with .floor }}<p class="card__meta">{{ . }}</p>{{ end }}
+          <h3>{{ .name }}</h3>
+          <ul class="bed-facts">
+            {{ with .beds }}<li><span class="bed-facts__label">Beds</span> {{ delimit . ", " }}</li>{{ end }}
+            {{ with .bath }}<li><span class="bed-facts__label">Bath</span> {{ . }}</li>{{ end }}
+          </ul>
+          {{ with .description }}<p>{{ . }}</p>{{ end }}
+          {{- with .features }}
+          <ul class="checklist">
+            {{- range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+          {{- end }}
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{/* ---- Amenities ---- */}}
+{{- with hugo.Data.amenities }}
+<section class="section" id="amenities">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Amenities</p>
+      <h2>Everything you need, and then some</h2>
+    </div>
+    <div class="grid grid--3 amenities">
+      {{- range . }}
+      <div class="amenity-group reveal">
+        <h3>{{ .category }}</h3>
+        <ul class="checklist">
+          {{- range .items }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{/* ---- Good to know ---- */}}
+{{- with $v.house_info }}
+<section class="section section--cream" id="good-to-know">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Good to Know</p>
+      <h2>House details</h2>
+    </div>
+    <div class="info-layout">
+      <dl class="info-list reveal">
+        {{- range . }}
+        <div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>
+        {{- end }}
+      </dl>
+      {{- with $v.house_rules }}
+      <div class="info-rules reveal">
+        <h3>House rules</h3>
+        <ul class="checklist">
+          {{- range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{- with .Content }}
+<section class="section">
+  <div class="container prose">{{ . }}</div>
+</section>
+{{- end }}
+
+{{ partial "book-band.html" . }}
+{{ end }}

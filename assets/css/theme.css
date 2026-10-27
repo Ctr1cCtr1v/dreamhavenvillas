@@ -1,75 +1,28 @@
 /* =====================================================================
    DREAM HAVEN VILLAS — THEME
    Colors and fonts used across the whole site. Change a value here and
-   it updates everywhere.
+   it updates everywhere. (Layout and component styles live in site.css.)
    ===================================================================== */
 
 :root {
-  /* Brand */
+  /* Brand — from the logo */
   --navy:      #0B1127;  /* matches the logo background exactly */
+  --navy-2:    #141C3A;  /* slightly lighter navy for layering */
   --gold:      #C9A04E;
   --gold-lt:   #E8C878;
 
   /* Coastal */
   --ocean:     #1F5F7A;
+  --ocean-dk:  #174A60;
   --pool:      #8CC4D6;
   --sand:      #D9C4A3;
   --cream:     #F7F2EA;
   --white:     #FFFFFF;
-  --ink:       #1F2A33;
-  --muted:     #5E6B74;
+  --ink:       #1F2A33;  /* body text */
+  --muted:     #5E6B74;  /* secondary text */
+  --line:      #E6DED1;  /* thin borders on light backgrounds */
 
-  /* Fonts */
+  /* Fonts (loaded from Google Fonts in layouts/_partials/head.html) */
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body:    "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-  /* Layout */
-  --max-width: 1200px;
-  --gutter: clamp(16px, 4vw, 40px);
-  --radius: 10px;
-  --header-h: 72px;
 }
-
-/* ---- Base (expanded into a full design system in Phase 1) ---------- */
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 1.0625rem;
-  line-height: 1.65;
-  color: var(--ink);
-  background: var(--white);
-  -webkit-font-smoothing: antialiased;
-}
-img { max-width: 100%; height: auto; display: block; }
-a { color: var(--ocean); }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; color: var(--navy); }
-.container { max-width: var(--max-width); margin-inline: auto; padding-inline: var(--gutter); }
-
-.announcement { background: var(--gold); color: var(--navy); text-align: center; padding: .5rem var(--gutter); font-size: .9rem; }
-.announcement a { color: var(--navy); font-weight: 700; }
-
-.site-header { position: sticky; top: 0; z-index: 50; background: var(--navy); }
-.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--header-h); }
-.site-header .logo img { height: 52px; width: auto; }
-.site-nav { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
-.site-nav a { color: var(--white); text-decoration: none; font-size: .95rem; letter-spacing: .03em; }
-.site-nav a:hover { color: var(--gold-lt); }
-
-.btn { display: inline-block; padding: .75rem 1.4rem; border-radius: 999px; background: var(--gold); color: var(--navy) !important; font-weight: 700; text-decoration: none; letter-spacing: .02em; }
-.btn:hover { background: var(--gold-lt); }
-
-.site-footer { background: var(--navy); color: #c9cfdb; padding-block: 3rem; margin-top: 4rem; font-size: .95rem; }
-.site-footer a { color: var(--gold-lt); }
-
-.section { padding-block: clamp(3rem, 8vw, 6rem); }
-.section--cream { background: var(--cream); }
-.eyebrow { text-transform: uppercase; letter-spacing: .2em; font-size: .78rem; color: var(--ocean); font-weight: 700; }
-.hero { position: relative; color: var(--white); }
-.hero img { width: 100%; height: min(85vh, 760px); object-fit: cover; }
-.hero__text { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; padding: var(--gutter); background: linear-gradient(rgba(11,17,39,.15), rgba(11,17,39,.45)); }
-.hero__text h1 { color: var(--white); font-size: clamp(2.4rem, 7vw, 4.5rem); margin: .3em 0; }
-.split { display: grid; gap: 2rem; align-items: center; }
-@media (min-width: 800px) { .split { grid-template-columns: 1fr 1fr; } .split--flip > :first-child { order: 2; } }
-.split img { border-radius: var(--radius); }

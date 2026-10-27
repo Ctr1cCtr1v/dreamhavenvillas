@@ -1,9 +1,12 @@
-{{/* Generic page. Each page gets its own layout in later phases
-     (villa, gallery, resort, explore, book, faq); until then this is used. */}}
+{{/* Generic page. Pages with their own layout (villa, gallery, resort,
+     explore, book, faq) get dedicated templates in later phases and fall
+     back to this one until then. */}}
 {{ define "main" }}
-<section class="section container">
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  <p><em>This page is built out in a later phase — see PLAN.md.</em></p>
+{{ partial "page-hero.html" . }}
+<section class="section">
+  <div class="container prose">
+    {{ .Content }}
+    <p><em>This page is built out in a later phase — see PLAN.md.</em></p>
+  </div>
 </section>
 {{ end }}

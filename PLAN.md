@@ -100,7 +100,8 @@ dhvwebsite/
 ├── content/                  ← one Markdown file per page (long-form prose)
 ├── layouts/                  ← templates; layouts/_partials/ = components (rarely touched)
 ├── assets/
-│   ├── css/theme.css         ← colors & fonts as variables
+│   ├── css/theme.css         ← colors & fonts as variables (owner-editable)
+│   ├── css/site.css          ← layout & component styles
 │   ├── js/
 │   └── images/               ← full-size photos; Hugo auto-generates web sizes
 │       ├── brand/            ← logos (source/ holds print files)
@@ -171,7 +172,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 ## 8. Status
 
 - [x] Phase 0 — Foundation (live at https://ctr1cctr1v.github.io/dreamhavenvillas/)
-- [ ] Phase 1 — Design system & shell
+- [x] Phase 1 — Design system & shell
 - [ ] Phase 2 — Home
 - [ ] Phase 3 — The Villa
 - [ ] Phase 4 — Gallery

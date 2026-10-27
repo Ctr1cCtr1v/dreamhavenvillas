@@ -1,0 +1,16 @@
+{{/* Interior page banner. Front matter options:
+     eyebrow: small label above the title
+     intro:   one-line subtitle
+     image:   photo path in assets/images/ (omit for a plain navy banner) */}}
+<section class="page-hero{{ if not .Params.image }} page-hero--plain{{ end }}">
+  {{- with .Params.image }}
+  <div class="page-hero__media">
+    {{ partial "img.html" (dict "src" . "alt" "" "eager" true) }}
+  </div>
+  {{- end }}
+  <div class="page-hero__text">
+    {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.intro }}<p>{{ . }}</p>{{ end }}
+  </div>
+</section>

@@ -1,15 +1,26 @@
 <header class="site-header">
-  <div class="container">
+  <div class="container site-header__bar">
     <a class="logo" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Title }} home">
       {{- with resources.Get "images/brand/logo-wide.png" }}
-        {{- $logo := .Resize "400x webp" }}
+        {{- $logo := .Resize "360x webp" }}
         <img src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="{{ site.Title }}">
       {{- end }}
     </a>
-    <nav class="site-nav" aria-label="Main">
-      {{- range site.Menus.main }}
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      {{- end }}
+
+    <div class="header-actions">
+      <a class="btn btn--sm" href="{{ site.Params.bookingURL }}">Book Direct</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        {{- $page := . }}
+        {{- range site.Menus.main }}
+          <li><a href="{{ .URL }}"{{ if $page.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        {{- end }}
+      </ul>
       <a class="btn" href="{{ site.Params.bookingURL }}">{{ site.Params.bookingButtonText }}</a>
     </nav>
   </div>

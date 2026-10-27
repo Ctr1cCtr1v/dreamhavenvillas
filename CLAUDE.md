@@ -15,6 +15,6 @@ Marketing + direct-booking site for a luxury private 8-bedroom vacation rental a
 - Images go through Hugo image processing (responsive sizes + WebP, lazy-loaded).
 - Owner is not a developer: keep data files simple, commented, and documented in `EDITING.md`.
 - Mobile-first.
-- Git: work on a branch per phase. Commit locally. **Never push without the owner's explicit OK** (pushing `main` publishes the live site).
+- Git: work on a branch per phase, commit locally, merge to `main`. **Owner approved (2026-10-27): push `main` at the end of each finished phase.** Pushing `main` publishes the live site, so push nothing else mid-phase without asking. Verify the deploy run succeeds after pushing.
 - Internal links in templates: never hard-code a leading-slash URL. Use `site.Home.RelPermalink`, menu `.URL`, or `strings.TrimPrefix "/" $url | relURL` for data-file URLs, so links work on both the github.io subpath and the custom domain.
 - Visual check: headless Chrome can't go below 500px wide, so check phones by putting the page in a 390px iframe and screenshotting that.

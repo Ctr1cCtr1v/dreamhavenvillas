@@ -124,7 +124,7 @@ dhvwebsite/
 - **Local repo (here):** Claude makes commits on this machine as work progresses (git is already configured with your GitHub identity).
 - **GitHub repo:** create an empty repo `dreamhavenvillas` on github.com (no README), or install the GitHub CLI (`brew install gh`, then run `! gh auth login`) so Claude can create it and push for you.
 - **Branching:** each phase is built on its own branch (`phase-2-home`, etc.). You preview it locally with `hugo server` at http://localhost:1313. When you're happy, it gets merged to `main` and pushed. **Pushing `main` = publishing the live site.**
-- **Claude never pushes without you saying so.**
+- **Claude pushes `main` at the end of each finished phase** (owner-approved), and checks that the deploy succeeds.
 - Small text/photo edits later can go straight to `main`, including via github.com's web editor.
 
 ## 7. Build Phases (one or two Claude Code sessions each)

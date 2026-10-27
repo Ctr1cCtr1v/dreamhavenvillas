@@ -163,6 +163,8 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 ### Phase 8 — Launch
 - Set `noindex: false` in hugo.yaml so search engines can list the site (it's true while placeholders are up).
 - Enable Pages, custom domain, DNS records at registrar, enforce HTTPS, verify domain.
+- ✅ 2026-10-27: custom domain set on the repo (Settings → Pages). GoDaddy DNS: 4 A records `@` → 185.199.108–111.153, CNAME `www` → ctr1cctr1v.github.io (NS/SOA/_dmarc/_domainconnect left as-is). Certificate issued; HTTPS enforced. The deploy workflow picks up the domain automatically via `steps.pages.outputs.base_url`, so no CNAME file is needed.
+- Remaining: flip `noindex: false` when the owner says go (after real photos/details); optional TXT domain verification at github.com/settings/pages.
 
 ### Phase 9 — Real content
 - Personal photos as interim replacements → professional photos (shoot scheduled ~week of 2026-11-02).
@@ -180,7 +182,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 - [x] Phase 5 — Resort & Explore
 - [x] Phase 6 — Book Direct & FAQ
 - [x] Phase 7 — Polish
-- [ ] Phase 8 — Launch
+- [~] Phase 8 — Launch (domain live at https://dreamhavenvillas.com; `noindex` still on until real content)
 - [ ] Phase 9 — Real content
 
 ## 9. Open Items
@@ -196,6 +198,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 | Guest reviews to feature | TODO |
 | Visitor stats (GoatCounter / Cloudflare) | Optional — off; add a code in hugo.yaml → params.analytics |
 | "Save" claim (specific % or general) | TODO |
+| Domain | ✅ dreamhavenvillas.com → GitHub Pages (DNS at GoDaddy) |
 | GitHub repo | ✅ github.com/Ctr1cCtr1v/dreamhavenvillas (public), Pages via Actions |
 | Stack confirmed (Hugo) | ✅ |
 | Map pin | ✅ 28.30885, -81.64318 (US Census geocoder) |

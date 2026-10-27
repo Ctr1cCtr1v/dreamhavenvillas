@@ -1,0 +1,9 @@
+{{- /* Links written in Markdown/data text. Internal links ("/explore/") get the
+       site's base path; external links open in a new tab. */ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $href := .Destination -}}
+{{- if and (not $u.IsAbs) (hasPrefix .Destination "/") -}}
+  {{- $href = strings.TrimPrefix "/" .Destination | relURL -}}
+{{- end -}}
+<a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $u.IsAbs }} target="_blank" rel="noopener"{{ end }}>{{ .Text }}</a>
+{{- /* chomp trailing newline */ -}}

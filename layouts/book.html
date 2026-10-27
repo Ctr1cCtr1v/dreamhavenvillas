@@ -1,0 +1,102 @@
+{{/* Book Direct & Save. Content: data/book.yaml (+ Booking questions from data/faq.yaml) */}}
+{{ define "main" }}
+{{- $b := hugo.Data.book }}
+{{- $p := site.Params }}
+{{ partial "page-hero.html" . }}
+
+{{/* ---- Primary call to action ---- */}}
+{{- with $b.cta }}
+<section class="section section--tight">
+  <div class="container">
+    <div class="book-cta reveal">
+      {{ partial "sparkle.html" }}
+      <h2>{{ .heading }}</h2>
+      <p class="lead">{{ .text }}</p>
+      <div class="btn-row"><a class="btn btn--lg" href="{{ $p.bookingURL }}">{{ .button | default $p.bookingButtonText }}</a></div>
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{/* ---- Comparison ---- */}}
+{{- with $b.compare }}
+<section class="section section--cream">
+  <div class="container container--narrow">
+    <div class="section-head reveal">
+      <p class="eyebrow">The difference</p>
+      <h2>{{ .heading }}</h2>
+      <p>{{ .intro }}</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="compare">
+        <thead><tr><th scope="col"><span class="visually-hidden">Feature</span></th>{{ range $i, $c := .columns }}<th scope="col"{{ if eq $i 1 }} class="compare__us"{{ end }}>{{ $c }}</th>{{ end }}</tr></thead>
+        <tbody>
+          {{- range .rows }}
+          <tr><th scope="row">{{ .label }}</th><td>{{ .them }}</td><td class="compare__us">{{ .us }}</td></tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+    {{ with .example }}<p class="compare__example reveal">{{ . }}</p>{{ end }}
+  </div>
+</section>
+{{- end }}
+
+{{/* ---- How it works ---- */}}
+{{- with $b.steps }}
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal"><p class="eyebrow">Simple</p><h2>{{ .heading }}</h2></div>
+    <ol class="steps">
+      {{- range .items }}
+      <li class="step reveal"><h3>{{ .title }}</h3><p>{{ .text }}</p></li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+{{- end }}
+
+{{/* ---- Reasons ---- */}}
+{{- with $b.reasons }}
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-head reveal"><p class="eyebrow">Book direct</p><h2>{{ .heading }}</h2></div>
+    <div class="grid reasons">
+      {{- range .items }}
+      <div class="reason reveal">
+        {{ partial "sparkle.html" }}
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{/* ---- Trust + booking FAQs ---- */}}
+<section class="section">
+  <div class="container container--narrow">
+    {{- with $b.trust }}
+    <div class="panel reveal trust">
+      <p class="eyebrow">Peace of mind</p>
+      <h3>{{ .heading }}</h3>
+      <p>{{ .text }}</p>
+      <p class="trust__name">{{ $p.managementCompany }}</p>
+    </div>
+    {{- end }}
+
+    {{- with where hugo.Data.faq "group" "Booking" }}{{ with index . 0 }}
+    <div class="faq-group book-faq">
+      <h2>Booking questions</h2>
+      {{ partial "faq-list.html" .questions }}
+      <p><a class="text-link" href="{{ "faq/" | relURL }}">See all FAQs</a></p>
+    </div>
+    {{- end }}{{ end }}
+
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </div>
+</section>
+
+{{ partial "book-band.html" . }}
+{{ end }}

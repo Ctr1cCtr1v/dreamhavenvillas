@@ -177,7 +177,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 - [x] Phase 3 — The Villa
 - [x] Phase 4 — Gallery
 - [x] Phase 5 — Resort & Explore
-- [ ] Phase 6 — Book Direct & FAQ
+- [x] Phase 6 — Book Direct & FAQ
 - [ ] Phase 7 — Polish
 - [ ] Phase 8 — Launch
 - [ ] Phase 9 — Real content

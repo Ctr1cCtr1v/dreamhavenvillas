@@ -1,0 +1,45 @@
+{{/* FAQ page. Content: data/faq.yaml */}}
+{{ define "main" }}
+{{- $faq := hugo.Data.faq }}
+{{- $p := site.Params }}
+{{ partial "page-hero.html" . }}
+
+{{- if gt (len $faq) 1 }}
+<nav class="subnav" aria-label="FAQ topics">
+  <div class="container subnav__inner">
+    {{- range $faq }}<a href="#{{ urlize .group }}">{{ .group }}</a>{{ end }}
+  </div>
+</nav>
+{{- end }}
+
+<section class="section">
+  <div class="container container--narrow">
+    {{- range $faq }}
+    <div class="faq-group" id="{{ urlize .group }}">
+      <h2>{{ .group }}</h2>
+      {{ partial "faq-list.html" .questions }}
+    </div>
+    {{- end }}
+
+    <div class="panel panel--navy faq-contact">
+      <p class="eyebrow">Still have questions?</p>
+      <h3>We're happy to help</h3>
+      <p>Reach out to {{ $p.managementCompany }}
+        {{- with $p.email }} at <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+        {{- with $p.phone }}{{ if $p.email }} or{{ else }} at{{ end }} <a href="tel:{{ . }}">{{ . }}</a>{{ end }}.</p>
+      <p><a class="btn" href="{{ $p.bookingURL }}">{{ $p.bookingButtonText }}</a></p>
+    </div>
+  </div>
+</section>
+
+{{/* FAQ structured data for search engines (skips unanswered TODOs) */}}
+{{- $items := slice }}
+{{- range $faq }}{{ range .questions }}
+  {{- if not (hasPrefix .a "TODO") }}
+    {{- $items = $items | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" (.a | markdownify | plainify))) }}
+  {{- end }}
+{{- end }}{{ end }}
+{{- with $items }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" . | jsonify | safeJS }}</script>
+{{- end }}
+{{ end }}

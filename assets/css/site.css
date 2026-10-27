@@ -549,3 +549,49 @@ html.lightbox-open { overflow: hidden; }
 .place p { font-size: .95rem; }
 .place__links { margin: auto 0 0; padding-top: .25rem; display: flex; gap: 1.25rem; font-weight: 700; font-size: .88rem; }
 .place__links a { text-decoration: none; border-bottom: 1px solid var(--gold); }
+
+/* ---- Book Direct --------------------------------------------------- */
+.book-cta { text-align: center; max-width: 760px; margin-inline: auto; padding: clamp(2rem, 5vw, 3.5rem); border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(180deg, var(--white), var(--cream)); box-shadow: var(--shadow); }
+.book-cta .btn-row { justify-content: center; margin-top: 1.5rem; }
+.compare { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.compare th, .compare td { padding: 1rem 1.25rem; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.compare thead th { font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); background: var(--white); }
+.compare tbody th { font-weight: 600; color: var(--navy); width: 40%; }
+.compare tbody tr:last-child > * { border-bottom: 0; }
+.compare .compare__us { background: rgba(201,160,78,.10); color: var(--navy); font-weight: 700; }
+.compare thead .compare__us { color: var(--navy); background: rgba(201,160,78,.22); }
+@media (max-width: 599px) { .compare th, .compare td { padding: .8rem .7rem; font-size: .9rem; } .compare tbody th { width: auto; } }
+.compare__example { margin-top: 1.5rem; text-align: center; font-family: var(--font-display); font-style: italic; font-size: 1.3rem; color: var(--ocean); }
+
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 1.5rem; }
+@media (min-width: 800px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+.step { counter-increment: step; position: relative; padding: 2rem 1.5rem 1.5rem; border-top: 2px solid var(--gold); }
+.step::before { content: counter(step, decimal-leading-zero); display: block; font-family: var(--font-display); font-size: 2.6rem; font-weight: 600; line-height: 1; color: var(--gold); margin-bottom: .75rem; }
+.step p { margin: 0; color: var(--muted); }
+
+.reasons { grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 600px) { .reasons { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1080px) { .reasons { grid-template-columns: repeat(4, 1fr); } }
+.reason { padding: 2rem 1.5rem; text-align: center; border: 1px solid rgba(201,160,78,.25); border-radius: var(--radius); background: rgba(255,255,255,.03); }
+.reason .sparkle { margin-bottom: 1rem; }
+.reason .sparkle::before, .reason .sparkle::after { width: 28px; }
+.reason h3 { font-size: 1.45rem; }
+.reason p { margin: 0; font-size: .95rem; }
+
+.trust { margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+.trust__name { margin: 0; font-weight: 700; color: var(--navy); }
+
+/* ---- FAQ ----------------------------------------------------------- */
+.faq-group { margin-bottom: clamp(2.5rem, 6vw, 3.5rem); }
+.faq-group h2 { font-size: clamp(1.8rem, 3.6vw, 2.3rem); padding-bottom: .5rem; border-bottom: 1px solid var(--gold); }
+.faq-list { display: grid; }
+.faq { border-bottom: 1px solid var(--line); }
+.faq summary { position: relative; list-style: none; cursor: pointer; padding: 1.15rem 2.5rem 1.15rem 0; font-weight: 700; color: var(--navy); font-size: 1.05rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; position: absolute; right: .35rem; top: 50%; width: .6rem; height: .6rem; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: translateY(-70%) rotate(45deg); transition: transform .25s var(--ease); }
+.faq[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+.faq summary:hover { color: var(--ocean); }
+.faq__answer { padding: 0 2.5rem 1.25rem 0; color: var(--ink); }
+.faq__answer p:last-child { margin-bottom: 0; }
+.faq-contact { text-align: center; margin-top: 1rem; }
+.faq-contact a:not(.btn) { color: var(--gold-lt); }

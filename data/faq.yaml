@@ -1,35 +1,63 @@
 # =====================================================================
 #  FAQ — grouped questions. Answers can use **bold** and [links](url).
+#  Questions whose answer is still "TODO" are shown so you can see them;
+#  delete any question you don't want.
+#  The "Booking" group also appears on the Book Direct page.
 # =====================================================================
 
 - group: Booking
   questions:
     - q: Why is booking direct cheaper?
       a: >-
-        Booking sites like Airbnb and VRBO add guest service fees on top of
+        Booking sites like Airbnb and VRBO add a guest service fee on top of
         the nightly rate. When you book directly with our management team,
-        those fees disappear — and we pass the savings on to you.
+        that fee isn't there — and we pass the savings on to you.
     - q: Is booking direct safe?
       a: TODO — describe the management company and secure payment.
+    - q: How do I pay, and is a deposit required?
+      a: TODO
     - q: What is the cancellation policy?
       a: TODO
     - q: Is there a minimum stay?
       a: TODO
+    - q: Can I make special requests?
+      a: TODO — e.g. early check-in, pool heat, pack 'n play.
 
 - group: Your Stay
   questions:
     - q: What time is check-in and check-out?
       a: TODO
     - q: Is the pool heated?
+      a: TODO — and is there a fee?
+    - q: Are linens and towels provided?
+      a: TODO
+    - q: Is there Wi-Fi?
       a: TODO
     - q: Are pets allowed?
       a: TODO
     - q: Where do we park?
       a: TODO
+    - q: Do you have baby gear?
+      a: TODO — crib, high chair, pack 'n play?
 
 - group: The Resort
   questions:
     - q: Can we use the Windsor at Westside resort amenities?
-      a: TODO
+      a: TODO — included? wristbands? hours?
     - q: How far is Disney World?
-      a: About 12–20 minutes by car, depending on the park.
+      a: >-
+        About 12–20 minutes by car, depending on the park. See the
+        [map and drive times](/explore/) for everything nearby.
+    - q: Is the community gated?
+      a: TODO — confirm gate details.
+
+- group: Getting Here
+  questions:
+    - q: Which airport should we fly into?
+      a: >-
+        Orlando International (MCO) is about 35 minutes away and has the most
+        flights. TODO — mention Orlando Sanford (SFB) or Tampa (TPA) if useful.
+    - q: Do we need a car?
+      a: >-
+        We recommend one. The parks, beaches, restaurants and grocery stores
+        are all an easy drive, and ride-shares are also available.

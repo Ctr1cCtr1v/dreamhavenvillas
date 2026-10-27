@@ -1,0 +1,66 @@
+# =====================================================================
+#  BOOK DIRECT & SAVE page
+#  The booking link itself is set once in hugo.yaml (params.bookingURL).
+#  ⚠ Keep every savings claim accurate to what guests actually pay.
+# =====================================================================
+
+cta:
+  heading: Ready when you are
+  text: >-
+    Check live availability and reserve directly with our local management
+    team. You'll be taken to their secure booking site.
+  button: Check Availability & Book
+
+# Side-by-side comparison table. Keep the rows short.
+compare:
+  heading: Same villa. Better price.
+  intro: >-
+    Booking sites add their own guest service fee on top of the nightly rate.
+    Book with us directly and that fee simply isn't there.
+  columns: [Booking sites, Book direct]
+  rows:
+    - label: The villa
+      them: Same home
+      us: Same home
+    - label: Booking-site service fee
+      them: Added at checkout
+      us: None
+    - label: Talk to the people who know the home
+      them: Through an app
+      us: Direct line to our local team
+    - label: Special requests          # TODO: confirm
+      them: Limited
+      us: Just ask
+  # Optional worked example — delete the "example" lines to hide it.
+  example: >-
+    TODO: e.g. "On a 7-night stay, booking-site service fees can add hundreds
+    of dollars. Booking direct keeps that money in your vacation budget."
+
+steps:
+  heading: How it works
+  items:
+    - title: Pick your dates
+      text: Tap "Book Direct" to see live availability and pricing.
+    - title: Book securely
+      text: Reserve and pay through our management company's secure booking site.   # TODO: confirm
+    - title: Get ready
+      text: You'll receive check-in details and everything you need before you arrive.
+
+reasons:
+  heading: Why guests book direct
+  items:
+    - title: Save on fees
+      text: No booking-site guest service fee added to your stay.
+    - title: The same 5-star home     # TODO: confirm rating claim
+      text: Same villa, same cleaning standards, same warm welcome.
+    - title: Real people, real fast
+      text: Questions go straight to the local team who manage the villa.
+    - title: Come back for less
+      text: "TODO: returning-guest perk? e.g. a discount code for your next stay."
+
+trust:
+  heading: Who you're booking with
+  text: >-
+    TODO: One or two sentences about the management company — who they are,
+    how long they've managed homes in the area, and that payments are
+    processed securely.

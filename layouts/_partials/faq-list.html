@@ -1,0 +1,10 @@
+{{/* FAQ accordion list (native <details>, works without JavaScript).
+     Usage: {{ partial "faq-list.html" .questions }} */}}
+<div class="faq-list">
+  {{- range . }}
+  <details class="faq">
+    <summary>{{ .q }}</summary>
+    <div class="faq__answer">{{ .a | markdownify }}</div>
+  </details>
+  {{- end }}
+</div>

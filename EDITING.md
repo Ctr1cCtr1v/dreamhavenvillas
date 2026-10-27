@@ -17,10 +17,10 @@ You never need to touch code to update the site. Words live in text files in
 | Windsor at Westside resort perks | `data/resort.yaml` |
 | Attractions, drive times, map pins, pin colors, category photos | `data/attractions.yaml` (lat/lng from Google Maps: right-click a spot → copy the numbers) |
 | Guest reviews | `data/reviews.yaml` |
-| FAQ | `data/faq.yaml` |
+| FAQ | `data/faq.yaml` (the "Booking" group also shows on the Book Direct page). Links like `[map](/explore/)` work. |
 | Gallery tabs, captions, videos | `data/gallery.yaml` |
 | Seasonal banner at top of site | `data/announcement.yaml` |
-| Longer text on Book Direct page | `content/book.md` |
+| Book Direct page (comparison table, steps, reasons, trust) | `data/book.yaml` |
 | Colors or fonts | `assets/css/theme.css` (top of file) |
 
 **Still to fill in:** search the project for `TODO`. In VS Code, use ⌘⇧F (Cmd+Shift+F) and type `TODO`.
@@ -39,6 +39,7 @@ The `.yaml` files are simple `label: value` lists. A few rules:
     This is a long paragraph that can
     wrap across several lines.
   ```
+- Lines written as `{ title: …, text: … }` treat **commas as separators**. If your text has a comma, use the one-field-per-line style instead, or wrap the text in quotes.
 - If a value contains a colon `:`, wrap it in quotes: `"Check-in: 4 PM"`. (Otherwise the site shows odd text like `map[...]`.)
 
 ---

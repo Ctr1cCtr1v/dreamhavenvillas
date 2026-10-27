@@ -21,5 +21,9 @@
 
 {{- $css := slice (resources.Get "css/theme.css") (resources.Get "css/site.css") | resources.Concat "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- if eq .Layout "explore" }}
+{{- $lcss := resources.Get "vendor/leaflet/leaflet.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $lcss.RelPermalink }}" integrity="{{ $lcss.Data.Integrity }}">
+{{- end }}
 {{- $js := slice (resources.Get "js/main.js") (resources.Get "js/lightbox.js") | resources.Concat "js/site.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>

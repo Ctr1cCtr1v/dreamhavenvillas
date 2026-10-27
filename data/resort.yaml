@@ -1,49 +1,70 @@
 # =====================================================================
 #  WINDSOR AT WESTSIDE — the resort community page
-#  ⚠ Amenities below are a DRAFT from public info — confirm each one
-#  (and whether any require a fee or wristband) before launch.
+#  ⚠ Amenities below are drafted from public travel listings. Confirm
+#    each one (and any fees / wristbands / hours) before launch, then
+#    delete the "verify" notes.
 # =====================================================================
 
 intro:
-  heading: Resort living at Windsor at Westside
+  eyebrow: Your resort
+  heading: Private villa. Resort playground.
   text: >-
-    Your villa sits inside Windsor at Westside, a gated resort community in
-    Kissimmee designed for vacationers. Step out of your private home and
-    into a resort clubhouse full of ways to play. TODO: refine.
+    Dream Haven Villas sits inside Windsor at Westside, a gated resort
+    community in Kissimmee built for vacationing families. Enjoy the privacy
+    of your own home and pool, then stroll to a clubhouse packed with ways to
+    play — all just minutes from Walt Disney World.
   image: resort/placeholder-clubhouse.jpg
 
+# Perk cards, shown in this order. "image" is optional.
 perks:
-  - name: Gated Security
-    text: Gated entry for peace of mind.   # TODO: confirm 24/7 staffed gate?
-    image: exterior/placeholder-aerial.jpg
-
-  - name: Resort Pool & Water Slides
-    text: TODO — confirm details.
+  - name: Resort Pool & Cabanas
+    text: A huge zero-entry resort pool with shaded cabanas and plenty of loungers.   # verify
     image: resort/placeholder-resort-pool.jpg
 
   - name: Lazy River
-    text: TODO — confirm details.
+    text: Grab a float and drift around the resort pool on the lazy river.   # verify
     image: resort/placeholder-lazy-river.jpg
 
-  - name: Splash Pad
-    text: TODO — confirm.
+  - name: Water Slides & Splash Park
+    text: Slides, water shoots and a splash park the kids won't want to leave.   # verify
     image: resort/placeholder-resort-pool.jpg
 
   - name: Fitness Center
-    text: TODO — confirm.
+    text: Keep up your routine with a fully equipped fitness center.   # verify
     image: resort/placeholder-fitness.jpg
 
-  - name: Clubhouse Dining & Bar
-    text: TODO — confirm restaurant / bar / market.
-    image: resort/placeholder-clubhouse.jpg
-
   - name: Sports Courts
-    text: TODO — tennis, pickleball, basketball, volleyball?
+    text: Tennis, basketball and volleyball courts for a little friendly competition.   # verify
     image: resort/placeholder-clubhouse.jpg
 
-  - name: Game Room & Theater
-    text: TODO — confirm.
+  - name: Bar & Lounge
+    text: Poolside drinks and bites at the clubhouse bar and lounge.   # verify name & hours
     image: resort/placeholder-clubhouse.jpg
 
-access_note: >-
-  TODO: How guests access resort amenities (wristbands, resort fee, hours).
+  - name: Ice Cream & Market
+    text: An ice cream parlor for treats and a sundry shop for the essentials.   # verify
+    image: resort/placeholder-clubhouse.jpg
+
+  - name: Kids' Arcade & Playground
+    text: An indoor arcade and outdoor playground for younger guests.   # verify
+    image: resort/placeholder-clubhouse.jpg
+
+# Smaller "also included" list under the cards
+extras:
+  - Gated community entrance          # verify: staffed 24/7?
+  - Palm-lined streets & walking paths
+  - TODO — add or remove items
+
+access:
+  heading: Resort access
+  text: >-
+    TODO: Explain how guests use the clubhouse — e.g. "Resort access is
+    included with your stay. Wristbands are provided at check-in." Include
+    any fees, hours, or age rules.
+
+location:
+  heading: In the heart of it all
+  text: >-
+    Windsor at Westside sits just west of Walt Disney World, close to the
+    restaurants and shops of US-192 and an easy drive to Universal, SeaWorld
+    and the airport.

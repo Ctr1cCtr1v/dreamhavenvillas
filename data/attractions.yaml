@@ -3,15 +3,26 @@
 #  ⚠ Drive times & miles are ESTIMATES from the villa without traffic.
 #    Verify in Google Maps and adjust. lat/lng place the pin on the map.
 #  category must match one of the names under "categories".
+#  Optional per place: url (website link).
+#  Each card gets a Google Maps "Directions" link automatically.
 # =====================================================================
 
+intro:
+  heading: Right in the middle of the magic
+  text: >-
+    Dream Haven Villas puts you minutes from Walt Disney World and an easy drive
+    to Universal, SeaWorld, championship golf and both Florida coasts. Tap a
+    pin for details and directions.
+
+# Categories: order = order on the page. color = map pin color.
+# image = the photo shown beside that category's list of places.
 categories:
-  - Theme Parks
-  - Beaches
-  - Golf
-  - Dining & Shopping
-  - Nature & Adventure
-  - Getting Here
+  - { name: Theme Parks,        color: "#C9A04E", image: area/placeholder-theme-parks.jpg }
+  - { name: Beaches,            color: "#3AA6C4", image: area/placeholder-beach.jpg }
+  - { name: Golf,               color: "#5E8C5A", image: area/placeholder-golf.jpg }
+  - { name: Dining & Shopping,  color: "#C2724E", image: area/placeholder-dining-shopping.jpg }
+  - { name: Nature & Adventure, color: "#1F5F7A", image: area/placeholder-nature.jpg }
+  - { name: Getting Here,       color: "#5E6B74" }
 
 places:
   # ---------------- Theme Parks ----------------
@@ -22,7 +33,6 @@ places:
     lat: 28.3553
     lng: -81.5901
     text: Safaris, Pandora, and Expedition Everest.
-    image: area/placeholder-theme-parks.jpg
     url: https://disneyworld.disney.go.com/destinations/animal-kingdom/
 
   - name: EPCOT
@@ -96,7 +106,6 @@ places:
     lat: 28.3684
     lng: -80.6046
     text: Atlantic surf, the historic pier, and Ron Jon Surf Shop.
-    image: area/placeholder-beach.jpg
 
   - name: Clearwater Beach
     category: Beaches
@@ -113,8 +122,23 @@ places:
     miles: 8
     lat: 28.2617
     lng: -81.6236
-    text: TODO — Greg Norman-designed courses nearby.
-    image: area/placeholder-golf.jpg
+    text: Two Greg Norman-designed courses just south of the villa.   # verify
+
+  - name: Reunion Resort Golf
+    category: Golf
+    drive: 15 min       # verify
+    miles: 8            # verify
+    lat: 28.2706
+    lng: -81.5908
+    text: Courses designed by Arnold Palmer, Jack Nicklaus and Tom Watson.   # verify
+
+  - name: Celebration Golf Club
+    category: Golf
+    drive: 20 min       # verify
+    miles: 12           # verify
+    lat: 28.3141
+    lng: -81.5444
+    text: A Robert Trent Jones Sr. & Jr. course in the town of Celebration.   # verify
 
   # ---------------- Dining & Shopping ----------------
   - name: Disney Springs
@@ -124,7 +148,6 @@ places:
     lat: 28.3707
     lng: -81.5197
     text: Free-to-visit dining, shopping, and entertainment district.
-    image: area/placeholder-dining-shopping.jpg
 
   - name: Old Town Kissimmee
     category: Dining & Shopping
@@ -150,7 +173,6 @@ places:
     lat: 28.3557
     lng: -81.4029
     text: Old-Florida charm and thousands of gators.
-    image: area/placeholder-nature.jpg
 
   # ---------------- Getting Here ----------------
   - name: Orlando International Airport (MCO)

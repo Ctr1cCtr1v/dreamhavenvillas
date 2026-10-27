@@ -15,7 +15,7 @@ You never need to touch code to update the site. Words live in text files in
 | Bedrooms, baths, sleeps, room-by-room details, house info & rules | `data/villa.yaml` (the sleeping-arrangements table builds itself from the bedrooms list) |
 | Amenity checklist | `data/amenities.yaml` |
 | Windsor at Westside resort perks | `data/resort.yaml` |
-| Attractions, drive times, map pins | `data/attractions.yaml` |
+| Attractions, drive times, map pins, pin colors, category photos | `data/attractions.yaml` (lat/lng from Google Maps: right-click a spot → copy the numbers) |
 | Guest reviews | `data/reviews.yaml` |
 | FAQ | `data/faq.yaml` |
 | Gallery tabs, captions, videos | `data/gallery.yaml` |

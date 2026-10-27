@@ -1,0 +1,114 @@
+{{/* Explore the Area — map, drive times, attraction cards. Content: data/attractions.yaml */}}
+{{ define "main" }}
+{{- $a := hugo.Data.attractions }}
+{{- $p := site.Params }}
+{{- $origin := printf "%v,%v" $p.latitude $p.longitude }}
+{{ partial "page-hero.html" . }}
+
+{{/* Data for the map script */}}
+{{- $colors := dict }}
+{{- range $a.categories }}{{ $colors = merge $colors (dict .name .color) }}{{ end }}
+{{- $pins := slice }}
+{{- range $a.places }}
+  {{- $pins = $pins | append (dict "name" .name "cat" .category "color" (index $colors .category | default "#1F5F7A") "lat" .lat "lng" .lng "drive" .drive "miles" .miles "url" (.url | default "") "dir" (printf "https://www.google.com/maps/dir/?api=1&origin=%s&destination=%v,%v" $origin .lat .lng)) }}
+{{- end }}
+{{- $mapData := dict "home" (dict "name" site.Title "lat" $p.latitude "lng" $p.longitude "address" (printf "%s, %s, %s %s" $p.address.street $p.address.city $p.address.state $p.address.zip)) "places" $pins }}
+
+<section class="section section--map">
+  <div class="container">
+    {{- with $a.intro }}
+    <div class="section-head reveal">
+      <h2>{{ .heading }}</h2>
+      <p class="lead">{{ .text }}</p>
+    </div>
+    {{- end }}
+
+    <div class="map-filters filters" role="toolbar" aria-label="Show on map" hidden>
+      <button type="button" class="filter is-active" aria-pressed="true" data-cat="">All</button>
+      {{- range $a.categories }}
+        {{- $name := .name }}
+        {{- if where $a.places "category" $name }}
+        <button type="button" class="filter" aria-pressed="false" data-cat="{{ $name }}"><span class="dot" style="background:{{ .color | safeCSS }}"></span>{{ $name }}</button>
+        {{- end }}
+      {{- end }}
+    </div>
+
+    <div class="map" id="map" role="region" aria-label="Map of Dream Haven Villas and nearby attractions">
+      <noscript><p class="map__fallback">The interactive map needs JavaScript. <a href="https://www.google.com/maps/search/?api=1&query={{ $origin }}">Open in Google Maps</a>.</p></noscript>
+    </div>
+    <p class="map__note"><span class="map__home-dot" aria-hidden="true"></span> {{ site.Title }} · {{ $p.address.street }}, {{ $p.address.city }} — <a href="https://www.google.com/maps/search/?api=1&query={{ $origin }}">open in Google Maps</a></p>
+    <script type="application/json" id="map-data">{{ $mapData | jsonify | safeJS }}</script>
+  </div>
+</section>
+
+{{/* ---- Drive times ---- */}}
+<section class="section section--cream" id="drive-times">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Drive times</p>
+      <h2>How far is everything?</h2>
+      <p>Approximate drive times from the villa without traffic.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="drive-table">
+        <thead><tr><th scope="col">Destination</th><th scope="col">Drive</th><th scope="col">Miles</th><th scope="col"><span class="visually-hidden">Directions</span></th></tr></thead>
+        {{- range $a.categories }}
+          {{- $cat := . }}
+          {{- with where $a.places "category" .name }}
+          <tbody>
+            <tr class="drive-table__group"><th colspan="4" scope="rowgroup"><span class="dot" style="background:{{ $cat.color | safeCSS }}"></span>{{ $cat.name }}</th></tr>
+            {{- range . }}
+            <tr>
+              <th scope="row">{{ .name }}</th>
+              <td data-label="Drive">{{ .drive }}</td>
+              <td data-label="Miles">{{ .miles }}</td>
+              <td><a href="https://www.google.com/maps/dir/?api=1&origin={{ $origin }}&destination={{ .lat }},{{ .lng }}" target="_blank" rel="noopener">Directions</a></td>
+            </tr>
+            {{- end }}
+          </tbody>
+          {{- end }}
+        {{- end }}
+      </table>
+    </div>
+  </div>
+</section>
+
+{{/* ---- Places by category: category photo + compact place cards ---- */}}
+{{- range $cat := $a.categories }}
+  {{- with where $a.places "category" $cat.name }}
+  <section class="section section--tight" id="{{ urlize $cat.name }}">
+    <div class="container cat{{ if not $cat.image }} cat--no-image{{ end }}">
+      <div class="cat__intro reveal">
+        <div class="cat-head">
+          <span class="dot dot--lg" style="background:{{ $cat.color | safeCSS }}"></span>
+          <h2>{{ $cat.name }}</h2>
+        </div>
+        {{- with $cat.image }}
+        <div class="cat__media">{{ partial "img.html" (dict "src" . "alt" "" "sizes" "(min-width: 900px) 38vw, 100vw") }}</div>
+        {{- end }}
+      </div>
+      <div class="cat__places">
+        {{- range . }}
+        <article class="place reveal">
+          <p class="card__meta">{{ .drive }} · {{ .miles }} mi</p>
+          <h3>{{ .name }}</h3>
+          {{ with .text }}<p>{{ . }}</p>{{ end }}
+          <p class="place__links">
+            {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">Website</a>{{ end }}
+            <a href="https://www.google.com/maps/dir/?api=1&origin={{ $origin }}&destination={{ .lat }},{{ .lng }}" target="_blank" rel="noopener">Directions</a>
+          </p>
+        </article>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+  {{- end }}
+{{- end }}
+
+{{ partial "book-band.html" . }}
+
+{{- $leaflet := resources.Get "vendor/leaflet/leaflet.js" }}
+{{- $mapjs := resources.Get "js/map.js" | minify }}
+{{- $bundle := slice $leaflet $mapjs | resources.Concat "js/explore.js" | fingerprint }}
+<script src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" defer></script>
+{{ end }}

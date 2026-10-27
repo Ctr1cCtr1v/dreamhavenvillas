@@ -1,0 +1,68 @@
+{{/* The Resort — Windsor at Westside. Content: data/resort.yaml */}}
+{{ define "main" }}
+{{- $r := hugo.Data.resort }}
+{{ partial "page-hero.html" . }}
+
+{{- with $r.intro }}
+<section class="section">
+  <div class="container split">
+    <div class="split__media reveal">{{ partial "img.html" (dict "src" .image "alt" "Windsor at Westside clubhouse" "sizes" "(min-width: 860px) 55vw, 100vw") }}</div>
+    <div class="reveal">
+      {{ with .eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      <h2>{{ .heading }}</h2>
+      <p class="lead">{{ .text }}</p>
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{- with $r.perks }}
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Included with your stay</p>
+      <h2>Resort amenities</h2>
+    </div>
+    <div class="grid perks">
+      {{- range . }}
+      <article class="card perk reveal">
+        {{- with .image }}<div class="card__media">{{ partial "img.html" (dict "src" . "alt" "" "sizes" "(min-width: 1080px) 25vw, (min-width: 600px) 50vw, 100vw") }}</div>{{ end }}
+        <div class="card__body">
+          <h3>{{ .name }}</h3>
+          <p>{{ .text }}</p>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+
+    {{- with $r.extras }}
+    <ul class="checklist extras reveal">
+      {{- range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+<section class="section">
+  <div class="container grid grid--2 resort-info">
+    {{- with $r.access }}
+    <div class="panel reveal">
+      <p class="eyebrow">Good to know</p>
+      <h3>{{ .heading }}</h3>
+      <p>{{ .text }}</p>
+    </div>
+    {{- end }}
+    {{- with $r.location }}
+    <div class="panel panel--navy reveal">
+      <p class="eyebrow">Location</p>
+      <h3>{{ .heading }}</h3>
+      <p>{{ .text }}</p>
+      <p><a class="btn btn--sm" href="{{ "explore/" | relURL }}">Map & drive times</a></p>
+    </div>
+    {{- end }}
+  </div>
+</section>
+
+{{ partial "book-band.html" . }}
+{{ end }}

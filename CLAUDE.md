@@ -9,6 +9,7 @@ Marketing + direct-booking site for a luxury private 8-bedroom vacation rental a
 - Responsive images: always use `partial "img.html" (dict "src" "<folder>/<file>.jpg" "alt" …)`. Paths are relative to `assets/images/`.
 - Hugo `cond` evaluates both branches. Never put image processing (`.Resize`, etc.) inside `cond`; use if/else.
 - Reusable partials: `photo-grid.html` (lightbox-ready, `data-lightbox` groups), `book-band.html` (text from data/home.yaml), `page-hero.html`, `sparkle.html`.
+- Explore map: Leaflet 1.9.4 is self-hosted in `assets/vendor/leaflet/` (SRI-verified), loaded only on the explore layout. Tiles are from OpenStreetMap (attribution required). Map data is passed as JSON in `#map-data`.
 - Gallery auto-loads every image in the folders listed in `data/gallery.yaml`, sorted by filename; a folder's `placeholder-*` files are skipped once it has a real photo.
 - Lightbox (`assets/js/lightbox.js`, bundled with main.js): any `a[data-lightbox="group"]` opens in the viewer; items inside `[hidden]` are skipped.
 - `hugo server` ignores static files starting with `_`, and its watcher can go stale. Restart it if new files 404.

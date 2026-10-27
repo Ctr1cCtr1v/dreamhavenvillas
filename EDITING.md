@@ -80,6 +80,8 @@ You never need to make phone or desktop sizes. The site does that automatically.
 
 - **Banner:** in `data/announcement.yaml`, set `show: true` and edit `message`.
 - **Hero photo:** change `hero.image` in `data/home.yaml`.
+- **Hero video (optional):** put a short muted `.mp4` (under ~8 MB) in `static/video/` and set `hero.video: video/yourfile.mp4` in `data/home.yaml`. Set it back to `""` to return to the photo.
+- **Quick-glance numbers** under the hero: `highlights` in `data/home.yaml`.
 - **Headline:** change `hero.headline` / `subheadline` in `data/home.yaml`.
 
 ---

@@ -173,7 +173,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 
 - [x] Phase 0 — Foundation (live at https://ctr1cctr1v.github.io/dreamhavenvillas/)
 - [x] Phase 1 — Design system & shell
-- [ ] Phase 2 — Home
+- [x] Phase 2 — Home
 - [ ] Phase 3 — The Villa
 - [ ] Phase 4 — Gallery
 - [ ] Phase 5 — Resort & Explore

@@ -1,6 +1,8 @@
 # =====================================================================
 #  GUEST REVIEWS — shown on the home page. Use real guest reviews only.
 #  source: where the review came from, e.g. Airbnb, VRBO, Direct guest
+#  rating: optional star count (defaults to 5)
+#  Delete every review to hide the section.
 # =====================================================================
 
 - quote: TODO — paste a favorite guest review here.

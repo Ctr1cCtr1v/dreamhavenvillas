@@ -17,4 +17,5 @@ Marketing + direct-booking site for a luxury private 8-bedroom vacation rental a
 - Mobile-first.
 - Git: work on a branch per phase, commit locally, merge to `main`. **Owner approved (2026-10-27): push `main` at the end of each finished phase.** Pushing `main` publishes the live site, so push nothing else mid-phase without asking. Verify the deploy run succeeds after pushing.
 - Internal links in templates: never hard-code a leading-slash URL. Use `site.Home.RelPermalink`, menu `.URL`, or `strings.TrimPrefix "/" $url | relURL` for data-file URLs, so links work on both the github.io subpath and the custom domain.
+- Scroll fade-in uses `.reveal` (pure CSS `animation-timeline: view()`, in `@supports`). Don't add JS-gated hiding; content must never depend on JS to become visible.
 - Visual check: headless Chrome can't go below 500px wide, so check phones by putting the page in a 390px iframe and screenshotting that.

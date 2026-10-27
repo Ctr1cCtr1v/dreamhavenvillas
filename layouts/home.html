@@ -2,9 +2,18 @@
 {{- $h := hugo.Data.home }}
 {{- $book := site.Params.bookingURL }}
 
+{{/* ---- Hero ---- */}}
 <section class="hero">
   <div class="hero__media">
-    {{ partial "img.html" (dict "src" $h.hero.image "alt" "" "eager" true) }}
+    {{- if $h.hero.video }}
+      {{- $poster := "" }}
+      {{- with resources.Get (printf "images/%s" $h.hero.image) }}{{ $poster = (.Resize "1600x webp").RelPermalink }}{{ end }}
+      <video autoplay muted loop playsinline preload="metadata" poster="{{ $poster }}" aria-hidden="true">
+        <source src="{{ $h.hero.video | relURL }}" type="video/mp4">
+      </video>
+    {{- else }}
+      {{ partial "img.html" (dict "src" $h.hero.image "alt" "" "eager" true) }}
+    {{- end }}
   </div>
   <div class="hero__overlay">
     <p class="eyebrow">{{ $h.hero.eyebrow }}</p>
@@ -17,21 +26,37 @@
   </div>
 </section>
 
+{{/* ---- Highlights strip ---- */}}
+{{- with $h.highlights }}
+<section class="highlights" aria-label="At a glance">
+  <div class="container highlights__row">
+    {{- range . }}
+    <div class="highlight">
+      <span class="highlight__value">{{ .value }}</span>
+      <span class="highlight__label">{{ .label }}</span>
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{/* ---- Intro ---- */}}
 <section class="section">
-  <div class="container section-head">
+  <div class="container section-head reveal">
     {{ partial "sparkle.html" }}
     <h2>{{ $h.intro.heading }}</h2>
     <p class="lead">{{ $h.intro.text }}</p>
   </div>
 </section>
 
+{{/* ---- Story sections ---- */}}
 {{- range $i, $s := $h.sections }}
 <section class="section {{ if modBool $i 2 }}section--cream{{ end }}">
   <div class="container split {{ if not (modBool $i 2) }}split--flip{{ end }}">
-    <div class="split__media">
+    <div class="split__media reveal">
       {{ partial "img.html" (dict "src" $s.image "alt" $s.heading "sizes" "(min-width: 860px) 55vw, 100vw") }}
     </div>
-    <div>
+    <div class="reveal">
       <p class="eyebrow">{{ $s.eyebrow }}</p>
       <h2>{{ $s.heading }}</h2>
       <p>{{ $s.text }}</p>
@@ -41,16 +66,39 @@
 </section>
 {{- end }}
 
-<section class="section section--cream">
+{{/* ---- Reviews ---- */}}
+{{- with hugo.Data.reviews }}
+<section class="section section--navy">
   <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Plan your stay</p>
-      <h2>Explore Dream Haven</h2>
+    <div class="section-head reveal">
+      <p class="eyebrow">{{ $h.reviews.eyebrow }}</p>
+      <h2>{{ $h.reviews.heading }}</h2>
     </div>
-    <div class="grid grid--4">
+    <div class="reviews">
+      {{- range . }}
+      <figure class="review reveal">
+        {{- $r := .rating | default 5 }}
+        <div class="review__stars" aria-label="{{ $r }} out of 5 stars">{{ strings.Repeat $r "★" }}</div>
+        <blockquote class="quote">“{{ .quote }}”</blockquote>
+        <figcaption class="quote-cite">{{ .name }}{{ with .source }} · {{ . }}{{ end }}{{ with .date }} · {{ . }}{{ end }}</figcaption>
+      </figure>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{/* ---- Explore tiles ---- */}}
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Plan your stay</p>
+      <h2>{{ $h.tiles_heading }}</h2>
+    </div>
+    <div class="grid tiles">
       {{- range $h.tiles }}
-      <a class="tile" href="{{ strings.TrimPrefix "/" .url | relURL }}">
-        <div class="tile__media">{{ partial "img.html" (dict "src" .image "alt" "" "sizes" "(min-width: 1000px) 25vw, (min-width: 560px) 50vw, 100vw") }}</div>
+      <a class="tile reveal" href="{{ strings.TrimPrefix "/" .url | relURL }}">
+        <div class="tile__media">{{ partial "img.html" (dict "src" .image "alt" "" "sizes" "(min-width: 900px) 25vw, 50vw") }}</div>
         <span class="tile__label">{{ .label }}</span>
       </a>
       {{- end }}
@@ -58,13 +106,24 @@
   </div>
 </section>
 
+{{/* ---- Book Direct band ---- */}}
+{{- with $h.book_band }}
 <section class="book-band">
-  <div class="book-band__media">{{ partial "img.html" (dict "src" $h.book_band.image "alt" "") }}</div>
-  <div class="container book-band__body">
-    <p class="eyebrow">No booking-site fees</p>
-    <h2>{{ $h.book_band.heading }}</h2>
-    <p class="lead" style="color:#D5DAE5">{{ $h.book_band.text }}</p>
-    <div class="btn-row"><a class="btn btn--lg" href="{{ $book }}">{{ site.Params.bookingButtonText }}</a></div>
+  <div class="book-band__media">{{ partial "img.html" (dict "src" .image "alt" "") }}</div>
+  <div class="container book-band__body reveal">
+    <p class="eyebrow">{{ .eyebrow }}</p>
+    <h2>{{ .heading }}</h2>
+    <p class="lead">{{ .text }}</p>
+    {{- with .points }}
+    <ul class="book-points">
+      {{- range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{- end }}
+    <div class="btn-row">
+      <a class="btn btn--lg" href="{{ $book }}">{{ site.Params.bookingButtonText }}</a>
+      <a class="btn btn--lg btn--outline" href="{{ "book/" | relURL }}">Why book direct?</a>
+    </div>
   </div>
 </section>
+{{- end }}
 {{ end }}

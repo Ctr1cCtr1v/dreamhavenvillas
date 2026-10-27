@@ -164,7 +164,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 - Set `noindex: false` in hugo.yaml so search engines can list the site (it's true while placeholders are up).
 - Enable Pages, custom domain, DNS records at registrar, enforce HTTPS, verify domain.
 - ✅ 2026-10-27: custom domain set on the repo (Settings → Pages). GoDaddy DNS: 4 A records `@` → 185.199.108–111.153, CNAME `www` → ctr1cctr1v.github.io (NS/SOA/_dmarc/_domainconnect left as-is). Certificate issued; HTTPS enforced. The deploy workflow picks up the domain automatically via `steps.pages.outputs.base_url`, so no CNAME file is needed.
-- Remaining: flip `noindex: false` when the owner says go (after real photos/details); optional TXT domain verification at github.com/settings/pages.
+- Remaining: flip `noindex: false` when the owner says go (after real photos/details). Domain verified (TXT `_github-pages-challenge-Ctr1cCtr1v`, keep that record in GoDaddy).
 
 ### Phase 9 — Real content
 - Personal photos as interim replacements → professional photos (shoot scheduled ~week of 2026-11-02).

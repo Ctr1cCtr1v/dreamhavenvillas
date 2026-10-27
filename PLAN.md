@@ -170,7 +170,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 
 ## 8. Status
 
-- [x] Phase 0 — Foundation (GitHub repo + Pages enablement still pending — owner)
+- [x] Phase 0 — Foundation (live at https://ctr1cctr1v.github.io/dreamhavenvillas/)
 - [ ] Phase 1 — Design system & shell
 - [ ] Phase 2 — Home
 - [ ] Phase 3 — The Villa
@@ -193,7 +193,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 | Home facts (baths, sleeps, sq ft, bed config, pool/spa, game room…) | TODO |
 | Guest reviews to feature | TODO |
 | "Save" claim (specific % or general) | TODO |
-| GitHub repo created | TODO — owner: `! gh auth login`, or create empty repo |
+| GitHub repo | ✅ github.com/Ctr1cCtr1v/dreamhavenvillas (public), Pages via Actions |
 | Stack confirmed (Hugo) | ✅ |
 | Map pin | ✅ 28.30885, -81.64318 (US Census geocoder) |
 

@@ -24,7 +24,7 @@
       <p class="eyebrow">{{ $s.eyebrow }}</p>
       <h2>{{ $s.heading }}</h2>
       <p>{{ $s.text }}</p>
-      {{ with $s.link }}<p><a href="{{ .url | relURL }}">{{ .text }} →</a></p>{{ end }}
+      {{ with $s.link }}<p><a href="{{ strings.TrimPrefix "/" .url | relURL }}">{{ .text }} →</a></p>{{ end }}
     </div>
   </div>
 </section>

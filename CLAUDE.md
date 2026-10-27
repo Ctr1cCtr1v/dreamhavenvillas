@@ -16,3 +16,4 @@ Marketing + direct-booking site for a luxury private 8-bedroom vacation rental a
 - Owner is not a developer: keep data files simple, commented, and documented in `EDITING.md`.
 - Mobile-first.
 - Git: work on a branch per phase. Commit locally. **Never push without the owner's explicit OK** (pushing `main` publishes the live site).
+- Internal links in templates: never hard-code a leading-slash URL. Use `site.Home.RelPermalink`, menu `.URL`, or `strings.TrimPrefix "/" $url | relURL` for data-file URLs, so links work on both the github.io subpath and the custom domain.

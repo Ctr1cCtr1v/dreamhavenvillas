@@ -1,0 +1,8 @@
+{{- with hugo.Data.announcement }}
+  {{- if .show }}
+  <div class="announcement">
+    {{ .message }}
+    {{ with .link_text }}<a href="{{ hugo.Data.announcement.link | default site.Params.bookingURL }}">{{ . }} →</a>{{ end }}
+  </div>
+  {{- end }}
+{{- end }}

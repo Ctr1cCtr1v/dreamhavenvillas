@@ -1,0 +1,9 @@
+{{/* Generic page. Each page gets its own layout in later phases
+     (villa, gallery, resort, explore, book, faq); until then this is used. */}}
+{{ define "main" }}
+<section class="section container">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <p><em>This page is built out in a later phase — see PLAN.md.</em></p>
+</section>
+{{ end }}

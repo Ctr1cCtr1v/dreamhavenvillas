@@ -1,0 +1,162 @@
+# =====================================================================
+#  EXPLORE THE AREA — map pins, drive-time table, and attraction cards
+#  ⚠ Drive times & miles are ESTIMATES from the villa without traffic.
+#    Verify in Google Maps and adjust. lat/lng place the pin on the map.
+#  category must match one of the names under "categories".
+# =====================================================================
+
+categories:
+  - Theme Parks
+  - Beaches
+  - Golf
+  - Dining & Shopping
+  - Nature & Adventure
+  - Getting Here
+
+places:
+  # ---------------- Theme Parks ----------------
+  - name: Disney's Animal Kingdom
+    category: Theme Parks
+    drive: 12 min
+    miles: 7
+    lat: 28.3553
+    lng: -81.5901
+    text: Safaris, Pandora, and Expedition Everest.
+    image: area/placeholder-theme-parks.jpg
+    url: https://disneyworld.disney.go.com/destinations/animal-kingdom/
+
+  - name: EPCOT
+    category: Theme Parks
+    drive: 15 min
+    miles: 10
+    lat: 28.3747
+    lng: -81.5494
+    text: World Showcase, festivals, and Guardians of the Galaxy.
+    url: https://disneyworld.disney.go.com/destinations/epcot/
+
+  - name: Disney's Hollywood Studios
+    category: Theme Parks
+    drive: 15 min
+    miles: 10
+    lat: 28.3575
+    lng: -81.5582
+    text: Star Wars Galaxy's Edge and Toy Story Land.
+    url: https://disneyworld.disney.go.com/destinations/hollywood-studios/
+
+  - name: Magic Kingdom
+    category: Theme Parks
+    drive: 20 min
+    miles: 13
+    lat: 28.4177
+    lng: -81.5812
+    text: The classic — Cinderella Castle and nighttime fireworks.
+    url: https://disneyworld.disney.go.com/destinations/magic-kingdom/
+
+  - name: SeaWorld Orlando
+    category: Theme Parks
+    drive: 25 min
+    miles: 17
+    lat: 28.4114
+    lng: -81.4612
+    text: Coasters, marine life, and Aquatica next door.
+    url: https://seaworld.com/orlando/
+
+  - name: Universal Orlando Resort
+    category: Theme Parks
+    drive: 30 min
+    miles: 22
+    lat: 28.4744
+    lng: -81.4678
+    text: Universal Studios, Islands of Adventure, and Volcano Bay.
+    url: https://www.universalorlando.com/
+
+  - name: Universal Epic Universe
+    category: Theme Parks
+    drive: 30 min
+    miles: 21
+    lat: 28.4720
+    lng: -81.4483
+    text: Universal's newest park.
+    url: https://www.universalorlando.com/
+
+  - name: LEGOLAND Florida
+    category: Theme Parks
+    drive: 40 min
+    miles: 28
+    lat: 27.9886
+    lng: -81.6907
+    text: Perfect for younger kids, plus Peppa Pig Theme Park.
+    url: https://www.legoland.com/florida/
+
+  # ---------------- Beaches ----------------
+  - name: Cocoa Beach
+    category: Beaches
+    drive: 1 hr 15 min
+    miles: 75
+    lat: 28.3684
+    lng: -80.6046
+    text: Atlantic surf, the historic pier, and Ron Jon Surf Shop.
+    image: area/placeholder-beach.jpg
+
+  - name: Clearwater Beach
+    category: Beaches
+    drive: 1 hr 45 min
+    miles: 100
+    lat: 27.9775
+    lng: -82.8271
+    text: Soft white sand and Gulf sunsets.
+
+  # ---------------- Golf ----------------
+  - name: ChampionsGate Golf
+    category: Golf
+    drive: 15 min
+    miles: 8
+    lat: 28.2617
+    lng: -81.6236
+    text: TODO — Greg Norman-designed courses nearby.
+    image: area/placeholder-golf.jpg
+
+  # ---------------- Dining & Shopping ----------------
+  - name: Disney Springs
+    category: Dining & Shopping
+    drive: 20 min
+    miles: 13
+    lat: 28.3707
+    lng: -81.5197
+    text: Free-to-visit dining, shopping, and entertainment district.
+    image: area/placeholder-dining-shopping.jpg
+
+  - name: Old Town Kissimmee
+    category: Dining & Shopping
+    drive: 15 min
+    miles: 9
+    lat: 28.3317
+    lng: -81.5310
+    text: Classic cars, rides, and family fun on US-192.
+
+  # ---------------- Nature & Adventure ----------------
+  - name: Kennedy Space Center
+    category: Nature & Adventure
+    drive: 1 hr 15 min
+    miles: 75
+    lat: 28.5240
+    lng: -80.6827
+    text: Rockets, astronaut encounters, and real launches.
+
+  - name: Gatorland
+    category: Nature & Adventure
+    drive: 30 min
+    miles: 18
+    lat: 28.3557
+    lng: -81.4029
+    text: Old-Florida charm and thousands of gators.
+    image: area/placeholder-nature.jpg
+
+  # ---------------- Getting Here ----------------
+  - name: Orlando International Airport (MCO)
+    category: Getting Here
+    drive: 35 min
+    miles: 26
+    lat: 28.4312
+    lng: -81.3081
+    text: The main airport for Orlando vacations.

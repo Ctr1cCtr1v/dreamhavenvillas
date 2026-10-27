@@ -1,5 +1,6 @@
 .DS_Store
-photo-inbox/
+photo-inbox/*
+!photo-inbox/README.md
 public/
 resources/_gen/
 .hugo_build.lock

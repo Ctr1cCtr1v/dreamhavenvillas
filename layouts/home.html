@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{- $h := hugo.Data.home }}
+
+<section class="hero">
+  {{ partial "img.html" (dict "src" $h.hero.image "alt" $h.hero.headline "eager" true) }}
+  <div class="hero__text">
+    <p class="eyebrow" style="color:var(--gold-lt)">{{ $h.hero.eyebrow }}</p>
+    <h1>{{ $h.hero.headline }}</h1>
+    <p>{{ $h.hero.subheadline }}</p>
+    <p><a class="btn" href="{{ site.Params.bookingURL }}">{{ site.Params.bookingButtonText }}</a></p>
+  </div>
+</section>
+
+<section class="section container">
+  <h2>{{ $h.intro.heading }}</h2>
+  <p>{{ $h.intro.text }}</p>
+</section>
+
+{{- range $i, $s := $h.sections }}
+<section class="section {{ if modBool $i 2 }}section--cream{{ end }}">
+  <div class="container split {{ if not (modBool $i 2) }}split--flip{{ end }}">
+    {{ partial "img.html" (dict "src" $s.image "alt" $s.heading "sizes" "(min-width: 800px) 50vw, 100vw") }}
+    <div>
+      <p class="eyebrow">{{ $s.eyebrow }}</p>
+      <h2>{{ $s.heading }}</h2>
+      <p>{{ $s.text }}</p>
+      {{ with $s.link }}<p><a href="{{ .url | relURL }}">{{ .text }} →</a></p>{{ end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+<section class="section container" style="text-align:center">
+  <h2>{{ $h.book_band.heading }}</h2>
+  <p>{{ $h.book_band.text }}</p>
+  <p><a class="btn" href="{{ site.Params.bookingURL }}">{{ site.Params.bookingButtonText }}</a></p>
+</section>
+{{ end }}

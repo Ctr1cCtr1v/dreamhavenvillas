@@ -3,7 +3,7 @@
 **Domain:** dreamhavenvillas.com
 **Property:** 8875 Qin Loop, Kissimmee, FL 34747 — Windsor at Westside (gated resort community). Luxury private 8-bedroom villa.
 **Hosting:** GitHub Pages (free, HTTPS, custom domain), built by GitHub Actions
-**Stack:** Hugo (recommended — see §2; awaiting owner confirmation)
+**Stack:** Hugo 0.168 (confirmed)
 **Last updated:** 2026-10-26
 
 ---
@@ -62,7 +62,7 @@ Global: sticky header (logo, nav, **Book Direct** button, also in mobile menu), 
 The logo (gold script on deep navy, with a sparkle arc) sets the tone: **a touch of evening magic over a clean beach palette.**
 
 - **Palette** (one CSS file, easy to tune):
-  - Midnight navy `#0E1733` — logo ground, header/footer, dark feature sections
+  - Midnight navy `#0B1127` — exact logo background, header/footer, dark feature sections
   - Gold `#C9A04E` (gradient to `#E8C878`) — accents, dividers, sparkle details, highlight buttons
   - Ocean blue `#1F5F7A` — primary buttons, links
   - Pool blue `#8CC4D6` — light accents
@@ -95,17 +95,17 @@ dhvwebsite/
 │   ├── attractions.yaml      ← name, category, drive time, miles, lat/lng, blurb, photo, link
 │   ├── reviews.yaml          ← guest testimonials
 │   ├── faq.yaml              ← questions & answers
-│   ├── gallery.yaml          ← photos with category + caption (order = display order)
+│   ├── gallery.yaml          ← gallery tabs, captions, videos (photos auto-load from folders)
 │   └── announcement.yaml     ← seasonal banner: on/off, message, link
 ├── content/                  ← one Markdown file per page (long-form prose)
-├── layouts/                  ← templates & components (rarely touched)
+├── layouts/                  ← templates; layouts/_partials/ = components (rarely touched)
 ├── assets/
 │   ├── css/theme.css         ← colors & fonts as variables
 │   ├── js/
 │   └── images/               ← full-size photos; Hugo auto-generates web sizes
 │       ├── brand/            ← logos (source/ holds print files)
 │       ├── hero/ exterior/ pool/ living/ kitchen/ bedrooms/ game-room/
-│       ├── resort/ area/ placeholders/
+│       ├── resort/ area/      (placeholders are placeholder-*.jpg inside each folder)
 ├── photo-inbox/              ← drop raw photos here (git-ignored); prep script moves them in
 ├── tools/prep-photos.sh
 ├── .github/workflows/        ← auto-deploy to GitHub Pages on push to main
@@ -136,6 +136,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 - Placeholder image set, `prep-photos.sh`, `EDITING.md`.
 
 ### Phase 1 — Design system & shell
+- Mobile hamburger menu (header currently wraps on phones). Verify with real device emulation; headless Chrome can't go below ~500px.
 - Colors, fonts, spacing, buttons, cards, section styles. Header with logo/nav/Book button, mobile menu, footer, announcement banner.
 
 ### Phase 2 — Home page
@@ -169,7 +170,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 
 ## 8. Status
 
-- [ ] Phase 0 — Foundation
+- [x] Phase 0 — Foundation (GitHub repo + Pages enablement still pending — owner)
 - [ ] Phase 1 — Design system & shell
 - [ ] Phase 2 — Home
 - [ ] Phase 3 — The Villa
@@ -192,8 +193,9 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 | Home facts (baths, sleeps, sq ft, bed config, pool/spa, game room…) | TODO |
 | Guest reviews to feature | TODO |
 | "Save" claim (specific % or general) | TODO |
-| GitHub repo created | TODO |
-| Stack confirmed (Hugo) | Awaiting owner |
+| GitHub repo created | TODO — owner: `! gh auth login`, or create empty repo |
+| Stack confirmed (Hugo) | ✅ |
+| Map pin | ✅ 28.30885, -81.64318 (US Census geocoder) |
 
 ## 10. Notes & Cautions
 

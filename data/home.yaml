@@ -1,0 +1,75 @@
+# =====================================================================
+#  HOME PAGE
+#  Photos: paths are inside assets/images/  (e.g. pool/my-photo.jpg)
+#  Keep paragraphs short — 2 to 3 sentences reads best on phones.
+# =====================================================================
+
+hero:
+  image: hero/placeholder-hero.jpg
+  video: ""            # optional: path to a short muted .mp4 in static/video/ — overrides image
+  eyebrow: Windsor at Westside · Kissimmee, Florida
+  headline: Where Florida dreams come home
+  subheadline: A luxury private 8-bedroom pool villa, minutes from the magic.
+
+intro:
+  heading: Your private haven, right by all the action
+  text: >-
+    Spend your days chasing thrills at the world's most famous theme parks,
+    then come home to your own sparkling pool, room for everyone, and the
+    quiet of a gated resort community. TODO: refine intro copy.
+
+# Story sections, shown top to bottom. Each alternates photo left / right.
+# "link" is optional — it adds a button to that page.
+sections:
+  - eyebrow: The Villa
+    heading: Room for everyone to spread out
+    text: >-
+      Eight bedrooms, open living spaces made for gathering, and a kitchen
+      ready for family feasts. TODO: refine.
+    image: living/placeholder-living-1.jpg
+    link: { text: Tour the villa, url: /the-villa/ }
+
+  - eyebrow: The Pool
+    heading: Your own private pool, steps from the living room
+    text: >-
+      Morning coffee on the lanai, afternoon splashes, and starry nights by
+      the water. TODO: refine (heated? spa? screened lanai?).
+    image: pool/placeholder-pool-1.jpg
+    link: { text: See the gallery, url: /gallery/ }
+
+  - eyebrow: The Resort
+    heading: Gated resort living at Windsor at Westside
+    text: >-
+      Lazy river, water slides, clubhouse dining and more — all included with
+      your stay. TODO: confirm resort amenities.
+    image: resort/placeholder-lazy-river.jpg
+    link: { text: Explore the resort, url: /windsor-at-westside/ }
+
+  - eyebrow: The Parks
+    heading: Minutes from the magic
+    text: >-
+      Walt Disney World, Universal Orlando, SeaWorld and more are an easy
+      drive away — beat the crowds and be home for a pool-side dinner.
+    image: area/placeholder-theme-parks.jpg
+    link: { text: Explore the area, url: /explore/ }
+
+  - eyebrow: Beyond the Parks
+    heading: Beaches, golf, and Florida sunshine
+    text: >-
+      Championship golf nearby, Gulf and Atlantic beaches within a day trip,
+      and natural springs to explore.
+    image: area/placeholder-beach.jpg
+
+# Image tiles row ("Explore the villa") — short labels, link to pages
+tiles:
+  - { label: The Villa,  image: exterior/placeholder-front-1.jpg, url: /the-villa/ }
+  - { label: Gallery,    image: pool/placeholder-pool-2.jpg,     url: /gallery/ }
+  - { label: The Resort, image: resort/placeholder-clubhouse.jpg, url: /windsor-at-westside/ }
+  - { label: Explore,    image: area/placeholder-golf.jpg,        url: /explore/ }
+
+book_band:
+  heading: Book direct & save
+  text: >-
+    Same villa, same stay — without the booking-site service fees. Reserve
+    directly with our management team and keep the savings for the parks.
+  image: pool/placeholder-pool-3.jpg

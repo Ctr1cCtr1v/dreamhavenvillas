@@ -1,0 +1,49 @@
+# =====================================================================
+#  WINDSOR AT WESTSIDE — the resort community page
+#  ⚠ Amenities below are a DRAFT from public info — confirm each one
+#  (and whether any require a fee or wristband) before launch.
+# =====================================================================
+
+intro:
+  heading: Resort living at Windsor at Westside
+  text: >-
+    Your villa sits inside Windsor at Westside, a gated resort community in
+    Kissimmee designed for vacationers. Step out of your private home and
+    into a resort clubhouse full of ways to play. TODO: refine.
+  image: resort/placeholder-clubhouse.jpg
+
+perks:
+  - name: Gated Security
+    text: Gated entry for peace of mind.   # TODO: confirm 24/7 staffed gate?
+    image: exterior/placeholder-aerial.jpg
+
+  - name: Resort Pool & Water Slides
+    text: TODO — confirm details.
+    image: resort/placeholder-resort-pool.jpg
+
+  - name: Lazy River
+    text: TODO — confirm details.
+    image: resort/placeholder-lazy-river.jpg
+
+  - name: Splash Pad
+    text: TODO — confirm.
+    image: resort/placeholder-resort-pool.jpg
+
+  - name: Fitness Center
+    text: TODO — confirm.
+    image: resort/placeholder-fitness.jpg
+
+  - name: Clubhouse Dining & Bar
+    text: TODO — confirm restaurant / bar / market.
+    image: resort/placeholder-clubhouse.jpg
+
+  - name: Sports Courts
+    text: TODO — tennis, pickleball, basketball, volleyball?
+    image: resort/placeholder-clubhouse.jpg
+
+  - name: Game Room & Theater
+    text: TODO — confirm.
+    image: resort/placeholder-clubhouse.jpg
+
+access_note: >-
+  TODO: How guests access resort amenities (wristbands, resort fee, hours).

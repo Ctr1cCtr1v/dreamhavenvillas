@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="{{ "/" | relURL }}" aria-label="{{ site.Title }} home">
+      {{- with resources.Get "images/brand/logo-wide.png" }}
+        {{- $logo := .Resize "400x webp" }}
+        <img src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="{{ site.Title }}">
+      {{- end }}
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      {{- range site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{- end }}
+      <a class="btn" href="{{ site.Params.bookingURL }}">{{ site.Params.bookingButtonText }}</a>
+    </nav>
+  </div>
+</header>

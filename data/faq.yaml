@@ -1,0 +1,35 @@
+# =====================================================================
+#  FAQ — grouped questions. Answers can use **bold** and [links](url).
+# =====================================================================
+
+- group: Booking
+  questions:
+    - q: Why is booking direct cheaper?
+      a: >-
+        Booking sites like Airbnb and VRBO add guest service fees on top of
+        the nightly rate. When you book directly with our management team,
+        those fees disappear — and we pass the savings on to you.
+    - q: Is booking direct safe?
+      a: TODO — describe the management company and secure payment.
+    - q: What is the cancellation policy?
+      a: TODO
+    - q: Is there a minimum stay?
+      a: TODO
+
+- group: Your Stay
+  questions:
+    - q: What time is check-in and check-out?
+      a: TODO
+    - q: Is the pool heated?
+      a: TODO
+    - q: Are pets allowed?
+      a: TODO
+    - q: Where do we park?
+      a: TODO
+
+- group: The Resort
+  questions:
+    - q: Can we use the Windsor at Westside resort amenities?
+      a: TODO
+    - q: How far is Disney World?
+      a: About 12–20 minutes by car, depending on the park.

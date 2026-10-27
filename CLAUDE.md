@@ -5,7 +5,9 @@ Marketing + direct-booking site for a luxury private 8-bedroom vacation rental a
 **Start every session by reading `PLAN.md`.** It holds the site map, design direction, folder structure, git workflow, phase list, status checklist, and open items. Update the status and open items as things change.
 
 ## Conventions
-- Hugo (pending owner confirmation), deployed by a GitHub Actions workflow.
+- Hugo 0.168 with the new template layout (`layouts/home.html`, `layouts/page.html`, `layouts/_partials/`). Use `hugo.Data` (not `site.Data`). Deployed by `.github/workflows/deploy.yml`; keep its HUGO_VERSION in sync with local.
+- Responsive images: always use `partial "img.html" (dict "src" "<folder>/<file>.jpg" "alt" …)`. Paths are relative to `assets/images/`.
+- Gallery auto-loads every image in the folders listed in `data/gallery.yaml`.
 - Content lives in `data/*.yaml` and `content/*.md`. Templates in `layouts/` must not hard-code copy.
 - Booking URL and contact info are defined once in `hugo.yaml`. Never duplicate them.
 - Unknown facts are marked `TODO:`; placeholder images are clearly labeled.

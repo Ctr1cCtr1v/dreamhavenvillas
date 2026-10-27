@@ -1,0 +1,69 @@
+# =====================================================================
+#  DREAM HAVEN VILLAS — SITE SETTINGS
+#  The items under "params" are the ones you'll most likely edit.
+#  Anything defined here is used on every page — change it once here.
+# =====================================================================
+
+baseURL: https://dreamhavenvillas.com/
+locale: en-US
+title: Dream Haven Villas
+enableRobotsTXT: true
+
+params:
+  tagline: Luxury Private 8-Bedroom Villa · Orlando, Florida
+  description: >-
+    A luxury private 8-bedroom pool villa in Windsor at Westside, a gated
+    resort community minutes from Walt Disney World. Book direct and save.
+
+  # --- Booking -------------------------------------------------------
+  # TODO: replace with the management company's booking page for this home
+  bookingURL: https://example.com/TODO-booking-link
+  bookingButtonText: Book Direct & Save
+
+  # --- Contact (leave a line blank "" to hide it on the site) -------
+  managementCompany: "TODO: Management Company Name"
+  email: ""   # TODO
+  phone: ""   # TODO
+
+  # --- Location ------------------------------------------------------
+  address:
+    street: 8875 Qin Loop
+    city: Kissimmee
+    state: FL
+    zip: "34747"
+  community: Windsor at Westside
+  # Map pin (from US Census geocoder for 8875 Qin Loop)
+  latitude: 28.30885
+  longitude: -81.64318
+
+  # --- Social links (leave blank "" to hide) ------------------------
+  social:
+    instagram: ""
+    facebook: ""
+    tiktok: ""
+
+# --- Navigation menu (order = order shown) -----------------------------
+menus:
+  main:
+    - { name: The Villa, pageRef: /the-villa, weight: 10 }
+    - { name: Gallery, pageRef: /gallery, weight: 20 }
+    - { name: The Resort, pageRef: /windsor-at-westside, weight: 30 }
+    - { name: Explore, pageRef: /explore, weight: 40 }
+    - { name: FAQ, pageRef: /faq, weight: 50 }
+
+# --- Technical settings (rarely changed) -------------------------------
+imaging:
+  jpeg: { quality: 82 }
+  webp: { quality: 80 }
+  resampleFilter: Lanczos
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies: {}
+disableKinds: [taxonomy, term, RSS]
+
+sitemap:
+  changefreq: monthly

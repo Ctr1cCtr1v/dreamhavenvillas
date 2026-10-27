@@ -1,0 +1,15 @@
+{{- $p := site.Params }}
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>{{ site.Title }}</strong><br>
+      {{ $p.address.street }}, {{ $p.address.city }}, {{ $p.address.state }} {{ $p.address.zip }}<br>
+      {{ $p.community }}</p>
+    <p>
+      Managed by {{ $p.managementCompany }}
+      {{ with $p.email }}<br><a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+      {{ with $p.phone }}<br><a href="tel:{{ . }}">{{ . }}</a>{{ end }}
+    </p>
+    <p><a class="btn" href="{{ $p.bookingURL }}">{{ $p.bookingButtonText }}</a></p>
+    <p><small>© {{ now.Year }} {{ site.Title }}</small></p>
+  </div>
+</footer>

@@ -1,0 +1,26 @@
+# =====================================================================
+#  GALLERY
+#  The gallery shows EVERY photo in each folder below automatically —
+#  just drop a photo into the folder (assets/images/<folder>/).
+#  Photos are sorted by filename, so prefix with numbers to set order:
+#      01-pool-sunset.jpg, 02-pool-day.jpg, ...
+#  Tabs appear in the order listed here. Delete a line to hide a tab.
+# =====================================================================
+
+categories:
+  - { folder: exterior,  label: Exterior }
+  - { folder: pool,      label: Pool & Lanai }
+  - { folder: living,    label: Living }
+  - { folder: kitchen,   label: Kitchen & Dining }
+  - { folder: bedrooms,  label: Bedrooms }
+  - { folder: game-room, label: Game Room }
+  - { folder: resort,    label: The Resort }
+  - { folder: area,      label: The Area }
+
+# Optional captions, by file path. Photos without one show no caption.
+captions:
+  pool/placeholder-pool-1.jpg: Private pool and lanai
+
+# Videos (YouTube or Vimeo links). Leave the list empty to hide the section.
+videos: []
+#  - { title: Villa walkthrough, url: https://www.youtube.com/watch?v=XXXX }

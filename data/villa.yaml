@@ -1,0 +1,125 @@
+# =====================================================================
+#  THE VILLA — property details page
+#  Fill in every TODO. Remove a line entirely to hide it on the site.
+# =====================================================================
+
+stats:
+  bedrooms: 8
+  bathrooms: "TODO"      # e.g. "5.5"
+  sleeps: "TODO"         # e.g. 16
+  square_feet: "TODO"    # e.g. "3,900"
+  pool: Private pool     # TODO: e.g. "Heated pool & spa"
+  parking: "TODO"        # e.g. "2-car garage + driveway"
+
+overview: >-
+  TODO: A 2–3 paragraph description of the home as a whole — layout, style,
+  what makes it special.
+
+# ---------------------------------------------------------------------
+#  ROOMS — shown in this order. Copy a block to add a room.
+#  beds: list each bed, e.g. "King", "Queen", "2 Twins", "Bunk (Twin/Twin)"
+#  photos: first photo is the main one
+# ---------------------------------------------------------------------
+rooms:
+  - name: Living Room
+    floor: First floor
+    description: TODO
+    features: [TODO]
+    photos: [living/placeholder-living-1.jpg, living/placeholder-living-2.jpg, living/placeholder-living-3.jpg]
+
+  - name: Kitchen & Dining
+    floor: First floor
+    description: TODO
+    features: [TODO]
+    photos: [kitchen/placeholder-kitchen-1.jpg, kitchen/placeholder-kitchen-2.jpg, kitchen/placeholder-dining.jpg]
+
+  - name: Game Room
+    floor: TODO
+    description: TODO
+    features: [TODO]
+    photos: [game-room/placeholder-game-room-1.jpg, game-room/placeholder-game-room-2.jpg]
+
+  - name: Pool & Lanai
+    floor: Outdoors
+    description: TODO
+    features: [TODO]
+    photos: [pool/placeholder-pool-1.jpg, pool/placeholder-pool-2.jpg, pool/placeholder-pool-3.jpg, pool/placeholder-pool-4.jpg]
+
+  - name: Bedroom 1 — Primary Suite
+    floor: TODO
+    beds: [TODO]
+    bath: TODO           # e.g. "Private en-suite with walk-in shower"
+    description: TODO
+    features: [TODO]
+    photos: [bedrooms/placeholder-bedroom-1.jpg]
+
+  - name: Bedroom 2
+    floor: TODO
+    beds: [TODO]
+    bath: TODO
+    description: TODO
+    features: [TODO]
+    photos: [bedrooms/placeholder-bedroom-2.jpg]
+
+  - name: Bedroom 3
+    floor: TODO
+    beds: [TODO]
+    bath: TODO
+    description: TODO
+    features: [TODO]
+    photos: [bedrooms/placeholder-bedroom-3.jpg]
+
+  - name: Bedroom 4
+    floor: TODO
+    beds: [TODO]
+    bath: TODO
+    description: TODO
+    features: [TODO]
+    photos: [bedrooms/placeholder-bedroom-4.jpg]
+
+  - name: Bedroom 5
+    floor: TODO
+    beds: [TODO]
+    bath: TODO
+    description: TODO
+    features: [TODO]
+    photos: [bedrooms/placeholder-bedroom-5.jpg]
+
+  - name: Bedroom 6
+    floor: TODO
+    beds: [TODO]
+    bath: TODO
+    description: TODO
+    features: [TODO]
+    photos: [bedrooms/placeholder-bedroom-6.jpg]
+
+  - name: Bedroom 7
+    floor: TODO
+    beds: [TODO]
+    bath: TODO
+    description: TODO
+    features: [TODO]
+    photos: [bedrooms/placeholder-bedroom-7.jpg]
+
+  - name: Bedroom 8
+    floor: TODO
+    beds: [TODO]
+    bath: TODO
+    description: TODO
+    features: [TODO]
+    photos: [bedrooms/placeholder-bedroom-8.jpg]
+
+# ---------------------------------------------------------------------
+#  HOUSE INFO
+# ---------------------------------------------------------------------
+house_info:
+  check_in: "TODO"        # e.g. "4:00 PM"
+  check_out: "TODO"       # e.g. "10:00 AM"
+  minimum_stay: "TODO"
+  pets: "TODO"
+  smoking: No smoking
+  events: "TODO"
+  wifi: "TODO"            # e.g. "High-speed fiber, 1 Gbps"
+
+house_rules:
+  - TODO

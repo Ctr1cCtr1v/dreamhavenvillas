@@ -1,0 +1,9 @@
+# =====================================================================
+#  SEASONAL ANNOUNCEMENT BANNER — thin strip at the very top of every page
+#  Set show: true to turn it on, false to hide it.
+# =====================================================================
+
+show: false
+message: "Holiday weeks are filling fast — book direct and save!"
+link_text: Check availability
+link: ""          # leave blank to use the booking link from hugo.yaml

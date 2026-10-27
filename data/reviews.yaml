@@ -1,0 +1,19 @@
+# =====================================================================
+#  GUEST REVIEWS — shown on the home page. Use real guest reviews only.
+#  source: where the review came from, e.g. Airbnb, VRBO, Direct guest
+# =====================================================================
+
+- quote: TODO — paste a favorite guest review here.
+  name: TODO Guest Name
+  source: Airbnb
+  date: TODO 2026
+
+- quote: TODO — paste a second review here.
+  name: TODO Guest Name
+  source: VRBO
+  date: TODO 2026
+
+- quote: TODO — paste a third review here.
+  name: TODO Guest Name
+  source: Direct guest
+  date: TODO 2026

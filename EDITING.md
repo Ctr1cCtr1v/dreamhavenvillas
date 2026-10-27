@@ -66,11 +66,20 @@ Photo paths are always relative to `assets/images/`.
 sorted by filename, so add numbers to control the order:
 `01-front.jpg`, `02-pool.jpg`, …
 
+Tap any photo, on the Gallery page or in a room's photo grid, to open the
+full-screen viewer. Swipe or use the arrow keys to move through the set.
+
+**Captions:** add them in `data/gallery.yaml` under `captions`, keyed by
+path, e.g. `pool/01-pool-sunset.jpg: Sunset over the pool`.
+**Videos:** paste YouTube or Vimeo links under `videos` in the same file.
+
 ### Replacing a placeholder
-Placeholder photos are named `placeholder-….jpg`. Either point the data file
-at your new photo, or delete the placeholder and give your photo the same
-name. When a real photo is in place, delete the matching placeholder so it
-doesn't appear in the gallery.
+Placeholder photos are named `placeholder-….jpg`.
+- **Gallery:** as soon as a folder has one real photo, that folder's placeholders
+  disappear from the gallery automatically.
+- **Other pages** (home, villa rooms, resort…) name their photos in the data
+  files, so point those lines at your new filenames.
+Once a folder's placeholders aren't used anywhere, you can delete them.
 
 You never need to make phone or desktop sizes. The site does that automatically.
 

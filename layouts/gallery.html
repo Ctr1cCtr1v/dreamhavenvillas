@@ -1,0 +1,80 @@
+{{/* Gallery — shows every photo in the folders listed in data/gallery.yaml.
+     A folder's placeholder-*.jpg files are skipped automatically once it
+     contains at least one real photo. */}}
+{{ define "main" }}
+{{- $g := hugo.Data.gallery }}
+{{- $captions := $g.captions | default dict }}
+{{ partial "page-hero.html" . }}
+
+{{/* Collect photos per category */}}
+{{- $cats := slice }}
+{{- range $g.categories }}
+  {{- $all := slice }}
+  {{- range sort (resources.Match (printf "images/%s/*" .folder)) "Name" }}
+    {{- if in (slice ".jpg" ".jpeg" ".png" ".webp") (lower (path.Ext .Name)) }}{{ $all = $all | append . }}{{ end }}
+  {{- end }}
+  {{- $real := slice }}
+  {{- range $all }}{{ if not (hasPrefix (path.Base .Name) "placeholder-") }}{{ $real = $real | append . }}{{ end }}{{ end }}
+  {{- $photos := cond (gt (len $real) 0) $real $all }}
+  {{- if $photos }}{{ $cats = $cats | append (dict "folder" .folder "label" .label "photos" $photos) }}{{ end }}
+{{- end }}
+
+<section class="section section--gallery">
+  <div class="container">
+    {{- if gt (len $cats) 1 }}
+    <div class="filters" role="toolbar" aria-label="Filter photos" hidden>
+      <button type="button" class="filter is-active" aria-pressed="true" data-filter="all">All</button>
+      {{- range $cats }}
+      <button type="button" class="filter" aria-pressed="false" data-filter="{{ .folder }}">{{ .label }} <span class="filter__count">{{ len .photos }}</span></button>
+      {{- end }}
+    </div>
+    {{- end }}
+
+    <div class="gallery">
+      {{- range $c := $cats }}
+        {{- range $i, $img := $c.photos }}
+          {{- $key := strings.TrimPrefix "/images/" $img.Name }}
+          {{- $caption := index $captions $key | default $c.label }}
+          {{- $big := $img }}
+          {{- if gt $img.Width 2000 }}{{ $big = $img.Resize "2000x webp" }}{{ else }}{{ $big = $img.Resize (printf "%dx webp" $img.Width) }}{{ end }}
+          <a class="gallery__item" href="{{ $big.RelPermalink }}" data-lightbox="gallery" data-category="{{ $c.folder }}" data-caption="{{ $caption }}">
+            {{ partial "img.html" (dict "src" $key "alt" $caption "sizes" "(min-width: 1100px) 33vw, 50vw") }}
+          </a>
+        {{- end }}
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{/* ---- Videos ---- */}}
+{{- with $g.videos }}
+<section class="section section--cream" id="videos">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Videos</p>
+      <h2>See it in motion</h2>
+    </div>
+    <div class="grid grid--2">
+      {{- range $v := . }}
+        {{- $u := urls.Parse $v.url }}
+        {{- $embed := "" }}
+        {{- if in $u.Host "youtu.be" }}{{ $embed = printf "https://www.youtube-nocookie.com/embed%s" $u.Path }}
+        {{- else if in $u.Host "youtube" }}{{ $embed = printf "https://www.youtube-nocookie.com/embed/%s" ($u.Query.Get "v") }}
+        {{- else if in $u.Host "vimeo" }}{{ $embed = printf "https://player.vimeo.com/video%s" $u.Path }}
+        {{- end }}
+        {{- with $embed }}
+        <figure class="video reveal">
+          <div class="video__frame"><iframe src="{{ . }}" title="{{ $v.title }}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+          <figcaption>{{ $v.title }}</figcaption>
+        </figure>
+        {{- else }}
+          {{- warnf "gallery: unrecognized video URL %s (use a YouTube or Vimeo link)" $v.url }}
+        {{- end }}
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{ partial "book-band.html" . }}
+{{ end }}

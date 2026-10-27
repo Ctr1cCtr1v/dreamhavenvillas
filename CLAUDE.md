@@ -9,7 +9,9 @@ Marketing + direct-booking site for a luxury private 8-bedroom vacation rental a
 - Responsive images: always use `partial "img.html" (dict "src" "<folder>/<file>.jpg" "alt" …)`. Paths are relative to `assets/images/`.
 - Hugo `cond` evaluates both branches. Never put image processing (`.Resize`, etc.) inside `cond`; use if/else.
 - Reusable partials: `photo-grid.html` (lightbox-ready, `data-lightbox` groups), `book-band.html` (text from data/home.yaml), `page-hero.html`, `sparkle.html`.
-- Gallery auto-loads every image in the folders listed in `data/gallery.yaml`.
+- Gallery auto-loads every image in the folders listed in `data/gallery.yaml`, sorted by filename; a folder's `placeholder-*` files are skipped once it has a real photo.
+- Lightbox (`assets/js/lightbox.js`, bundled with main.js): any `a[data-lightbox="group"]` opens in the viewer; items inside `[hidden]` are skipped.
+- `hugo server` ignores static files starting with `_`, and its watcher can go stale. Restart it if new files 404.
 - Content lives in `data/*.yaml` and `content/*.md`. Templates in `layouts/` must not hard-code copy.
 - Booking URL and contact info are defined once in `hugo.yaml`. Never duplicate them.
 - Unknown facts are marked `TODO:`; placeholder images are clearly labeled.

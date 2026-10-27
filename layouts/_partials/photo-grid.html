@@ -21,7 +21,7 @@
          data-lightbox="{{ $group }}" data-caption="{{ $name }}">
         {{- if lt $i 3 }}
           {{ partial "img.html" (dict "src" $src "alt" $alt "sizes" (cond (eq $i 0) ($.sizes | default "(min-width: 860px) 40vw, 100vw") "(min-width: 860px) 20vw, 50vw")) }}
-          {{- if and (eq $i 2) (gt $count 3) }}<span class="photo-grid__more">+{{ sub $count 3 }} photos</span>{{ end }}
+          {{- if and (eq $i 2) (gt $count 3) }}{{ $more := sub $count 3 }}<span class="photo-grid__more">+{{ $more }} {{ cond (eq $more 1) "photo" "photos" }}</span>{{ end }}
         {{- end }}
       </a>
     {{- else }}

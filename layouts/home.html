@@ -12,7 +12,29 @@
         <source src="{{ $h.hero.video | relURL }}" type="video/mp4">
       </video>
     {{- else }}
-      {{ partial "img.html" (dict "src" $h.hero.image "alt" "" "eager" true) }}
+      {{/* Slideshow: hero.image first, then every other photo in the hero
+           folder (by filename). Placeholders drop out once a real photo exists. */}}
+      {{- $all := slice }}
+      {{- range sort (resources.Match "images/hero/*") "Name" }}
+        {{- if in (slice ".jpg" ".jpeg" ".png" ".webp") (lower (path.Ext .Name)) }}{{ $all = $all | append (strings.TrimPrefix "/images/" .Name) }}{{ end }}
+      {{- end }}
+      {{- $real := slice }}
+      {{- range $all }}{{ if not (hasPrefix (path.Base .) "placeholder-") }}{{ $real = $real | append . }}{{ end }}{{ end }}
+      {{- $pool := cond (gt (len $real) 0) $real $all }}
+      {{- $slides := slice }}
+      {{- with $h.hero.image }}{{ if not (and (hasPrefix (path.Base .) "placeholder-") $real) }}{{ $slides = slice . }}{{ end }}{{ end }}
+      {{- range $pool }}{{ if not (in $slides .) }}{{ $slides = $slides | append . }}{{ end }}{{ end }}
+      {{- if eq $h.hero.slideshow false }}{{ $slides = first 1 $slides }}{{ end }}
+      <div class="hero__slides"{{ if gt (len $slides) 1 }} data-slideshow data-interval="{{ $h.hero.slide_seconds | default 6 }}"{{ end }}>
+        {{- range $i, $s := $slides }}
+          {{ partial "img.html" (dict "src" $s "alt" "" "eager" (eq $i 0) "defer" (gt $i 0) "class" (cond (eq $i 0) "hero__slide is-active" "hero__slide")) }}
+        {{- end }}
+      </div>
+      {{- if gt (len $slides) 1 }}
+      <button type="button" class="hero__pause" aria-pressed="false" aria-label="Pause slideshow" hidden>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/><path class="i-play" d="M8 5l11 7-11 7z"/></svg>
+      </button>
+      {{- end }}
     {{- end }}
   </div>
   <div class="hero__overlay">

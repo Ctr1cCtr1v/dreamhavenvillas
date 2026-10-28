@@ -6,7 +6,13 @@
 # =====================================================================
 
 hero:
+  # SLIDESHOW: every photo in assets/images/hero/ rotates with a slow fade.
+  # "image" below is shown FIRST and is also the photo used for link
+  # previews when someone shares the site. Other photos follow in filename
+  # order (name them 01-pool.jpg, 02-front.jpg… to choose the order).
   image: hero/placeholder-hero.jpg
+  slideshow: true        # false = show only the "image" photo
+  slide_seconds: 6       # how long each photo stays up
   # Optional short, muted background video (under ~8 MB). Put the .mp4 in
   # static/video/ and write e.g. video/hero.mp4 — the image above is shown
   # while it loads and on phones with data-saver on.

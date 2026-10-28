@@ -344,6 +344,28 @@ h4 { font-size: 1.2rem; }
 /* ---- Hero video ---------------------------------------------------- */
 .hero__media video { pointer-events: none; }
 
+/* ---- Hero slideshow --------------------------------------------------
+   Slides stack on top of each other; the active one fades in while slowly
+   zooming. Without JavaScript only the first photo shows. */
+.hero__slides { position: relative; z-index: 0; }
+.hero__slide:not(:first-child) { position: absolute; inset: 0; }
+.hero__slide { opacity: 0; transition: opacity 1.6s ease, transform 0s 1.6s; }
+.hero__slide.is-active { opacity: 1; z-index: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero__slide.is-active { transform: scale(1.06); transition: opacity 1.6s ease, transform 9s ease-out; }
+}
+.hero__pause {
+  position: absolute; z-index: 2; right: max(var(--gutter), env(safe-area-inset-right, 0px)); bottom: 1.25rem;
+  width: 2.5rem; height: 2.5rem; display: grid; place-items: center;
+  border: 1px solid rgba(255,255,255,.45); border-radius: 50%;
+  background: rgba(11,17,39,.45); color: var(--white); cursor: pointer;
+  backdrop-filter: blur(4px); transition: background .2s;
+}
+.hero__pause:hover { background: rgba(11,17,39,.7); }
+.hero__pause svg { fill: currentColor; }
+.hero__pause .i-play, .hero__pause[aria-pressed="true"] .i-pause { display: none; }
+.hero__pause[aria-pressed="true"] .i-play { display: inline; }
+
 /* ---- Scroll reveal ---------------------------------------------------
    Gentle fade-up as sections scroll into view. Pure CSS: browsers without
    scroll-driven animation support simply show everything, never hidden. */

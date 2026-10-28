@@ -55,7 +55,7 @@
 {{- $lcss := resources.Get "vendor/leaflet/leaflet.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $lcss.RelPermalink }}" integrity="{{ $lcss.Data.Integrity }}">
 {{- end }}
-{{- $js := slice (resources.Get "js/main.js") (resources.Get "js/lightbox.js") | resources.Concat "js/site.js" | minify | fingerprint }}
+{{- $js := slice (resources.Get "js/main.js") (resources.Get "js/lightbox.js") (resources.Get "js/hero.js") | resources.Concat "js/site.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 
 {{- if or .IsHome (eq .Layout "villa") }}{{ partial "schema-rental.html" (dict "page" . "image" $share) }}{{ end }}

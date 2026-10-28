@@ -3,7 +3,8 @@
   download small files and desktops get sharp ones.
 
   Usage: {{ partial "img.html" (dict "src" "pool/photo.jpg" "alt" "Pool at sunset") }}
-  Options: sizes (default "100vw"), class, eager (true for above-the-fold images)
+  Options: sizes (default "100vw"), class, eager (true for above-the-fold images),
+           defer (true = src/srcset left as data- attributes for JS to load)
 */}}
 {{- $path := printf "images/%s" .src }}
 {{- with resources.Get $path }}
@@ -17,13 +18,14 @@
   {{- end }}
   {{- $fallback := $img }}
   {{- if gt $img.Width 1200 }}{{ $fallback = $img.Resize "1200x webp" }}{{ else }}{{ $fallback = $img.Resize (printf "%dx webp" $img.Width) }}{{ end }}
-  <img src="{{ $fallback.RelPermalink }}"
-       srcset="{{ delimit $srcset ", " }}"
+  {{- /* defer: no src yet — JavaScript loads it when needed (hero slideshow) */}}
+  <img {{ if $.defer }}data-{{ end }}src="{{ $fallback.RelPermalink }}"
+       {{ if $.defer }}data-{{ end }}srcset="{{ delimit $srcset ", " }}"
        sizes="{{ $.sizes | default "100vw" }}"
        width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
        alt="{{ $.alt }}"
        {{ with $.class }}class="{{ . }}"{{ end }}
-       {{ if $.eager }}fetchpriority="high"{{ else }}loading="lazy" decoding="async"{{ end }}>
+       {{ if $.eager }}fetchpriority="high"{{ else if $.defer }}decoding="async"{{ else }}loading="lazy" decoding="async"{{ end }}>
 {{- else }}
   {{- warnf "Image not found: assets/%s" $path }}
   <div class="img-missing" role="img" aria-label="{{ $.alt }}">Missing photo: {{ .src }}</div>

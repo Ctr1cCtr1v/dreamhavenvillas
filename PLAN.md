@@ -194,12 +194,12 @@ Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, 
 | Owners | ✅ Tony & Aimee (OK to show; signs the home-page welcome) |
 | Management company | ✅ Florida Vacation Collection · help@tampavacationcollection.com · 813-343-2660 |
 | Booking URL | ❓ Not available yet (owner will provide). Booking terms live on that site, not ours |
-| Deal Alerts | ✅ Page + form built. ❓ Needs a Formspree endpoint in hugo.yaml → dealAlerts.action |
+| Deal Alerts | ✅ Page + form built (Google Form → Sheet). ❓ Owner creates the Google Form, then sends the link; Claude fills entry IDs into hugo.yaml |
 | Bedrooms | ✅ Main: King primary (en-suite), Queen. Up: 3 King, 1 Queen, Cars room (bunks), Moana room (2 twins). Per-room baths unknown (Bath column hidden until all rooms have one) |
 | Sleeps | ✅ 16 |
 | Spa | ✅ Yes, shares the pool's heat |
 | Game room | ✅ TV + air hockey (work in progress) |
-| Loft | ❓ Details (seating/TV) |
+| Loft | ✅ Games table, games closet, large sectional, massive TV, Disney movie posters |
 | Baby gear | ✅ Pack 'n play, stroller, cooler. No high chair |
 | Reviews | ✅ 2 direct reviews; more coming |
 | Drive times | ✅ OpenStreetMap routing (Oct 2026) + Welcome Book |

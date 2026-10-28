@@ -77,12 +77,19 @@ spaces:
       - game-room/placeholder-game-room-2.jpg
 
   - name: Upstairs Loft
-    tagline: Movie nights, upstairs
+    tagline: Movie nights and game nights, upstairs
     floor: Second floor
     description: >-
-      A second huge gathering space at the top of the stairs — a place for
-      the kids to hang out and for lounging after a big park day.
-    features: [Second living space, Upstairs with the bedrooms]
+      A second huge gathering space at the top of the stairs. Sink into the
+      large sectional for a Disney movie night on the massive TV, surrounded
+      by classic Disney movie posters — or pull out a game from the closet
+      full of them and settle in at the games table.
+    features:
+      - Large sectional
+      - Massive TV
+      - Games table
+      - Closet full of board games
+      - Disney movie posters
     photos:
       - living/placeholder-loft-1.jpg
       - living/placeholder-loft-2.jpg

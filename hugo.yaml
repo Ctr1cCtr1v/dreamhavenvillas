@@ -37,11 +37,18 @@ params:
   longitude: -81.64318
 
   # --- Deal Alerts signup form (the /deals/ page) --------------------
-  # Paste the form endpoint from your form service here, e.g. Formspree:
-  #   action: https://formspree.io/f/abcdwxyz
-  # Leave "" and the page shows "signups open soon" instead of sending.
+  # Signups go to a Google Form → Google Sheet. "action" is the form's
+  # .../formResponse address; "fields" are its entry IDs (entry.123456…).
+  # Leave action "" and the page shows "signups open soon" instead.
+  # (See EDITING.md → Deal Alerts for how these are found.)
   dealAlerts:
     action: ""
+    fields:
+      name: ""        # First name
+      email: ""       # Email
+      interests: ""   # Which deals (checkboxes)
+      visit: ""       # When visiting (dropdown)
+      consent: ""     # Consent checkbox — its one option must be "Yes"
 
   # --- Search engines ------------------------------------------------
   # true = ask Google etc. NOT to list the site yet (use while it still has

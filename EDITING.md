@@ -21,7 +21,7 @@ You never need to touch code to update the site. Words live in text files in
 | Gallery tabs, captions, videos | `data/gallery.yaml` |
 | Seasonal banner at top of site | `data/announcement.yaml` |
 | Book Direct page (comparison table, steps, reasons, trust) | `data/book.yaml` |
-| Deal Alerts page wording, checkbox choices | `data/deals.yaml` (where signups are sent: `hugo.yaml` → `dealAlerts`) |
+| Deal Alerts page wording, checkbox choices | `data/deals.yaml` (the Google Form connection: `hugo.yaml` → `dealAlerts`) |
 | Resort clubhouse hours | `data/resort.yaml` → `hours` |
 | Colors or fonts | `assets/css/theme.css` (top of file) |
 
@@ -117,14 +117,27 @@ a while. Facebook's "Sharing Debugger" can refresh it.
 
 ## Deal Alerts signups
 
-The **Deal Alerts** page (`/deals/`, linked from the footer, the FAQ and the Book Direct page) collects first name, email, the kinds of deals someone wants, and roughly when they're thinking of visiting. Every signup must tick the consent box.
+The **Deal Alerts** page (`/deals/`, linked from the footer, the FAQ and the Book Direct page) collects first name, email, the kinds of deals someone wants, and roughly when they're thinking of visiting. Everyone must tick the consent box. The page keeps the website's own design. Behind the scenes it sends each signup to a **Google Form**, which saves them into a **Google Sheet** you own (free, no limit).
 
-The website can't store signups itself, so it sends each one to a form service. To turn it on:
-1. Create a free account at **formspree.io** and add a new form. Use the email address where you want signups sent.
-2. Copy the form's endpoint. It looks like `https://formspree.io/f/abcdwxyz`.
-3. Paste it into `hugo.yaml` → `dealAlerts:` → `action:`.
+**Setting up the Google Form** (one time). The questions must match the website exactly:
 
-Each signup then arrives by email and is saved in your Formspree dashboard, where you can export them all as a spreadsheet (CSV) and import them into an email marketing tool (MailerLite, Mailchimp, Brevo…). When you send a marketing email, it must include an unsubscribe link. The marketing tools add one automatically.
+| Question | Type | Options (type them exactly) |
+|---|---|---|
+| First name | Short answer | — |
+| Email | Short answer | — |
+| Which deals interest you? | Checkboxes | Last-minute openings · Seasonal specials · Holidays & special events · Returning-guest offers |
+| When are you thinking of visiting? | Dropdown | Not sure yet · In the next 3 months · 3–6 months from now · 6–12 months from now · More than a year out |
+| Consent | Checkboxes | Yes |
+
+In the form's **Settings → Responses**, set "Collect email addresses" to **Do not collect**, and turn **off** "Restrict to users in your organization" / "Require sign-in". Then open **Responses → Link to Sheets** so signups land in a spreadsheet.
+
+Then Claude (or you) fills in `hugo.yaml` → `dealAlerts`:
+- `action`: the form's address, with `viewform` changed to `formResponse`.
+- `fields`: each question's `entry.…` number. Find them with ⋮ → **Get pre-filled link**: fill in every answer, click **Get link**, and the link shows `entry.123456=…` for each question.
+
+If you change the checkbox or dropdown choices in `data/deals.yaml`, make the same change in the Google Form, or those answers won't be saved.
+
+**Marketing to the list:** in the Google Sheet, choose File → Download → CSV, and import that into an email tool (MailerLite, Mailchimp, Brevo…). Marketing emails must include an unsubscribe link, which those tools add automatically.
 
 Until `action` is set, the form shows "signups open very soon" instead of sending.
 

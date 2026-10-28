@@ -69,15 +69,17 @@
       <h2>{{ len . }} bedrooms, room for everyone</h2>
     </div>
 
+    {{- /* Bath column only appears once every room has a "bath" line */}}
+    {{- $baths := eq (len (where . "bath" "!=" nil)) (len .) }}
     <div class="table-wrap reveal">
       <table class="sleep-table">
-        <thead><tr><th scope="col">Room</th><th scope="col">Beds</th><th scope="col">Bath</th><th scope="col">Floor</th></tr></thead>
+        <thead><tr><th scope="col">Room</th><th scope="col">Beds</th>{{ if $baths }}<th scope="col">Bath</th>{{ end }}<th scope="col">Floor</th></tr></thead>
         <tbody>
           {{- range . }}
           <tr>
             <th scope="row"><a href="#{{ urlize .name }}">{{ .name }}</a></th>
             <td data-label="Beds">{{ delimit (.beds | default slice) ", " }}</td>
-            <td data-label="Bath">{{ .bath }}</td>
+            {{- if $baths }}<td data-label="Bath">{{ .bath }}</td>{{ end }}
             <td data-label="Floor">{{ .floor }}</td>
           </tr>
           {{- end }}

@@ -68,6 +68,7 @@
     {{ partial "sparkle.html" }}
     <h2>{{ $h.intro.heading }}</h2>
     <p class="lead">{{ $h.intro.text }}</p>
+    {{- with $h.intro.signature }}<p class="signature">— {{ . }}</p>{{ end }}
   </div>
 </section>
 

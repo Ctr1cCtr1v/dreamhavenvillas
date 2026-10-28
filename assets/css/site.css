@@ -611,6 +611,9 @@ html.lightbox-open { overflow: hidden; }
 
 .trust { margin-bottom: clamp(2.5rem, 6vw, 4rem); }
 .trust__name { margin: 0; font-weight: 700; color: var(--navy); }
+.signature { font-family: var(--font-display); font-style: italic; font-size: 1.6rem; color: var(--gold-dk); margin-top: 1rem; }
+.book-deals { margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+.footer-deals { margin-top: 1rem; font-weight: 700; }
 
 /* ---- FAQ ----------------------------------------------------------- */
 .faq-group { margin-bottom: clamp(2.5rem, 6vw, 3.5rem); }
@@ -632,3 +635,27 @@ html.lightbox-open { overflow: hidden; }
 .page-404 .btn-row { justify-content: center; margin-top: 2rem; }
 .page-404__links { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.5rem; margin-top: 2.5rem; }
 .page-404__links a { font-weight: 700; text-decoration: none; }
+
+/* ---- Deal Alerts form ---------------------------------------------- */
+.deals { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+@media (min-width: 900px) { .deals { grid-template-columns: 1fr 1.1fr; } }
+.deals__intro .sparkle { color: var(--gold); width: 1.75rem; height: 1.75rem; margin-bottom: .75rem; }
+.deal-form { display: grid; gap: 1.25rem; box-shadow: var(--shadow); }
+.field-row { display: grid; gap: 1.25rem; }
+@media (min-width: 560px) { .field-row { grid-template-columns: 1fr 1fr; } }
+.field { display: grid; gap: .4rem; margin: 0; padding: 0; border: 0; min-width: 0; }
+.field label, .field legend { font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--navy); padding: 0; margin-bottom: .4rem; }
+.field input, .field select {
+  font: inherit; color: var(--ink); width: 100%;
+  padding: .8rem .95rem; border: 1px solid #CFC4B3; border-radius: 10px; background: var(--white);
+}
+.field input:focus-visible, .field select:focus-visible { outline: 2px solid var(--ocean); outline-offset: 1px; border-color: var(--ocean); }
+.checks { display: grid; gap: .6rem; }
+@media (min-width: 560px) { .checks { grid-template-columns: 1fr 1fr; } }
+.field .check { font-size: 1rem; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink); margin: 0; }
+.check { display: flex; gap: .6rem; align-items: flex-start; line-height: 1.4; cursor: pointer; }
+.check input { width: 1.15rem; height: 1.15rem; margin: .1rem 0 0; accent-color: var(--ocean); flex: none; }
+.check.check--consent { font-size: .92rem; color: var(--muted); }
+.deal-form .btn { justify-self: start; }
+.deal-form__status { margin: 0; padding: 1rem 1.25rem; border-radius: 10px; background: #FBEDEA; color: #8A2E1D; font-weight: 600; }
+.deal-form__status.is-ok { background: #E7F2F5; color: var(--ocean); font-size: 1.1rem; }

@@ -10,9 +10,9 @@
 stats:
   - { value: "8",     label: Bedrooms }
   - { value: "6",     label: Bathrooms }
-  - { value: "16",    label: Sleeps }        # verify: max occupancy
+  - { value: "16",    label: Sleeps }
   - { value: "4,041", label: Sq Ft }
-  - { value: Private, label: Heated Pool }   # heat available on request
+  - { value: "Pool & Spa", label: Private }   # heat available on request
   - { value: Gated,   label: Resort }
 
 overview:
@@ -25,9 +25,10 @@ overview:
 
     Spread across two floors and more than 4,000 square feet, the villa has
     two huge indoor gathering areas, an outdoor dining area by a sunny,
-    south-facing pool, eight bedrooms and six full bathrooms. The primary
-    suite and a second king room are on the main floor, so grandparents can
-    skip the stairs, and the kids' themed bedrooms are waiting upstairs.
+    south-facing pool and spa, eight bedrooms and six full bathrooms. The
+    king primary suite and a queen room are on the main floor, so
+    grandparents can skip the stairs, and the kids' Cars and Moana rooms are
+    waiting upstairs.
 
 # ---------------------------------------------------------------------
 #  SHARED SPACES — living areas, kitchen, game room, outdoors.
@@ -68,9 +69,9 @@ spaces:
     tagline: Where friendly rivalries begin
     floor: First floor
     description: >-
-      A video-game themed game room built for family tournaments, with a
-      game table and big TVs. TODO: list the games.
-    features: [Game table, Big-screen TV, TODO game]
+      Air hockey and a big TV for family tournaments — and more games are on
+      the way.
+    features: [Air hockey table, Big-screen TV]
     photos:
       - game-room/placeholder-game-room-1.jpg
       - game-room/placeholder-game-room-2.jpg
@@ -79,9 +80,9 @@ spaces:
     tagline: Movie nights, upstairs
     floor: Second floor
     description: >-
-      A second huge gathering space at the top of the stairs for lounging,
-      board games and movie nights. TODO: describe the seating and TV.
-    features: [TODO feature, TODO feature]
+      A second huge gathering space at the top of the stairs — a place for
+      the kids to hang out and for lounging after a big park day.
+    features: [Second living space, Upstairs with the bedrooms]
     photos:
       - living/placeholder-loft-1.jpg
       - living/placeholder-loft-2.jpg
@@ -90,11 +91,13 @@ spaces:
     tagline: Your own private resort
     floor: Outdoors
     description: >-
-      Your private screened pool faces south, so it gets sun all day. Pool
-      heat is available on request for winter swims, and the covered lanai
+      Your private screened pool and spa face south, so they get sun all day.
+      Heat is available on request for winter swims (the spa shares the
+      pool's temperature), and the covered lanai
       has an outdoor dining area for long evenings by the water. A pool door
       alarm and safety fence come set up on arrival.
     features:
+      - Private pool & spa
       - South-facing, sun all day
       - Heated on request ($50/day)
       - Screened enclosure
@@ -110,72 +113,64 @@ spaces:
 #  BEDROOMS — also builds the "Sleeping Arrangements" table automatically.
 #  beds: list each bed, e.g. [King] or [Queen, Twin] or ["Bunk (Twin over Twin)"]
 #  bath: e.g. "Private en-suite" / "Shared hall bath" / "Jack-and-Jill"
-#  ⚠ The Welcome Book says 4 king rooms, 2 queen rooms and 2 kids' rooms
-#    with 2 twins each. Which room is which is a best guess — verify.
+#  bath is optional — leave it out and the room shows no bath line.
 # ---------------------------------------------------------------------
 bedrooms:
   - name: Primary Suite
     floor: First floor
     beds: [King]
     bath: Private en-suite, double vanity
-    description: A main-floor king suite with its own bathroom.
-    features: [Main floor — no stairs]
+    description: A main-floor king suite with its own bathroom — no stairs needed.
+    features: [Main floor]
     photos: [bedrooms/placeholder-bedroom-1.jpg]
 
   - name: Bedroom 2
     floor: First floor
-    beds: [King]              # verify
-    bath: TODO
-    description: A second main-floor king room.
-    features: [TODO]
+    beds: [Queen]
+    description: A main-floor queen room, great for grandparents.
+    features: [Main floor]
     photos: [bedrooms/placeholder-bedroom-2.jpg]
 
   - name: Bedroom 3
     floor: Second floor
-    beds: [King]              # verify
-    bath: TODO
-    description: TODO
-    features: [TODO]
+    beds: [King]
+    description: A comfortable upstairs king room.
+    features: []
     photos: [bedrooms/placeholder-bedroom-3.jpg]
 
   - name: Bedroom 4
     floor: Second floor
-    beds: [King]              # verify
-    bath: TODO
-    description: TODO
-    features: [TODO]
+    beds: [King]
+    description: A second upstairs king room.
+    features: []
     photos: [bedrooms/placeholder-bedroom-4.jpg]
 
   - name: Bedroom 5
     floor: Second floor
-    beds: [Queen]             # verify
-    bath: TODO
-    description: TODO
-    features: [TODO]
+    beds: [King]
+    description: A third upstairs king room.
+    features: []
     photos: [bedrooms/placeholder-bedroom-5.jpg]
 
   - name: Bedroom 6
     floor: Second floor
-    beds: [Queen]             # verify
-    bath: TODO
-    description: TODO
-    features: [TODO]
+    beds: [Queen]
+    description: An upstairs queen room.
+    features: []
     photos: [bedrooms/placeholder-bedroom-6.jpg]
 
-  - name: Kids' Room 1
+  - name: Cars Room
     floor: Second floor
-    beds: [Twin, Twin]
-    bath: TODO
-    description: A themed kids' room the little ones will love.   # TODO: name the theme?
-    features: [Themed decor]
+    beds: [Bunk beds]
+    description: A race-car themed kids' room with bunk beds.
+    features: [Themed kids' room]
     photos: [bedrooms/placeholder-bedroom-7.jpg]
 
-  - name: Kids' Room 2
+  - name: Moana Room
     floor: Second floor
     beds: [Twin, Twin]
-    bath: TODO
-    description: A second themed kids' room.   # TODO: name the theme?
-    features: [Themed decor]
+    description: An island-themed kids' room with two twin beds.
+    features: [Themed kids' room]
     photos: [bedrooms/placeholder-bedroom-8.jpg]
 
 # ---------------------------------------------------------------------
@@ -184,7 +179,6 @@ bedrooms:
 house_info:
   - { label: Check-in,      value: "After 4:00 PM" }
   - { label: Check-out,     value: "By 10:00 AM" }
-  - { label: Minimum stay,  value: "TODO" }
   - { label: Entry,         value: "Keyless — your own door code" }
   - { label: Parking,       value: "Driveway & street" }
   - { label: Wi-Fi,         value: "Free high-speed Wi-Fi" }

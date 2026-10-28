@@ -24,8 +24,8 @@ hero:
 # Quick-glance strip just below the hero. Keep each to a few words.
 highlights:
   - { value: "8",      label: Bedrooms }
-  - { value: "16",     label: Guests }          # verify max occupancy
-  - { value: Private,  label: Pool & Lanai }
+  - { value: "16",     label: Guests }
+  - { value: Private,  label: Pool & Spa }
   - { value: "10 mi",  label: To Disney }
 
 intro:
@@ -36,6 +36,7 @@ intro:
     parks, then come home to your own sunny pool, room for everyone to spread
     out, and the calm of a gated resort. We hope it feels like staying at the
     home of a friend.
+  signature: Tony & Aimee
 
 # Story sections, shown top to bottom. Photos alternate left / right.
 # "link" is optional — it adds a link to another page.
@@ -52,8 +53,8 @@ sections:
   - eyebrow: The Pool
     heading: Your own private pool, steps from the living room
     text: >-
-      A screened, south-facing private pool with sun all day — heated on
-      request for winter swims. Morning coffee on the lanai. Afternoon cannonballs while the little ones
+      A screened, south-facing private pool and spa with sun all day — heated
+      on request for winter swims. Morning coffee on the lanai. Afternoon cannonballs while the little ones
       nap. Starry evenings by the water after a big park day. The pool is all
       yours — no towels saving chairs, no crowds.
     image: pool/placeholder-pool-1.jpg

@@ -86,6 +86,15 @@
     </div>
     {{- end }}
 
+    {{- with $b.deals }}
+    <div class="panel panel--navy reveal book-deals">
+      <p class="eyebrow">Deal Alerts</p>
+      <h3>{{ .heading }}</h3>
+      <p>{{ .text }}</p>
+      <p><a class="btn" href="{{ "deals/" | relURL }}">{{ .button | default "Get Deal Alerts" }}</a></p>
+    </div>
+    {{- end }}
+
     {{- with where hugo.Data.faq "group" "Booking" }}{{ with index . 0 }}
     <div class="faq-group book-faq">
       <h2>Booking questions</h2>

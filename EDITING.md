@@ -21,6 +21,8 @@ You never need to touch code to update the site. Words live in text files in
 | Gallery tabs, captions, videos | `data/gallery.yaml` |
 | Seasonal banner at top of site | `data/announcement.yaml` |
 | Book Direct page (comparison table, steps, reasons, trust) | `data/book.yaml` |
+| Deal Alerts page wording, checkbox choices | `data/deals.yaml` (where signups are sent: `hugo.yaml` → `dealAlerts`) |
+| Resort clubhouse hours | `data/resort.yaml` → `hours` |
 | Colors or fonts | `assets/css/theme.css` (top of file) |
 
 **Still to fill in:** search the project for `TODO`. In VS Code, use ⌘⇧F (Cmd+Shift+F) and type `TODO`.
@@ -112,6 +114,19 @@ a while. Facebook's "Sharing Debugger" can refresh it.
   **Set it to `false` at launch.**
 - `analytics:` add a GoatCounter code or Cloudflare Web Analytics token to see
   visitor counts. Both are free and privacy-friendly. Leave them `""` for off.
+
+## Deal Alerts signups
+
+The **Deal Alerts** page (`/deals/`, linked from the footer, the FAQ and the Book Direct page) collects first name, email, the kinds of deals someone wants, and roughly when they're thinking of visiting. Every signup must tick the consent box.
+
+The website can't store signups itself, so it sends each one to a form service. To turn it on:
+1. Create a free account at **formspree.io** and add a new form. Use the email address where you want signups sent.
+2. Copy the form's endpoint. It looks like `https://formspree.io/f/abcdwxyz`.
+3. Paste it into `hugo.yaml` → `dealAlerts:` → `action:`.
+
+Each signup then arrives by email and is saved in your Formspree dashboard, where you can export them all as a spreadsheet (CSV) and import them into an email marketing tool (MailerLite, Mailchimp, Brevo…). When you send a marketing email, it must include an unsubscribe link. The marketing tools add one automatically.
+
+Until `action` is set, the form shows "signups open very soon" instead of sending.
 
 ## Previewing changes on your computer
 

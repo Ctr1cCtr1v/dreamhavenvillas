@@ -21,8 +21,8 @@ params:
   bookingButtonText: Book Direct & Save
 
   # --- Contact (leave a line blank "" to hide it on the site) -------
-  managementCompany: "TODO: Management Company Name"
-  email: ""   # TODO
+  managementCompany: Florida Vacation Collection
+  email: help@tampavacationcollection.com
   phone: "813-343-2660"
 
   # --- Location ------------------------------------------------------
@@ -35,6 +35,13 @@ params:
   # Map pin (from US Census geocoder for 8875 Qin Loop)
   latitude: 28.30885
   longitude: -81.64318
+
+  # --- Deal Alerts signup form (the /deals/ page) --------------------
+  # Paste the form endpoint from your form service here, e.g. Formspree:
+  #   action: https://formspree.io/f/abcdwxyz
+  # Leave "" and the page shows "signups open soon" instead of sending.
+  dealAlerts:
+    action: ""
 
   # --- Search engines ------------------------------------------------
   # true = ask Google etc. NOT to list the site yet (use while it still has

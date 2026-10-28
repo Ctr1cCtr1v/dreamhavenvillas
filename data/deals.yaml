@@ -1,0 +1,42 @@
+# =====================================================================
+#  DEAL ALERTS — the signup page (/deals/)
+#  Where signups are sent is set in hugo.yaml → params.dealAlerts.
+#  Edit any wording below. "interests" become checkboxes; "visit"
+#  becomes the "When are you thinking of visiting?" dropdown.
+# =====================================================================
+
+heading: Be first to hear about deals
+text: >-
+  Tell us what kind of deals you're looking for and we'll let you know —
+  last-minute openings, seasonal specials and special-event dates. Book
+  direct and save even more.
+
+perks:
+  - Last-minute openings at a discount
+  - Seasonal and holiday specials
+  - Returning-guest offers
+  - No spam — just the occasional deal
+
+interests:
+  - Last-minute openings
+  - Seasonal specials
+  - Holidays & special events
+  - Returning-guest offers
+
+visit:
+  - Not sure yet
+  - In the next 3 months
+  - 3–6 months from now
+  - 6–12 months from now
+  - More than a year out
+
+consent: Yes, email me Dream Haven Villas deals. I can unsubscribe anytime.
+button: Sign Me Up
+success: >-
+  You're on the list! Watch your inbox for deals — and thank you for
+  booking direct.
+error: >-
+  Sorry, something went wrong. Please try again, or email us instead.
+not_ready: >-
+  Deal Alerts signups open very soon. Please check back, or email us in the
+  meantime.

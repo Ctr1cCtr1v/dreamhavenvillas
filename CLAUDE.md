@@ -14,6 +14,8 @@ Marketing + direct-booking site for a luxury private 8-bedroom vacation rental a
 - Markdown links get base-path handling via `layouts/_markup/render-link.html`, so `[x](/explore/)` is safe in data/markdown text.
 - Gallery auto-loads every image in the folders listed in `data/gallery.yaml`, sorted by filename; a folder's `placeholder-*` files are skipped once it has a real photo.
 - Home hero is a slideshow (`assets/js/hero.js`): hero.image first, then all of `assets/images/hero/` by filename (placeholders drop once a real photo exists). Slides after the first use `img.html` with `defer` (data-src/srcset, loaded by JS just before showing). Respects prefers-reduced-motion; has a pause button. Headless Chrome's virtual time stalls on `img.decode()`, so don't add it back.
+- Deal Alerts (`/deals/`, `layouts/deals.html`, `assets/js/deals.js`, wording in `data/deals.yaml`): a plain POST form (Formspree-compatible field names, `_gotcha` honeypot), sent with fetch + `Accept: application/json` for an inline thank-you. The endpoint is `params.dealAlerts.action`; when it's empty, the page shows a "not ready" message.
+- The owners' Welcome Book PDF is the source for house facts. It is git-ignored (`*.pdf`) because it contains the Wi-Fi password and door/safety info. Never publish those.
 - Lightbox (`assets/js/lightbox.js`, bundled with main.js): any `a[data-lightbox="group"]` opens in the viewer; items inside `[hidden]` are skipped.
 - `hugo server` ignores static files starting with `_`, and its watcher can go stale. Restart it if new files 404.
 - Content lives in `data/*.yaml` and `content/*.md`. Templates in `layouts/` must not hard-code copy.

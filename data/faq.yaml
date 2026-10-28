@@ -15,15 +15,22 @@
     - q: Can I get a discount?
       a: >-
         Yes! We offer a discount for returning guests and for guests who book
-        directly through our website.
+        directly through our website. [Sign up for Deal Alerts](/deals/) to
+        hear about specials first.
+    - q: How do I find out about deals?
+      a: >-
+        Sign up for [Deal Alerts](/deals/) and tell us what you're looking
+        for — last-minute openings, seasonal specials or special events — and
+        we'll let you know.
     - q: Is booking direct safe?
-      a: TODO — describe the management company and secure payment.
-    - q: How do I pay, and is a deposit required?
-      a: TODO
-    - q: What is the cancellation policy?
-      a: TODO
-    - q: Is there a minimum stay?
-      a: TODO
+      a: >-
+        Yes. Reservations are made through Florida Vacation Collection, our
+        local property manager, on their secure booking site.
+    - q: What are the payment, deposit and cancellation terms?
+      a: >-
+        You'll see the full payment, deposit, minimum-stay and cancellation
+        terms on the booking page before you reserve. Questions? Just call or
+        email us — our contact details are at the bottom of every page.
     - q: Can we check in early or check out late?
       a: >-
         Just ask! If there's no quick turnover scheduled, you may be able to
@@ -44,9 +51,9 @@
     - q: Is the pool heated?
       a: >-
         Pool heat is available for **$50 per day** for the length of your
-        stay — please let us know a couple of days before you arrive. It's
-        mostly needed in the winter months; the south-facing pool gets sun
-        all day.
+        stay — please let us know a couple of days before you arrive. The spa
+        shares the pool's temperature. Heat is mostly needed in the winter
+        months; the south-facing pool gets sun all day.
     - q: Are linens and towels provided?
       a: >-
         Yes — bed linens, extra pillows and blankets, bath, hand and makeup
@@ -68,7 +75,10 @@
         house. Please never block the sidewalk or park with tires on the grass —
         the HOA is strict and will fine or tow.
     - q: Do you have baby gear?
-      a: TODO — crib, high chair, pack 'n play?
+      a: >-
+        There's a pack 'n play and a stroller you're welcome to use (no high
+        chair, so bring one if you need it). There's also a cooler for park
+        and beach days.
 
 - group: The Resort
   questions:

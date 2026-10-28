@@ -28,13 +28,10 @@ compare:
     - label: Talk to the people who know the home
       them: Through an app
       us: Direct line to our local team
-    - label: Special requests          # TODO: confirm
+    - label: Special requests
       them: Limited
       us: Just ask
-  # Optional worked example — delete the "example" lines to hide it.
-  example: >-
-    TODO: e.g. "On a 7-night stay, booking-site service fees can add hundreds
-    of dollars. Booking direct keeps that money in your vacation budget."
+  # Optional worked example — add an "example:" line here to show one.
 
 steps:
   heading: How it works
@@ -42,7 +39,7 @@ steps:
     - title: Pick your dates
       text: Tap "Book Direct" to see live availability and pricing.
     - title: Book securely
-      text: Reserve and pay through our management company's secure booking site.   # TODO: confirm
+      text: Reserve and pay through our property manager's secure booking site.
     - title: Get ready
       text: You'll receive check-in details and everything you need before you arrive.
 
@@ -63,6 +60,14 @@ trust:
   text: >-
     Dream Haven Villa isn't owned by a corporation or managed by a company
     with hundreds of properties — it's our family's actual vacation home.
-    Day to day, it's cared for by our local property manager, who handles
-    bookings and is a phone call away during your stay. TODO: add the
-    management company's name and how payments are processed securely.
+    Day to day, it's cared for by our local property manager, Florida
+    Vacation Collection, who handles reservations and payments securely and
+    is a phone call away during your stay.
+
+# "Deal Alerts" box on the Book Direct page (links to the /deals/ page)
+deals:
+  heading: Get deals before anyone else
+  text: >-
+    Sign up for Deal Alerts and we'll email you last-minute openings,
+    seasonal specials and returning-guest offers.
+  button: Get Deal Alerts

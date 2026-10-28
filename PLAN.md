@@ -191,17 +191,17 @@ Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, 
 
 | Item | Status |
 |---|---|
-| Owners | Tony & Aimee (family-owned, not corporate). Confirm OK to show first names |
-| Management company name | ❓ Welcome Book says both "Tampa Vacation Collection" and "Florida Vacation Collection". Need the correct one |
-| Public contact | Phone ✅ 813-343-2660. Email ❓ help@tampa… vs help@florida…vacationcollection.com |
-| Booking URL | ❓ Still placeholder |
-| Deal Alerts signup | ❓ Welcome Book promises "Deal Alerts" on the site. Needs a form service choice |
-| Bedroom layout | 4 king / 2 queen / 2 kids' rooms (2 twins each) ✅. Which room is which + baths ❓ |
-| Sleeps | 16 (from bed count). Confirm max occupancy |
-| Private spa | Sale listing says yes; Welcome Book doesn't mention it. Removed from the site until confirmed |
-| Minimum stay, cancellation, deposit/payment | ❓ |
-| Baby gear | ❓ |
-| Reviews | ✅ 2 from the Welcome Book; source (Airbnb/VRBO/direct) ❓; more welcome |
+| Owners | ✅ Tony & Aimee (OK to show; signs the home-page welcome) |
+| Management company | ✅ Florida Vacation Collection · help@tampavacationcollection.com · 813-343-2660 |
+| Booking URL | ❓ Not available yet (owner will provide). Booking terms live on that site, not ours |
+| Deal Alerts | ✅ Page + form built. ❓ Needs a Formspree endpoint in hugo.yaml → dealAlerts.action |
+| Bedrooms | ✅ Main: King primary (en-suite), Queen. Up: 3 King, 1 Queen, Cars room (bunks), Moana room (2 twins). Per-room baths unknown (Bath column hidden until all rooms have one) |
+| Sleeps | ✅ 16 |
+| Spa | ✅ Yes, shares the pool's heat |
+| Game room | ✅ TV + air hockey (work in progress) |
+| Loft | ❓ Details (seating/TV) |
+| Baby gear | ✅ Pack 'n play, stroller, cooler. No high chair |
+| Reviews | ✅ 2 direct reviews; more coming |
 | Drive times | ✅ OpenStreetMap routing (Oct 2026) + Welcome Book |
 | Resort amenities & hours | ✅ From the Welcome Book |
 | Logo | ✅ Received (wide + square sticker). Ask designer for transparent PNG/SVG if available |

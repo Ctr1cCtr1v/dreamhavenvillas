@@ -44,8 +44,9 @@ sections:
 
   - eyebrow: The Pool
     heading: Your own private pool, steps from the living room
-    # TODO: mention heated pool / spa / screened lanai if applicable
+    # verify: screened pool + spa (from the sale listing); add "heated" if it is
     text: >-
+      A screened private pool and spa, steps from the living room.
       Morning coffee on the lanai. Afternoon cannonballs while the little ones
       nap. Starry evenings by the water after a big park day. The pool is all
       yours — no towels saving chairs, no crowds.

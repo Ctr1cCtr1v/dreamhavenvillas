@@ -2,26 +2,32 @@
 #  THE VILLA — property details page
 #  Fill in every TODO. Delete a line entirely to hide it on the site.
 #  Photos: paths inside assets/images/ — the FIRST photo is the big one.
+#  Lines marked "# verify" were filled in from the home's July 2026 sale
+#  listing (MLS O6405993). Check them against the home as it is today.
 # =====================================================================
 
 # Key numbers bar at the top of the page (order = order shown)
 stats:
   - { value: "8",     label: Bedrooms }
-  - { value: "TODO",  label: Bathrooms }     # e.g. "5.5"
+  - { value: "6",     label: Bathrooms }     # verify (6 full baths)
   - { value: "TODO",  label: Sleeps }        # e.g. "16"
-  - { value: "TODO",  label: Sq Ft }         # e.g. "3,900"
-  - { value: Private, label: Pool }          # e.g. "Heated Pool & Spa"
+  - { value: "4,041", label: Sq Ft }         # verify
+  - { value: "Pool & Spa", label: Private }  # verify; add "Heated" if it is
   - { value: Gated,   label: Resort }
 
 overview:
   heading: A home built for big getaways
   # Separate paragraphs with a blank line.
   text: |-
-    TODO: Describe the home as a whole — the layout, the style, and what makes
-    it special. Two or three short paragraphs work best.
+    Built in 2018 and spread across two floors and more than 4,000 square
+    feet, Dream Haven Villas has room for the whole crew: eight bedrooms, six
+    full bathrooms, an open-plan living, kitchen and dining space, and a
+    screened pool and spa just outside.
 
-    TODO: Second paragraph — e.g. how the floor plan keeps families together
-    while giving everyone their own space.
+    The primary suite and a second bedroom are on the main floor, so
+    grandparents can skip the stairs. Upstairs, the rest of the bedrooms
+    gather around a loft made for movie nights, and kids will head straight
+    for the game room. TODO: check this description and make it yours.
 
 # ---------------------------------------------------------------------
 #  SHARED SPACES — living areas, kitchen, game room, outdoors.
@@ -53,22 +59,35 @@ spaces:
       - kitchen/placeholder-dining.jpg
 
   - name: Game Room
-    tagline: TODO — e.g. "Where friendly rivalries begin"
-    floor: TODO
+    tagline: Where friendly rivalries begin
+    floor: First floor      # verify
     description: >-
-      TODO: Describe the game room — which games, seating, TV.
+      A video-game themed game room built for family tournaments.
+      TODO: list the games, seating and screens.
     features: [TODO game, TODO game, TODO game]
     photos:
       - game-room/placeholder-game-room-1.jpg
       - game-room/placeholder-game-room-2.jpg
 
+  - name: Upstairs Loft
+    tagline: Movie nights, upstairs
+    floor: Second floor     # verify
+    description: >-
+      An open loft at the top of the stairs for lounging, board games and
+      movie nights. TODO: describe the seating and TV.
+    features: [TODO feature, TODO feature]
+    photos:
+      - living/placeholder-loft-1.jpg
+      - living/placeholder-loft-2.jpg
+
   - name: Pool & Lanai
-    tagline: TODO — e.g. "Your own private resort"
+    tagline: Your own private resort
     floor: Outdoors
     description: >-
-      TODO: Describe the pool area — size, heated?, spa?, screened enclosure,
-      sun exposure, lounge and dining furniture.
-    features: [TODO feature, TODO feature, TODO feature]
+      A private pool and spa inside a screened enclosure, with a covered
+      lanai for shade. TODO: is the pool heated (and is there a fee)? Which
+      way does it face? Describe the lounge and dining furniture.
+    features: [Private pool, Spa, Screened enclosure, Covered lanai]   # verify
     photos:
       - pool/placeholder-pool-1.jpg
       - pool/placeholder-pool-2.jpg
@@ -82,15 +101,15 @@ spaces:
 # ---------------------------------------------------------------------
 bedrooms:
   - name: Primary Suite
-    floor: TODO
+    floor: First floor      # verify
     beds: [TODO]
-    bath: TODO
+    bath: Private en-suite, double vanity   # verify
     description: TODO — what makes this room special.
     features: [TODO, TODO]
     photos: [bedrooms/placeholder-bedroom-1.jpg]
 
   - name: Bedroom 2
-    floor: TODO
+    floor: First floor      # verify
     beds: [TODO]
     bath: TODO
     description: TODO
@@ -98,7 +117,7 @@ bedrooms:
     photos: [bedrooms/placeholder-bedroom-2.jpg]
 
   - name: Bedroom 3
-    floor: TODO
+    floor: Second floor     # verify
     beds: [TODO]
     bath: TODO
     description: TODO
@@ -106,7 +125,7 @@ bedrooms:
     photos: [bedrooms/placeholder-bedroom-3.jpg]
 
   - name: Bedroom 4
-    floor: TODO
+    floor: Second floor     # verify
     beds: [TODO]
     bath: TODO
     description: TODO
@@ -114,7 +133,7 @@ bedrooms:
     photos: [bedrooms/placeholder-bedroom-4.jpg]
 
   - name: Bedroom 5
-    floor: TODO
+    floor: Second floor     # verify
     beds: [TODO]
     bath: TODO
     description: TODO
@@ -122,7 +141,7 @@ bedrooms:
     photos: [bedrooms/placeholder-bedroom-5.jpg]
 
   - name: Bedroom 6
-    floor: TODO
+    floor: Second floor     # verify
     beds: [TODO]
     bath: TODO
     description: TODO
@@ -130,7 +149,7 @@ bedrooms:
     photos: [bedrooms/placeholder-bedroom-6.jpg]
 
   - name: Bedroom 7
-    floor: TODO
+    floor: Second floor     # verify
     beds: [TODO]
     bath: TODO
     description: TODO
@@ -138,7 +157,7 @@ bedrooms:
     photos: [bedrooms/placeholder-bedroom-7.jpg]
 
   - name: Bedroom 8
-    floor: TODO
+    floor: Second floor     # verify
     beds: [TODO]
     bath: TODO
     description: TODO
@@ -152,7 +171,7 @@ house_info:
   - { label: Check-in,      value: "TODO" }   # e.g. "4:00 PM"
   - { label: Check-out,     value: "TODO" }   # e.g. "10:00 AM"
   - { label: Minimum stay,  value: "TODO" }
-  - { label: Parking,       value: "TODO" }   # e.g. "2-car garage + driveway for 2"
+  - { label: Parking,       value: "2-car garage + driveway" }   # verify
   - { label: Wi-Fi,         value: "TODO" }   # e.g. "High-speed fiber"
   - { label: Pets,          value: "TODO" }
   - { label: Smoking,       value: Not permitted }

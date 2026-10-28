@@ -12,6 +12,10 @@
         Booking sites like Airbnb and VRBO add a guest service fee on top of
         the nightly rate. When you book directly with our management team,
         that fee isn't there — and we pass the savings on to you.
+    - q: Can I get a discount?
+      a: >-
+        Yes! We offer a discount for returning guests and for guests who book
+        directly through our website.
     - q: Is booking direct safe?
       a: TODO — describe the management company and secure payment.
     - q: How do I pay, and is a deposit required?
@@ -20,44 +24,80 @@
       a: TODO
     - q: Is there a minimum stay?
       a: TODO
+    - q: Can we check in early or check out late?
+      a: >-
+        Just ask! If there's no quick turnover scheduled, you may be able to
+        purchase an early check-in or late check-out, based on availability
+        and notice.
     - q: Can I make special requests?
-      a: TODO — e.g. early check-in, pool heat, pack 'n play.
+      a: >-
+        Absolutely — pool heat, early check-in and more. Let us know a couple
+        of days before you arrive.
 
 - group: Your Stay
   questions:
     - q: What time is check-in and check-out?
-      a: TODO
+      a: >-
+        Check-in is after **4 PM** and check-out is by **10 AM**. Entry is
+        keyless: you'll get your own door code on arrival day, so there are
+        no keys to keep track of.
     - q: Is the pool heated?
-      a: TODO — and is there a fee?
+      a: >-
+        Pool heat is available for **$50 per day** for the length of your
+        stay — please let us know a couple of days before you arrive. It's
+        mostly needed in the winter months; the south-facing pool gets sun
+        all day.
     - q: Are linens and towels provided?
-      a: TODO
+      a: >-
+        Yes — bed linens, extra pillows and blankets, bath, hand and makeup
+        towels, and pool towels. Shampoo, conditioner, body wash and a hair
+        dryer are provided too, and there's a washer and dryer with starter
+        detergent.
     - q: Is there Wi-Fi?
-      a: TODO
+      a: >-
+        Yes, free Wi-Fi throughout the home. The smart TVs are in guest mode,
+        so you can log into your own streaming apps and you'll be signed out
+        automatically at check-out.
     - q: Are pets allowed?
-      a: TODO
+      a: >-
+        Sorry, no. This is a pet-free home so future guests with allergies
+        can stay comfortably.
     - q: Where do we park?
-      a: TODO
+      a: >-
+        In the driveway, the driveway apron, or on the street in front of the
+        house. Please never block the sidewalk or park with tires on the grass —
+        the HOA is strict and will fine or tow.
     - q: Do you have baby gear?
       a: TODO — crib, high chair, pack 'n play?
 
 - group: The Resort
   questions:
     - q: Can we use the Windsor at Westside resort amenities?
-      a: TODO — included? wristbands? hours?
+      a: >-
+        Yes — every community amenity is **included with your stay**, with no
+        extra fees. The clubhouse is right across from the front gate, and
+        everyone signs a quick waiver the first time they use the pool. You
+        can even use it on check-out day before a late flight. See the
+        [resort page](/windsor-at-westside/) for hours.
     - q: How far is Disney World?
       a: >-
-        About 12–20 minutes by car, depending on the park. See the
+        About 10 miles to Animal Kingdom, the closest Disney park — roughly
+        25–30 minutes by car depending on the park and traffic. You can even
+        hear the fireworks from the villa! See the
         [map and drive times](/explore/) for everything nearby.
     - q: Is the community gated?
-      a: TODO — confirm gate details.
+      a: >-
+        Yes. Windsor at Westside has a guarded gate — just show the guard your
+        reservation and drive straight to the house.
 
 - group: Getting Here
   questions:
     - q: Which airport should we fly into?
       a: >-
-        Orlando International (MCO) is about 35 minutes away and has the most
-        flights. TODO — mention Orlando Sanford (SFB) or Tampa (TPA) if useful.
+        Orlando International (MCO) has the most flights and is about 35
+        miles away — around 45 minutes via the FL-417 toll road.
     - q: Do we need a car?
       a: >-
         We recommend one. The parks, beaches, restaurants and grocery stores
-        are all an easy drive, and ride-shares are also available.
+        are all an easy drive — Publix is about 7 minutes away. Uber and Lyft
+        also serve the area and usually arrive quickly.

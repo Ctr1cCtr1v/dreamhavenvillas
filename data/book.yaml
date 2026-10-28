@@ -51,16 +51,18 @@ reasons:
   items:
     - title: Save on fees
       text: No booking-site guest service fee added to your stay.
-    - title: The same 5-star home     # TODO: confirm rating claim
-      text: Same villa, same cleaning standards, same warm welcome.
+    - title: The same home, the same family
+      text: Same villa, same professional cleaning, same warm welcome from the family who owns it.
     - title: Real people, real fast
       text: Questions go straight to the local team who manage the villa.
     - title: Come back for less
-      text: "TODO: returning-guest perk? e.g. a discount code for your next stay."
+      text: We offer a discount for returning guests — and for booking direct.
 
 trust:
   heading: Who you're booking with
   text: >-
-    TODO: One or two sentences about the management company — who they are,
-    how long they've managed homes in the area, and that payments are
-    processed securely.
+    Dream Haven Villa isn't owned by a corporation or managed by a company
+    with hundreds of properties — it's our family's actual vacation home.
+    Day to day, it's cared for by our local property manager, who handles
+    bookings and is a phone call away during your stay. TODO: add the
+    management company's name and how payments are processed securely.

@@ -23,7 +23,7 @@ params:
   # --- Contact (leave a line blank "" to hide it on the site) -------
   managementCompany: "TODO: Management Company Name"
   email: ""   # TODO
-  phone: ""   # TODO
+  phone: "813-343-2660"
 
   # --- Location ------------------------------------------------------
   address:

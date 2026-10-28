@@ -1,8 +1,7 @@
 # =====================================================================
 #  WINDSOR AT WESTSIDE — the resort community page
-#  ⚠ Amenities below are drafted from public travel listings. Confirm
-#    each one (and any fees / wristbands / hours) before launch, then
-#    delete the "verify" notes.
+#  Details come from the Dream Haven Welcome Book (Oct 2026). Resort hours
+#  can change seasonally — update the "hours" list when they do.
 # =====================================================================
 
 intro:
@@ -11,60 +10,72 @@ intro:
   text: >-
     Dream Haven Villas sits inside Windsor at Westside, a gated resort
     community in Kissimmee built for vacationing families. Enjoy the privacy
-    of your own home and pool, then stroll to a clubhouse packed with ways to
-    play — all just minutes from Walt Disney World.
+    of your own home and pool, then head to a 10,000 sq ft clubhouse packed
+    with ways to play — and every bit of it is included with your stay.
   image: resort/placeholder-clubhouse.jpg
 
 # Perk cards, shown in this order. "image" is optional.
 perks:
-  - name: Resort Pool & Cabanas
-    text: A huge zero-entry resort pool with shaded cabanas and plenty of loungers.   # verify
+  - name: Zero-Entry Resort Pool
+    text: A huge resort-style pool you can walk right into, plus a hot tub for the grown-ups.
     image: resort/placeholder-resort-pool.jpg
 
   - name: Lazy River
-    text: Grab a float and drift around the resort pool on the lazy river.   # verify
+    text: Grab a float and drift the afternoon away on the clubhouse lazy river.
     image: resort/placeholder-lazy-river.jpg
 
-  - name: Water Slides & Splash Park
-    text: Slides, water shoots and a splash park the kids won't want to leave.   # verify
+  - name: Waterslide & Splash Pad
+    text: A waterslide and a kids' water playground the little ones won't want to leave.
     image: resort/placeholder-resort-pool.jpg
 
+  - name: Tu Casa Bar & Lounge
+    text: Poolside food and a full bar — pizzas, wings, nachos and frozen drinks. Grab a souvenir cup for discounted refills every time you bring it back.
+    image: resort/placeholder-clubhouse.jpg
+
   - name: Fitness Center
-    text: Keep up your routine with a fully equipped fitness center.   # verify
+    text: A full workout room, open early (6 AM) to late (9 PM) every day.
     image: resort/placeholder-fitness.jpg
 
-  - name: Sports Courts
-    text: Tennis, basketball and volleyball courts for a little friendly competition.   # verify
+  - name: Sports Courts & Fields
+    text: A multi-sport court for basketball, volleyball and pickleball, plus a volleyball court and soccer field.
     image: resort/placeholder-clubhouse.jpg
 
-  - name: Bar & Lounge
-    text: Poolside drinks and bites at the clubhouse bar and lounge.   # verify name & hours
+  - name: Kids' Activity Center
+    text: A one-of-a-kind activity center and game room for younger guests, plus a playground outside.
     image: resort/placeholder-clubhouse.jpg
 
-  - name: Ice Cream & Market
-    text: An ice cream parlor for treats and a sundry shop for the essentials.   # verify
-    image: resort/placeholder-clubhouse.jpg
-
-  - name: Kids' Arcade & Playground
-    text: An indoor arcade and outdoor playground for younger guests.   # verify
-    image: resort/placeholder-clubhouse.jpg
+  - name: Quiet Phase 3 Pool
+    text: Looking for something calmer? The Phase 3 pool is a peaceful spot to swim and sunbathe.
+    image: resort/placeholder-resort-pool.jpg
 
 # Smaller "also included" list under the cards
 extras:
-  - Gated community entrance          # verify: staffed 24/7?
-  - Palm-lined streets & walking paths
-  - TODO — add or remove items
+  - Guarded, gated entrance
+  - Poolside grill — foot-long hot dogs & burgers (Wed–Sun, weather permitting)
+  - Clubhouse right across from the front gate
+  - Access on your check-out day too — perfect before a late flight
 
 access:
-  heading: Resort access
+  heading: Resort access is included
   text: >-
-    TODO: Explain how guests use the clubhouse — e.g. "Resort access is
-    included with your stay. Wristbands are provided at check-in." Include
-    any fees, hours, or age rules.
+    Every community amenity is included with your stay — no extra resort or
+    visit fees like many communities nearby. The clubhouse sits right across
+    the street from the front gate. Everyone signs a quick waiver the first
+    time they use the pool.
+
+# Clubhouse hours (shown in the access panel). Subject to change for
+# weather, holidays and resort needs.
+hours:
+  - { label: Clubhouse & game room, value: "9 AM – 9 PM" }
+  - { label: Fitness center,        value: "6 AM – 9 PM" }
+  - { label: Pool & basketball,     value: "9 AM – dusk" }
+  - { label: Activities center,     value: "10 AM – 6 PM" }
+  - { label: Tu Casa Bar & Lounge,  value: "11 AM – dusk" }
+hours_note: Hours may change with the season, weather and holidays.
 
 location:
   heading: In the heart of it all
   text: >-
-    Windsor at Westside sits just west of Walt Disney World, close to the
-    restaurants and shops of US-192 and an easy drive to Universal, SeaWorld
-    and the airport.
+    Windsor at Westside sits just west of Walt Disney World — about 10 miles
+    from Animal Kingdom — close to the restaurants and shops of US-192 and an
+    easy drive to Universal, SeaWorld and the airport.

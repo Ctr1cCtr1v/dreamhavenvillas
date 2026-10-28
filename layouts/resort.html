@@ -51,6 +51,13 @@
       <p class="eyebrow">Good to know</p>
       <h3>{{ .heading }}</h3>
       <p>{{ .text }}</p>
+      {{- with $r.hours }}
+      <h4 class="hours__title">Clubhouse hours</h4>
+      <dl class="hours">
+        {{- range . }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}
+      </dl>
+      {{- with $r.hours_note }}<p class="hours__note">{{ . }}</p>{{ end }}
+      {{- end }}
     </div>
     {{- end }}
     {{- with $r.location }}

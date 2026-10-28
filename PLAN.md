@@ -187,20 +187,28 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 
 ## 9. Open Items
 
+Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, kept local and git-ignored, never published: it contains the Wi-Fi password and door/safety details).
+
 | Item | Status |
 |---|---|
-| Booking URL | Placeholder for now; link only (no widget expected) |
-| Management company name | TODO |
-| Public contact info | TODO |
+| Owners | Tony & Aimee (family-owned, not corporate). Confirm OK to show first names |
+| Management company name | ❓ Welcome Book says both "Tampa Vacation Collection" and "Florida Vacation Collection". Need the correct one |
+| Public contact | Phone ✅ 813-343-2660. Email ❓ help@tampa… vs help@florida…vacationcollection.com |
+| Booking URL | ❓ Still placeholder |
+| Deal Alerts signup | ❓ Welcome Book promises "Deal Alerts" on the site. Needs a form service choice |
+| Bedroom layout | 4 king / 2 queen / 2 kids' rooms (2 twins each) ✅. Which room is which + baths ❓ |
+| Sleeps | 16 (from bed count). Confirm max occupancy |
+| Private spa | Sale listing says yes; Welcome Book doesn't mention it. Removed from the site until confirmed |
+| Minimum stay, cancellation, deposit/payment | ❓ |
+| Baby gear | ❓ |
+| Reviews | ✅ 2 from the Welcome Book; source (Airbnb/VRBO/direct) ❓; more welcome |
+| Drive times | ✅ OpenStreetMap routing (Oct 2026) + Welcome Book |
+| Resort amenities & hours | ✅ From the Welcome Book |
 | Logo | ✅ Received (wide + square sticker). Ask designer for transparent PNG/SVG if available |
-| Photos | Placeholders now → personal photos → professional shoot next week |
-| Home facts (baths, sleeps, sq ft, bed config, pool/spa, game room…) | TODO |
-| Guest reviews to feature | TODO |
-| Visitor stats (GoatCounter / Cloudflare) | Optional — off; add a code in hugo.yaml → params.analytics |
-| "Save" claim (specific % or general) | TODO |
-| Domain | ✅ dreamhavenvillas.com → GitHub Pages (DNS at GoDaddy) |
+| Photos | Placeholders now → personal photos → professional shoot |
+| Visitor stats (GoatCounter / Cloudflare) | Optional, off; add a code in hugo.yaml → params.analytics |
 | GitHub repo | ✅ github.com/Ctr1cCtr1v/dreamhavenvillas (public), Pages via Actions |
-| Stack confirmed (Hugo) | ✅ |
+| Domain | ✅ dreamhavenvillas.com → GitHub Pages (DNS at GoDaddy), verified. www HTTPS cert pending |
 | Map pin | ✅ 28.30885, -81.64318 (US Census geocoder) |
 
 ## 10. Notes & Cautions

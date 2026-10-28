@@ -1,33 +1,33 @@
 # =====================================================================
 #  THE VILLA — property details page
-#  Fill in every TODO. Delete a line entirely to hide it on the site.
+#  Delete a line entirely to hide it on the site.
 #  Photos: paths inside assets/images/ — the FIRST photo is the big one.
-#  Lines marked "# verify" were filled in from the home's July 2026 sale
-#  listing (MLS O6405993). Check them against the home as it is today.
+#  Facts come from the Dream Haven Welcome Book and the home's 2026 sale
+#  listing. Lines marked "# verify" still need a quick check.
 # =====================================================================
 
 # Key numbers bar at the top of the page (order = order shown)
 stats:
   - { value: "8",     label: Bedrooms }
-  - { value: "6",     label: Bathrooms }     # verify (6 full baths)
-  - { value: "TODO",  label: Sleeps }        # e.g. "16"
-  - { value: "4,041", label: Sq Ft }         # verify
-  - { value: "Pool & Spa", label: Private }  # verify; add "Heated" if it is
+  - { value: "6",     label: Bathrooms }
+  - { value: "16",    label: Sleeps }        # verify: max occupancy
+  - { value: "4,041", label: Sq Ft }
+  - { value: Private, label: Heated Pool }   # heat available on request
   - { value: Gated,   label: Resort }
 
 overview:
-  heading: A home built for big getaways
+  heading: Our family's home, ready for yours
   # Separate paragraphs with a blank line.
   text: |-
-    Built in 2018 and spread across two floors and more than 4,000 square
-    feet, Dream Haven Villas has room for the whole crew: eight bedrooms, six
-    full bathrooms, an open-plan living, kitchen and dining space, and a
-    screened pool and spa just outside.
+    Dream Haven Villa is our family's own vacation home, not a corporate
+    rental. It's where we make memories with our kids, and we hope you'll
+    feel like you're staying in the home of a friend.
 
-    The primary suite and a second bedroom are on the main floor, so
-    grandparents can skip the stairs. Upstairs, the rest of the bedrooms
-    gather around a loft made for movie nights, and kids will head straight
-    for the game room. TODO: check this description and make it yours.
+    Spread across two floors and more than 4,000 square feet, the villa has
+    two huge indoor gathering areas, an outdoor dining area by a sunny,
+    south-facing pool, eight bedrooms and six full bathrooms. The primary
+    suite and a second king room are on the main floor, so grandparents can
+    skip the stairs, and the kids' themed bedrooms are waiting upstairs.
 
 # ---------------------------------------------------------------------
 #  SHARED SPACES — living areas, kitchen, game room, outdoors.
@@ -35,24 +35,30 @@ overview:
 # ---------------------------------------------------------------------
 spaces:
   - name: Living Room
-    tagline: TODO — one short line, e.g. "Gather, relax, and plan tomorrow's adventure"
+    tagline: Gather, relax, and plan tomorrow's adventure
     floor: First floor
     description: >-
-      TODO: Describe the living room — seating, TV, natural light, how it
-      connects to the pool and kitchen.
-    features: [TODO feature, TODO feature, TODO feature]
+      An open, comfortable living space with plenty of seating and a big
+      smart TV. Log into your own streaming apps — the TVs are in guest mode,
+      so you're signed out automatically at check-out.
+    features: [Large smart TV, Stream your own apps, Open to the kitchen]   # verify
     photos:
       - living/placeholder-living-1.jpg
       - living/placeholder-living-2.jpg
       - living/placeholder-living-3.jpg
 
-  - name: Kitchen & Dining
-    tagline: TODO — e.g. "Family feasts, made easy"
+  - name: Kitchen & Coffee Bar
+    tagline: Family feasts, made easy
     floor: First floor
     description: >-
-      TODO: Describe the kitchen and dining — appliances, island seating,
-      dining table size.
-    features: [TODO feature, TODO feature, TODO feature]
+      A fully equipped kitchen with everything you need for big family
+      breakfasts and dinners in — right down to the Mickey and Minnie waffle
+      makers. Start every morning at the coffee bar.
+    features:
+      - Coffee bar with Keurig & two drip makers
+      - Mickey & Minnie waffle makers
+      - Dishwasher & garbage disposal
+      - Pots, pans & cooking utensils
     photos:
       - kitchen/placeholder-kitchen-1.jpg
       - kitchen/placeholder-kitchen-2.jpg
@@ -60,21 +66,21 @@ spaces:
 
   - name: Game Room
     tagline: Where friendly rivalries begin
-    floor: First floor      # verify
+    floor: First floor
     description: >-
-      A video-game themed game room built for family tournaments.
-      TODO: list the games, seating and screens.
-    features: [TODO game, TODO game, TODO game]
+      A video-game themed game room built for family tournaments, with a
+      game table and big TVs. TODO: list the games.
+    features: [Game table, Big-screen TV, TODO game]
     photos:
       - game-room/placeholder-game-room-1.jpg
       - game-room/placeholder-game-room-2.jpg
 
   - name: Upstairs Loft
     tagline: Movie nights, upstairs
-    floor: Second floor     # verify
+    floor: Second floor
     description: >-
-      An open loft at the top of the stairs for lounging, board games and
-      movie nights. TODO: describe the seating and TV.
+      A second huge gathering space at the top of the stairs for lounging,
+      board games and movie nights. TODO: describe the seating and TV.
     features: [TODO feature, TODO feature]
     photos:
       - living/placeholder-loft-1.jpg
@@ -84,10 +90,16 @@ spaces:
     tagline: Your own private resort
     floor: Outdoors
     description: >-
-      A private pool and spa inside a screened enclosure, with a covered
-      lanai for shade. TODO: is the pool heated (and is there a fee)? Which
-      way does it face? Describe the lounge and dining furniture.
-    features: [Private pool, Spa, Screened enclosure, Covered lanai]   # verify
+      Your private screened pool faces south, so it gets sun all day. Pool
+      heat is available on request for winter swims, and the covered lanai
+      has an outdoor dining area for long evenings by the water. A pool door
+      alarm and safety fence come set up on arrival.
+    features:
+      - South-facing, sun all day
+      - Heated on request ($50/day)
+      - Screened enclosure
+      - Outdoor dining area
+      - Pool safety fence & door alarm
     photos:
       - pool/placeholder-pool-1.jpg
       - pool/placeholder-pool-2.jpg
@@ -98,86 +110,94 @@ spaces:
 #  BEDROOMS — also builds the "Sleeping Arrangements" table automatically.
 #  beds: list each bed, e.g. [King] or [Queen, Twin] or ["Bunk (Twin over Twin)"]
 #  bath: e.g. "Private en-suite" / "Shared hall bath" / "Jack-and-Jill"
+#  ⚠ The Welcome Book says 4 king rooms, 2 queen rooms and 2 kids' rooms
+#    with 2 twins each. Which room is which is a best guess — verify.
 # ---------------------------------------------------------------------
 bedrooms:
   - name: Primary Suite
-    floor: First floor      # verify
-    beds: [TODO]
-    bath: Private en-suite, double vanity   # verify
-    description: TODO — what makes this room special.
-    features: [TODO, TODO]
+    floor: First floor
+    beds: [King]
+    bath: Private en-suite, double vanity
+    description: A main-floor king suite with its own bathroom.
+    features: [Main floor — no stairs]
     photos: [bedrooms/placeholder-bedroom-1.jpg]
 
   - name: Bedroom 2
-    floor: First floor      # verify
-    beds: [TODO]
+    floor: First floor
+    beds: [King]              # verify
     bath: TODO
-    description: TODO
+    description: A second main-floor king room.
     features: [TODO]
     photos: [bedrooms/placeholder-bedroom-2.jpg]
 
   - name: Bedroom 3
-    floor: Second floor     # verify
-    beds: [TODO]
+    floor: Second floor
+    beds: [King]              # verify
     bath: TODO
     description: TODO
     features: [TODO]
     photos: [bedrooms/placeholder-bedroom-3.jpg]
 
   - name: Bedroom 4
-    floor: Second floor     # verify
-    beds: [TODO]
+    floor: Second floor
+    beds: [King]              # verify
     bath: TODO
     description: TODO
     features: [TODO]
     photos: [bedrooms/placeholder-bedroom-4.jpg]
 
   - name: Bedroom 5
-    floor: Second floor     # verify
-    beds: [TODO]
+    floor: Second floor
+    beds: [Queen]             # verify
     bath: TODO
     description: TODO
     features: [TODO]
     photos: [bedrooms/placeholder-bedroom-5.jpg]
 
   - name: Bedroom 6
-    floor: Second floor     # verify
-    beds: [TODO]
+    floor: Second floor
+    beds: [Queen]             # verify
     bath: TODO
     description: TODO
     features: [TODO]
     photos: [bedrooms/placeholder-bedroom-6.jpg]
 
-  - name: Bedroom 7
-    floor: Second floor     # verify
-    beds: [TODO]
+  - name: Kids' Room 1
+    floor: Second floor
+    beds: [Twin, Twin]
     bath: TODO
-    description: TODO
-    features: [TODO]
+    description: A themed kids' room the little ones will love.   # TODO: name the theme?
+    features: [Themed decor]
     photos: [bedrooms/placeholder-bedroom-7.jpg]
 
-  - name: Bedroom 8
-    floor: Second floor     # verify
-    beds: [TODO]
+  - name: Kids' Room 2
+    floor: Second floor
+    beds: [Twin, Twin]
     bath: TODO
-    description: TODO
-    features: [TODO]
+    description: A second themed kids' room.   # TODO: name the theme?
+    features: [Themed decor]
     photos: [bedrooms/placeholder-bedroom-8.jpg]
 
 # ---------------------------------------------------------------------
 #  HOUSE INFO — "Good to know" panel. Delete a line to hide it.
 # ---------------------------------------------------------------------
 house_info:
-  - { label: Check-in,      value: "TODO" }   # e.g. "4:00 PM"
-  - { label: Check-out,     value: "TODO" }   # e.g. "10:00 AM"
+  - { label: Check-in,      value: "After 4:00 PM" }
+  - { label: Check-out,     value: "By 10:00 AM" }
   - { label: Minimum stay,  value: "TODO" }
-  - { label: Parking,       value: "2-car garage + driveway" }   # verify
-  - { label: Wi-Fi,         value: "TODO" }   # e.g. "High-speed fiber"
-  - { label: Pets,          value: "TODO" }
-  - { label: Smoking,       value: Not permitted }
-  - { label: Events,        value: "TODO" }
+  - { label: Entry,         value: "Keyless — your own door code" }
+  - { label: Parking,       value: "Driveway & street" }
+  - { label: Wi-Fi,         value: "Free high-speed Wi-Fi" }
+  - { label: Pets,          value: Not permitted }
+  - { label: Smoking,       value: "Not permitted (incl. vaping)" }
+  - { label: Parties,       value: Not permitted }
+  - { label: Quiet hours,   value: "10 PM – 7 AM" }
 
 house_rules:
-  - TODO — house rule
-  - TODO — house rule
-  - TODO — house rule
+  - No smoking or vaping anywhere on the property, including the garage and pool area.
+  - No pets — this is a pet-free home for guests with allergies.
+  - No parties. This is a family vacation home, not a party house.
+  - Community quiet hours are 10 PM to 7 AM.
+  - Park only in the driveway or on the street — never blocking the sidewalk (the HOA fines and tows).
+  - No tape or adhesive on walls or doors. Use the banner holder for celebrations!
+  - Life happens! Please report any damage right away.

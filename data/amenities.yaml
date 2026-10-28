@@ -1,45 +1,57 @@
 # =====================================================================
 #  AMENITY CHECKLIST — grouped by category, shown on The Villa page.
-#  Add or delete lines freely. Common items are pre-filled as a starting
-#  point — delete any the home does NOT have.
+#  Add or delete lines freely.
 #  ⚠ If an item contains a colon ( : ), wrap it in quotes:
 #      - "Pool heat: available for a fee"
 # =====================================================================
 
 - category: Pool & Outdoor
   items:
-    - Private screened pool     # verify; TODO: heated? (extra fee?)
-    - Spa / hot tub             # verify
-    - Covered lanai             # verify
-    - TODO — Outdoor dining & lounge chairs
+    - Private screened pool (south-facing)
+    - Pool heat on request ($50/day)
+    - Covered lanai with outdoor dining
+    - Pool safety fence & door alarm
+    - Pool towels
+    - Weekly pool service
 
 - category: Entertainment
   items:
-    - Video-game themed game room   # verify; TODO: list the games
-    - Upstairs loft lounge          # verify
-    - Smart TVs
-    - High-speed Wi-Fi
+    - Video-game themed game room
+    - Game table
+    - Upstairs loft lounge
+    - Smart TVs throughout (stream your own apps)
+    - Free high-speed Wi-Fi
 
 - category: Kitchen & Dining
   items:
     - Fully equipped kitchen
-    - TODO — Dining seats for ___
-    - Coffee maker
-    - Dishwasher
+    - Coffee bar (Keurig & two drip makers)
+    - Electric kettle & tea pot
+    - Mickey & Minnie waffle makers
+    - Dishwasher & garbage disposal
+    - Filtered water at the fridge
 
 - category: Comfort
   items:
-    - Central air conditioning
-    - Linens & towels provided
-    - Washer & dryer
+    - Two central air conditioning units
+    - Linens, extra pillows & blankets
+    - Bath, hand & makeup towels
+    - Shampoo, conditioner & body wash
+    - Hair dryer
+    - Iron & ironing board
+    - Washer & dryer (starter detergent included)
+    - Essential oil diffusers & linen spray
 
 - category: Family Friendly
   items:
-    - TODO — Pack 'n play / high chair
-    - Theme-park inspired kids' rooms   # verify
+    - Two themed kids' bedrooms
+    - Two main-floor king bedrooms
+    - Banner holder for celebrations
+    - TODO — Pack 'n play / high chair?
 
 - category: Parking & Access
   items:
-    - Gated resort community
-    - 2-car garage + driveway parking   # verify
-    - TODO — Keyless entry
+    - Guarded, gated resort community
+    - Keyless entry with your own door code
+    - Driveway & street parking
+    - Daily trash valet

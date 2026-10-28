@@ -24,17 +24,18 @@ hero:
 # Quick-glance strip just below the hero. Keep each to a few words.
 highlights:
   - { value: "8",      label: Bedrooms }
-  - { value: "TODO",   label: Guests }          # TODO: sleeps how many?
+  - { value: "16",     label: Guests }          # verify max occupancy
   - { value: Private,  label: Pool & Lanai }
-  - { value: "12 min", label: To Disney }        # verify drive time
+  - { value: "10 mi",  label: To Disney }
 
 intro:
   heading: Your private haven, right by all the action
   text: >-
-    Spend your days chasing thrills at the world's most famous theme parks,
-    then come home to your own sparkling pool, room for everyone to spread out,
-    and the calm of a gated resort community. At Dream Haven Villas, the whole
-    family vacations together — without anyone giving up a thing.
+    Dream Haven Villa is our family's own vacation home — not a corporate
+    rental. Spend your days chasing thrills at the world's most famous theme
+    parks, then come home to your own sunny pool, room for everyone to spread
+    out, and the calm of a gated resort. We hope it feels like staying at the
+    home of a friend.
 
 # Story sections, shown top to bottom. Photos alternate left / right.
 # "link" is optional — it adds a link to another page.
@@ -50,10 +51,9 @@ sections:
 
   - eyebrow: The Pool
     heading: Your own private pool, steps from the living room
-    # verify: screened pool + spa (from the sale listing); add "heated" if it is
     text: >-
-      A screened private pool and spa, steps from the living room.
-      Morning coffee on the lanai. Afternoon cannonballs while the little ones
+      A screened, south-facing private pool with sun all day — heated on
+      request for winter swims. Morning coffee on the lanai. Afternoon cannonballs while the little ones
       nap. Starry evenings by the water after a big park day. The pool is all
       yours — no towels saving chairs, no crowds.
     image: pool/placeholder-pool-1.jpg
@@ -61,29 +61,30 @@ sections:
 
   - eyebrow: The Resort
     heading: Gated resort living at Windsor at Westside
-    # TODO: confirm amenities named here
     text: >-
-      Step outside your private villa and into a resort clubhouse with a lazy
-      river, water slides, a fitness center and dining. Security at the gate,
-      palm-lined streets, and a true resort feel — all part of your stay.
+      Step outside your private villa and into a 10,000 sq ft clubhouse with a
+      lazy river, waterslide, hot tub, fitness center and a poolside bar &
+      grill. A guarded gate, a true resort feel — and it's all included with
+      your stay, with no extra resort fees.
     image: resort/placeholder-lazy-river.jpg
     link: { text: Explore the resort, url: /windsor-at-westside/ }
 
   - eyebrow: The Parks
     heading: Minutes from the magic
     text: >-
-      Walt Disney World is just down the road, with Universal Orlando, Epic
-      Universe and SeaWorld an easy drive away. Rope-drop the parks, head home
-      for a midday swim, and go back rested for the fireworks.
+      Walt Disney World is about 10 miles away — you can even hear the
+      fireworks from the villa. Universal, Epic Universe and SeaWorld are an
+      easy drive. Rope-drop the parks, head home for a midday swim, and go
+      back rested for the fireworks.
     image: area/placeholder-theme-parks.jpg
     link: { text: See drive times & the map, url: /explore/ }
 
   - eyebrow: Beyond the Parks
     heading: Beaches, golf and Florida sunshine
     text: >-
-      Tee off at championship courses nearby, spend a day on the Atlantic or
-      Gulf coast, watch a rocket launch at Kennedy Space Center, or float a
-      crystal-clear natural spring. Florida is your backyard.
+      Tee off at championship courses nearby, hunt for shark teeth on the Gulf
+      coast, sink your toes in Siesta Key's cool white sand, or watch a rocket
+      launch at Kennedy Space Center. Florida is your backyard.
     image: area/placeholder-beach.jpg
     link: { text: Things to do nearby, url: /explore/ }
 
@@ -105,10 +106,10 @@ book_band:
   heading: Book direct & save
   text: >-
     Same villa, same stay — without the service fees that booking sites add on
-    top. Reserve directly with our local management team and keep the savings
-    for the parks.
+    top. Book directly with us, and come back again for our returning-guest
+    discount.
   points:
     - No Airbnb or VRBO service fees
     - Direct line to our local team
-    - Same home, same 5-star stay      # TODO: confirm rating claim
+    - Discounts for returning guests
   image: pool/placeholder-pool-3.jpg

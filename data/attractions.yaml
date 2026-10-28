@@ -1,7 +1,8 @@
 # =====================================================================
 #  EXPLORE THE AREA — map pins, drive-time table, and attraction cards
-#  ⚠ Drive times & miles are ESTIMATES from the villa without traffic.
-#    Verify in Google Maps and adjust. lat/lng place the pin on the map.
+#  Drive times & miles: from the villa, without traffic (OpenStreetMap
+#  routing, Oct 2026, cross-checked with the Welcome Book). Real times vary
+#  with traffic — adjust freely. lat/lng place the pin on the map.
 #  category must match one of the names under "categories".
 #  Optional per place: url (website link).
 #  Each card gets a Google Maps "Directions" link automatically.
@@ -10,9 +11,10 @@
 intro:
   heading: Right in the middle of the magic
   text: >-
-    Dream Haven Villas puts you minutes from Walt Disney World and an easy drive
-    to Universal, SeaWorld, championship golf and both Florida coasts. Tap a
-    pin for details and directions.
+    Dream Haven Villas sits about 10 miles from Walt Disney World — close
+    enough to hear the fireworks from the villa — and an easy drive to
+    Universal, SeaWorld, championship golf and both Florida coasts. These are
+    our family's favorites. Tap a pin for details and directions.
 
 # Categories: order = order on the page. color = map pin color.
 # image = the photo shown beside that category's list of places.
@@ -21,6 +23,7 @@ categories:
   - { name: Beaches,            color: "#3AA6C4", image: area/placeholder-beach.jpg }
   - { name: Golf,               color: "#5E8C5A", image: area/placeholder-golf.jpg }
   - { name: Dining & Shopping,  color: "#C2724E", image: area/placeholder-dining-shopping.jpg }
+  - { name: Day Trips,          color: "#8E6B2E", image: area/placeholder-beach.jpg }
   - { name: Nature & Adventure, color: "#1F5F7A", image: area/placeholder-nature.jpg }
   - { name: Getting Here,       color: "#5E6B74" }
 
@@ -28,71 +31,71 @@ places:
   # ---------------- Theme Parks ----------------
   - name: Disney's Animal Kingdom
     category: Theme Parks
-    drive: 12 min
-    miles: 7
+    drive: 25 min
+    miles: 10
     lat: 28.3553
     lng: -81.5901
-    text: Safaris, Pandora, and Expedition Everest.
+    text: The closest Disney park to the villa — safaris, Pandora, and Expedition Everest.
     url: https://disneyworld.disney.go.com/destinations/animal-kingdom/
-
-  - name: EPCOT
-    category: Theme Parks
-    drive: 15 min
-    miles: 10
-    lat: 28.3747
-    lng: -81.5494
-    text: World Showcase, festivals, and Guardians of the Galaxy.
-    url: https://disneyworld.disney.go.com/destinations/epcot/
 
   - name: Disney's Hollywood Studios
     category: Theme Parks
-    drive: 15 min
-    miles: 10
+    drive: 25 min
+    miles: 12
     lat: 28.3575
     lng: -81.5582
     text: Star Wars Galaxy's Edge and Toy Story Land.
     url: https://disneyworld.disney.go.com/destinations/hollywood-studios/
 
+  - name: EPCOT
+    category: Theme Parks
+    drive: 25 min
+    miles: 13
+    lat: 28.3747
+    lng: -81.5494
+    text: World Showcase, festivals, and Guardians of the Galaxy.
+    url: https://disneyworld.disney.go.com/destinations/epcot/
+
   - name: Magic Kingdom
     category: Theme Parks
-    drive: 20 min
-    miles: 13
+    drive: 30 min
+    miles: 15
     lat: 28.4177
     lng: -81.5812
-    text: The classic — Cinderella Castle and nighttime fireworks.
+    text: The classic — Cinderella Castle and nighttime fireworks (you can hear them from the villa!).
     url: https://disneyworld.disney.go.com/destinations/magic-kingdom/
 
   - name: SeaWorld Orlando
     category: Theme Parks
-    drive: 25 min
-    miles: 17
+    drive: 30 min
+    miles: 18
     lat: 28.4114
     lng: -81.4612
-    text: Coasters, marine life, and Aquatica next door.
+    text: Mako, Kraken and Manta coasters, plus orcas, sharks, dolphins and manatees. Check their site for ticket specials — they run discounts often.
     url: https://seaworld.com/orlando/
 
   - name: Universal Orlando Resort
     category: Theme Parks
-    drive: 30 min
+    drive: 35 min
     miles: 22
     lat: 28.4744
     lng: -81.4678
-    text: Universal Studios, Islands of Adventure, and Volcano Bay.
+    text: Universal Studios, Islands of Adventure, Volcano Bay and CityWalk — home of Harry Potter, Jurassic Park and Kong.
     url: https://www.universalorlando.com/
 
   - name: Universal Epic Universe
     category: Theme Parks
-    drive: 30 min
-    miles: 21
+    drive: 35 min
+    miles: 22
     lat: 28.4720
     lng: -81.4483
-    text: Universal's newest park.
+    text: Universal's newest park, with Super Nintendo World.
     url: https://www.universalorlando.com/
 
   - name: LEGOLAND Florida
     category: Theme Parks
-    drive: 40 min
-    miles: 28
+    drive: 50 min
+    miles: 30
     lat: 27.9886
     lng: -81.6907
     text: Perfect for younger kids, plus Peppa Pig Theme Park.
@@ -101,84 +104,167 @@ places:
   # ---------------- Beaches ----------------
   - name: Cocoa Beach
     category: Beaches
-    drive: 1 hr 15 min
-    miles: 75
+    drive: 1 hr 30 min
+    miles: 74
     lat: 28.3684
     lng: -80.6046
-    text: Atlantic surf, the historic pier, and Ron Jon Surf Shop.
+    text: On famous A1A, close to Kennedy Space Center and Ron Jon Surf Shop.
 
   - name: Clearwater Beach
     category: Beaches
-    drive: 1 hr 45 min
-    miles: 100
+    drive: 1 hr 50 min
+    miles: 86
     lat: 27.9775
     lng: -82.8271
     text: Soft white sand and Gulf sunsets.
 
+  - name: Siesta Key Beach
+    category: Beaches
+    drive: 2 hr 20 min
+    miles: 117
+    lat: 27.2656
+    lng: -82.5525
+    text: One of the best beaches in the world — famous white quartz sand that stays cool on your feet.
+
+  - name: Lido Key Beach
+    category: Beaches
+    drive: 2 hr 20 min
+    miles: 114
+    lat: 27.3117
+    lng: -82.5770
+    text: A local favorite, right by St. Armands Circle for food and shopping.
+
+  - name: Venice & Caspersen Beach
+    category: Beaches
+    drive: 2 hr 35 min
+    miles: 125
+    lat: 27.0583
+    lng: -82.4400
+    text: The best beachcombing around — come home with a jar of shark teeth.
+
   # ---------------- Golf ----------------
   - name: ChampionsGate Golf
     category: Golf
-    drive: 15 min
-    miles: 8
+    drive: 10 min
+    miles: 4.5
     lat: 28.2617
     lng: -81.6236
-    text: Two Greg Norman-designed courses just south of the villa.   # verify
+    text: Two Greg Norman-designed courses just south of the villa.
 
   - name: Reunion Resort Golf
     category: Golf
-    drive: 15 min       # verify
-    miles: 8            # verify
+    drive: 15 min
+    miles: 7
     lat: 28.2706
     lng: -81.5908
-    text: Courses designed by Arnold Palmer, Jack Nicklaus and Tom Watson.   # verify
+    text: Courses designed by Arnold Palmer, Jack Nicklaus and Tom Watson.
 
   - name: Celebration Golf Club
     category: Golf
-    drive: 20 min       # verify
-    miles: 12           # verify
+    drive: 25 min
+    miles: 12
     lat: 28.3141
     lng: -81.5444
-    text: A Robert Trent Jones Sr. & Jr. course in the town of Celebration.   # verify
+    text: A Robert Trent Jones Sr. & Jr. course in the town of Celebration.
 
   # ---------------- Dining & Shopping ----------------
+  - name: Publix Super Market
+    category: Dining & Shopping
+    drive: 7 min
+    miles: 1.7
+    lat: 28.31026
+    lng: -81.66842
+    text: The closest full grocery store — 2424 Sand Mine Rd, Davenport.
+
+  - name: Chuy's Tex-Mex
+    category: Dining & Shopping
+    drive: 14 min
+    miles: 5.8
+    lat: 28.34687
+    lng: -81.60611
+    text: A family favorite on US-192.
+
+  - name: Olive Garden
+    category: Dining & Shopping
+    drive: 15 min
+    miles: 5.8
+    lat: 28.26048
+    lng: -81.60999
+    text: Easy Italian for a big group, on Osceola Polk Line Rd.
+
   - name: Disney Springs
     category: Dining & Shopping
-    drive: 20 min
-    miles: 13
+    drive: 25 min
+    miles: 14
     lat: 28.3707
     lng: -81.5197
     text: Free-to-visit dining, shopping, and entertainment district.
 
+  - name: Disney Character Warehouse
+    category: Dining & Shopping
+    drive: 25 min
+    miles: 15
+    lat: 28.38918
+    lng: -81.49292
+    text: Discounted Disney merch at Orlando Vineland Premium Outlets — our pick for souvenirs.
+
   - name: Old Town Kissimmee
     category: Dining & Shopping
-    drive: 15 min
-    miles: 9
+    drive: 20 min
+    miles: 11
     lat: 28.3317
     lng: -81.5310
-    text: Classic cars, rides, and family fun on US-192.
+    text: Rides, shops and free parking — plus free car shows on Friday and Saturday nights.
+    url: https://www.myoldtownusa.com/
 
   # ---------------- Nature & Adventure ----------------
+  - name: Gatorland
+    category: Nature & Adventure
+    drive: 35 min
+    miles: 21
+    lat: 28.3557
+    lng: -81.4029
+    text: Gator shows, crocodiles, snakes, a Florida panther and a zipline. Open daily.
+    url: https://www.gatorland.com/
+
+  - name: Lake Apopka Wildlife Drive
+    category: Nature & Adventure
+    drive: 50 min
+    miles: 33
+    lat: 28.6727
+    lng: -81.5776
+    text: The best free alligator viewing around. Open weekends and holidays — best on cooler days.
+
   - name: Kennedy Space Center
     category: Nature & Adventure
-    drive: 1 hr 15 min
-    miles: 75
+    drive: 1 hr 30 min
+    miles: 71
     lat: 28.5240
     lng: -80.6827
     text: Rockets, astronaut encounters, and real launches.
 
-  - name: Gatorland
-    category: Nature & Adventure
-    drive: 30 min
-    miles: 18
-    lat: 28.3557
-    lng: -81.4029
-    text: Old-Florida charm and thousands of gators.
+  # ---------------- Day Trips ----------------
+  - name: Anna Maria Island
+    category: Day Trips
+    drive: 2 hr 20 min
+    miles: 107
+    lat: 27.5306
+    lng: -82.7337
+    text: Classic Florida island life with great food and great views.
+
+  - name: Sanibel Island
+    category: Day Trips
+    drive: 3 hr 40 min
+    miles: 153
+    lat: 26.4520
+    lng: -82.0145
+    text: More seashells than sand — a shell lover's paradise, and a great place to spot dolphins.
 
   # ---------------- Getting Here ----------------
   - name: Orlando International Airport (MCO)
     category: Getting Here
-    drive: 35 min
-    miles: 26
+    drive: 45 min
+    miles: 35
     lat: 28.4312
     lng: -81.3081
-    text: The main airport for Orlando vacations.
+    text: The main airport for Orlando vacations — about 45 minutes via the FL-417 toll road.

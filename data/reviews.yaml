@@ -2,20 +2,21 @@
 #  GUEST REVIEWS — shown on the home page. Use real guest reviews only.
 #  source: where the review came from, e.g. Airbnb, VRBO, Direct guest
 #  rating: optional star count (defaults to 5)
+#  date: optional, e.g. "June 2026"
 #  Delete every review to hide the section.
 # =====================================================================
 
-- quote: TODO — paste a favorite guest review here.
-  name: TODO Guest Name
-  source: Airbnb
-  date: TODO 2026
+- quote: >-
+    Our family LOVED Dream Haven Villa! The south facing pool had sun all
+    day and the kitchen had everything we needed! We loved the game table
+    and the huge TVs! We will be back!!!
+  name: The Hansens, Utah
+  source: Guest review       # TODO: Airbnb / VRBO / Direct?
 
-- quote: TODO — paste a second review here.
-  name: TODO Guest Name
-  source: VRBO
-  date: TODO 2026
-
-- quote: TODO — paste a third review here.
-  name: TODO Guest Name
-  source: Direct guest
-  date: TODO 2026
+- quote: >-
+    Would highly recommend! Everything was clean and tastefully done. Loved
+    the Minnie and Mickey waffle makers! The coffee bar was great and the
+    kids loved their bedrooms. We loved the nice pillows and sheets and
+    convenient location!
+  name: Terry & Cyndi
+  source: Guest review       # TODO: Airbnb / VRBO / Direct?

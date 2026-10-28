@@ -4,3 +4,7 @@ photo-inbox/*
 public/
 resources/_gen/
 .hugo_build.lock
+
+# Private owner documents (welcome book etc.) — never publish
+*.pdf
+!assets/images/brand/source/*.pdf

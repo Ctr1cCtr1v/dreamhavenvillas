@@ -194,22 +194,31 @@ Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, 
 | Owners | ✅ Tony & Aimee (OK to show; signs the home-page welcome) |
 | Management company | ✅ Florida Vacation Collection · help@tampavacationcollection.com · 813-343-2660 |
 | Booking URL | ❓ Not available yet (owner will provide). Booking terms live on that site, not ours |
-| Deal Alerts | ✅ Page + form built (Google Form → Sheet). ❓ Owner creates the Google Form, then sends the link; Claude fills entry IDs into hugo.yaml |
-| Bedrooms | ✅ Main: King primary (en-suite), Queen. Up: 3 King, 1 Queen, Cars room (bunks), Moana room (2 twins). Per-room baths unknown (Bath column hidden until all rooms have one) |
+| Deal Alerts | ✅ Connected to Google Form → Sheet (entry IDs in hugo.yaml) |
+| Bedrooms | ✅ 4 King, 2 Queen, 2 kids' rooms. Baths: 4 en-suite, 2 jack-and-jill (Bedrooms 3 & 4), kids' rooms share one |
 | Sleeps | ✅ 16 |
 | Spa | ✅ Yes, shares the pool's heat |
 | Game room | ✅ TV + air hockey (work in progress) |
-| Loft | ✅ Games table, games closet, large sectional, massive TV, Disney movie posters |
+| Living rooms | ✅ Large sectionals and 85-inch TVs in both main and upstairs living rooms |
+| Kitchen | ✅ Dining seats 12, island seats 4 |
+| Outdoors | ✅ Outdoor table for 6, outdoor sectional, poolside sectional & loungers, cornhole. Grill later |
 | Baby gear | ✅ Pack 'n play, stroller, cooler. No high chair |
+| Social accounts | ❓ To create (Facebook, Instagram) |
 | Reviews | ✅ 2 direct reviews; more coming |
 | Drive times | ✅ OpenStreetMap routing (Oct 2026) + Welcome Book |
 | Resort amenities & hours | ✅ From the Welcome Book |
 | Logo | ✅ Received (wide + square sticker). Ask designer for transparent PNG/SVG if available |
 | Photos | Placeholders now → personal photos → professional shoot |
-| Visitor stats (GoatCounter / Cloudflare) | Optional, off; add a code in hugo.yaml → params.analytics |
+| Visitor stats (GoatCounter / Cloudflare) | Skipped for now (owner). Off |
 | GitHub repo | ✅ github.com/Ctr1cCtr1v/dreamhavenvillas (public), Pages via Actions |
 | Domain | ✅ dreamhavenvillas.com → GitHub Pages (DNS at GoDaddy), verified. www HTTPS cert pending |
 | Map pin | ✅ 28.30885, -81.64318 (US Census geocoder) |
+
+### To do later (not on site yet)
+- **Facebook & Instagram accounts:** create them, then add the links to `hugo.yaml` → `social`. The footer icons appear automatically.
+- **Outdoor grill:** add to The Villa page once the grill is set up.
+- **Visitor stats:** skipped for now (owner). GoatCounter stays off. Revisit later.
+- **Bathroom details:** the sleeping table now shows bath info for every room (from owner answers, 2026-10-30).
 
 ## 10. Notes & Cautions
 

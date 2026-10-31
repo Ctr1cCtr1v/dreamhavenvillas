@@ -39,10 +39,10 @@ spaces:
     tagline: Gather, relax, and plan tomorrow's adventure
     floor: First floor
     description: >-
-      An open, comfortable living space with plenty of seating and a big
-      smart TV. Log into your own streaming apps — the TVs are in guest mode,
-      so you're signed out automatically at check-out.
-    features: [Large smart TV, Stream your own apps, Open to the kitchen]   # verify
+      A main-floor living room with a large sectional and an 85-inch TV,
+      open to the kitchen. Log into your own streaming apps — the TVs are in
+      guest mode, so you're signed out automatically at check-out.
+    features: [Large sectional, 85-inch TV, Open to the kitchen]
     photos:
       - living/placeholder-living-1.jpg
       - living/placeholder-living-2.jpg
@@ -52,10 +52,13 @@ spaces:
     tagline: Family feasts, made easy
     floor: First floor
     description: >-
-      A fully equipped kitchen with everything you need for big family
-      breakfasts and dinners in — right down to the Mickey and Minnie waffle
-      makers. Start every morning at the coffee bar.
+      A fully equipped kitchen for big family breakfasts and dinners in,
+      right down to the Mickey and Minnie waffle makers. The dining table
+      seats 12, with 4 more seats at the island. Start every morning at the
+      coffee bar.
     features:
+      - Dining table seats 12
+      - Island seats 4
       - Coffee bar with Keurig & two drip makers
       - Mickey & Minnie waffle makers
       - Dishwasher & garbage disposal
@@ -80,13 +83,13 @@ spaces:
     tagline: Movie nights and game nights, upstairs
     floor: Second floor
     description: >-
-      A second huge gathering space at the top of the stairs. Sink into the
-      large sectional for a Disney movie night on the massive TV, surrounded
-      by classic Disney movie posters — or pull out a game from the closet
-      full of them and settle in at the games table.
+      An upstairs living room at the top of the stairs. Sink into the large
+      sectional for a Disney movie night on the 85-inch TV, surrounded by
+      Disney movie posters, or pull a game from the closet and settle in at
+      the games table.
     features:
       - Large sectional
-      - Massive TV
+      - 85-inch TV
       - Games table
       - Closet full of board games
       - Disney movie posters
@@ -100,15 +103,18 @@ spaces:
     description: >-
       Your private screened pool and spa face south, so they get sun all day.
       Heat is available on request for winter swims (the spa shares the
-      pool's temperature), and the covered lanai
-      has an outdoor dining area for long evenings by the water. A pool door
-      alarm and safety fence come set up on arrival.
+      pool's temperature). Lounge on the pool loungers and the poolside
+      sectional, dine at the outdoor table for six, or play a game of
+      cornhole. A pool door alarm and safety fence come set up on arrival.
     features:
       - Private pool & spa
       - South-facing, sun all day
       - Heated on request ($50/day)
       - Screened enclosure
-      - Outdoor dining area
+      - Outdoor dining table for six
+      - Outdoor sectional
+      - Poolside sectional & loungers
+      - Cornhole
       - Pool safety fence & door alarm
     photos:
       - pool/placeholder-pool-1.jpg
@@ -126,57 +132,64 @@ bedrooms:
   - name: Primary Suite
     floor: First floor
     beds: [King]
-    bath: Private en-suite, double vanity
-    description: A main-floor king suite with its own bathroom — no stairs needed.
-    features: [Main floor]
+    bath: Private en-suite
+    description: A main-floor king suite with its own en-suite bathroom — no stairs needed.
+    features: [Main floor, En-suite bathroom]
     photos: [bedrooms/placeholder-bedroom-1.jpg]
 
   - name: Bedroom 2
     floor: First floor
     beds: [Queen]
-    description: A main-floor queen room, great for grandparents.
-    features: [Main floor]
+    bath: Private en-suite
+    description: A main-floor queen room with its own en-suite bathroom, great for grandparents.
+    features: [Main floor, En-suite bathroom]
     photos: [bedrooms/placeholder-bedroom-2.jpg]
 
   - name: Bedroom 3
     floor: Second floor
     beds: [King]
-    description: A comfortable upstairs king room.
-    features: []
+    bath: Private vanity, shared jack-and-jill tub/shower & toilet
+    description: An upstairs king room with its own vanity. It shares a jack-and-jill tub, shower and toilet with Bedroom 4.
+    features: [Jack-and-jill bathroom]
     photos: [bedrooms/placeholder-bedroom-3.jpg]
 
   - name: Bedroom 4
     floor: Second floor
     beds: [King]
-    description: A second upstairs king room.
-    features: []
+    bath: Private vanity, shared jack-and-jill tub/shower & toilet
+    description: An upstairs king room with its own vanity. It shares a jack-and-jill tub, shower and toilet with Bedroom 3.
+    features: [Jack-and-jill bathroom]
     photos: [bedrooms/placeholder-bedroom-4.jpg]
 
   - name: Bedroom 5
     floor: Second floor
     beds: [King]
-    description: A third upstairs king room.
-    features: []
+    bath: Private en-suite
+    description: An upstairs king room with its own en-suite bathroom.
+    features: [En-suite bathroom]
     photos: [bedrooms/placeholder-bedroom-5.jpg]
 
   - name: Bedroom 6
     floor: Second floor
     beds: [Queen]
-    description: An upstairs queen room.
-    features: []
+    bath: Private en-suite
+    description: An upstairs queen room with its own en-suite bathroom.
+    features: [En-suite bathroom]
     photos: [bedrooms/placeholder-bedroom-6.jpg]
 
   - name: Cars Room
     floor: Second floor
     beds: [Bunk beds]
-    description: A race-car themed kids' room with bunk beds.
+    bath: Shared double vanity, shower & toilet with the Moana Room
+    description: A race-car themed kids' room with bunk beds. It shares a double vanity, shower and toilet with the Moana Room.
     features: [Themed kids' room]
     photos: [bedrooms/placeholder-bedroom-7.jpg]
 
   - name: Moana Room
     floor: Second floor
     beds: [Twin, Twin]
-    description: An island-themed kids' room with two twin beds.
+    bath: Shared double vanity, shower & toilet with the Cars Room
+    description: An island-themed kids' room with two twin beds. It shares a double vanity, shower and toilet with the Cars Room.
     features: [Themed kids' room]
     photos: [bedrooms/placeholder-bedroom-8.jpg]
 

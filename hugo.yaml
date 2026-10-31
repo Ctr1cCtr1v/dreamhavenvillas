@@ -42,13 +42,13 @@ params:
   # Leave action "" and the page shows "signups open soon" instead.
   # (See EDITING.md → Deal Alerts for how these are found.)
   dealAlerts:
-    action: ""
+    action: "https://docs.google.com/forms/d/e/1FAIpQLScIpPBkj5OFcrIVt7bD8fJ5qpYTTWCLPoBwFWY2Ud0FT5TCYQ/formResponse"
     fields:
-      name: ""        # First name
-      email: ""       # Email
-      interests: ""   # Which deals (checkboxes)
-      visit: ""       # When visiting (dropdown)
-      consent: ""     # Consent checkbox — its one option must be "Yes"
+      name: "entry.310902120"       # First name
+      email: "entry.81894254"       # Email
+      interests: "entry.2081486598" # Which deals (checkboxes)
+      visit: "entry.511188422"      # When visiting (dropdown)
+      consent: "entry.458119458"    # Consent checkbox — its one option is "Yes"
 
   # --- Search engines ------------------------------------------------
   # true = ask Google etc. NOT to list the site yet (use while it still has

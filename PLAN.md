@@ -208,7 +208,7 @@ Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, 
 | Drive times | ✅ OpenStreetMap routing (Oct 2026) + Welcome Book |
 | Resort amenities & hours | ✅ From the Welcome Book |
 | Logo | ✅ Received (wide + square sticker). Ask designer for transparent PNG/SVG if available |
-| Photos | ✅ Professional shoot added 2026-11-19 (97 photos; originals in `8875 Qin Loop full size/`, git-ignored). Still placeholder: Explore/area photos, resort Tu Casa, Fitness Center, Phase 3 pool. Bedroom 3–6 photo matching to confirm with owner |
+| Photos | ✅ Professional shoot added 2026-11-19 (102 photos; originals in `8875 Qin Loop full size/`, git-ignored). Still placeholder: Explore/area photos, resort Tu Casa, Fitness Center, Phase 3 pool. Bedroom 3–6 photo matching to confirm with owner |
 | Visitor stats (GoatCounter / Cloudflare) | Skipped for now (owner). Off |
 | GitHub repo | ✅ github.com/Ctr1cCtr1v/dreamhavenvillas (public), Pages via Actions |
 | Domain | ✅ dreamhavenvillas.com → GitHub Pages (DNS at GoDaddy), verified. www HTTPS cert pending |

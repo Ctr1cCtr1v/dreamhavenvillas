@@ -76,6 +76,14 @@ full-screen viewer. Swipe or use the arrow keys to move through the set.
 path, e.g. `pool/01-pool-sunset.jpg: Sunset over the pool`.
 **Videos:** paste YouTube or Vimeo links under `videos` in the same file.
 
+### The professional photo shoot (November 2026)
+The full-size originals are in the `8875 Qin Loop full size/` folder. It stays
+on this computer only (it is too big to upload). The prepped copies live in
+`assets/images/`, renamed by room, e.g. `bedrooms/05a-bedroom-5.jpg`. The
+**Baths & Details** gallery tab shows the `details/` folder (entry, baths,
+laundry and close-ups). To swap in a different shoot photo, put it in
+`photo-inbox/<folder>/` and run the prep script.
+
 ### Replacing a placeholder
 Placeholder photos are named `placeholder-….jpg`.
 - **Gallery:** as soon as a folder has one real photo, that folder's placeholders

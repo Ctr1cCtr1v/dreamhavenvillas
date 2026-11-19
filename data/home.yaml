@@ -10,7 +10,7 @@ hero:
   # "image" below is shown FIRST and is also the photo used for link
   # previews when someone shares the site. Other photos follow in filename
   # order (name them 01-pool.jpg, 02-front.jpg… to choose the order).
-  image: hero/placeholder-hero.jpg
+  image: hero/01-pool-sunset.jpg
   slideshow: true        # false = show only the "image" photo
   slide_seconds: 6       # how long each photo stays up
   # Optional short, muted background video (under ~8 MB). Put the .mp4 in
@@ -47,7 +47,7 @@ sections:
       Eight bedrooms mean every family, couple and kid gets a space of their own.
       Open living areas bring everyone back together for movie nights, game
       nights and long dinners around a full-size table.
-    image: living/placeholder-living-1.jpg
+    image: living/01-living-room.jpg
     link: { text: Tour the villa room by room, url: /the-villa/ }
 
   - eyebrow: The Pool
@@ -57,7 +57,7 @@ sections:
       on request for winter swims. Morning coffee on the lanai. Afternoon cannonballs while the little ones
       nap. Starry evenings by the water after a big park day. The pool is all
       yours — no towels saving chairs, no crowds.
-    image: pool/placeholder-pool-1.jpg
+    image: pool/01-pool-and-spa.jpg
     link: { text: See the photos, url: /gallery/ }
 
   - eyebrow: The Resort
@@ -67,7 +67,7 @@ sections:
       lazy river, waterslide, hot tub, fitness center and a poolside bar &
       grill. A guarded gate, a true resort feel — and it's all included with
       your stay, with no extra resort fees.
-    image: resort/placeholder-lazy-river.jpg
+    image: resort/09-lazy-river.jpg
     link: { text: Explore the resort, url: /windsor-at-westside/ }
 
   - eyebrow: The Parks
@@ -97,9 +97,9 @@ reviews:
 # "Explore Dream Haven" photo tiles — short labels, each links to a page
 tiles_heading: Explore Dream Haven
 tiles:
-  - { label: The Villa,  image: exterior/placeholder-front-1.jpg,  url: /the-villa/ }
-  - { label: Gallery,    image: pool/placeholder-pool-2.jpg,       url: /gallery/ }
-  - { label: The Resort, image: resort/placeholder-clubhouse.jpg,  url: /windsor-at-westside/ }
+  - { label: The Villa,  image: exterior/01-front-dusk.jpg,     url: /the-villa/ }
+  - { label: Gallery,    image: game-room/01-game-room.jpg,   url: /gallery/ }
+  - { label: The Resort, image: resort/01-clubhouse.jpg,      url: /windsor-at-westside/ }
   - { label: Explore,    image: area/placeholder-golf.jpg,         url: /explore/ }
 
 book_band:
@@ -113,4 +113,4 @@ book_band:
     - No Airbnb or VRBO service fees
     - Direct line to our local team
     - Discounts for returning guests
-  image: pool/placeholder-pool-3.jpg
+  image: pool/03-pool-wide.jpg

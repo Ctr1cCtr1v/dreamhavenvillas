@@ -1,5 +1,10 @@
 # Photo shot list
 
+> **Update 2026-11-19:** the professional shoot photos are in. Everything
+> below is done except `area/` (your own trip photos) and three resort cards
+> (Tu Casa, Fitness Center, Phase 3 pool). The real file names differ from
+> the suggestions below; see `data/gallery.yaml` → `captions:` for the list.
+
 Drop each photo into `photo-inbox/<folder>/` using the file names below
 (the numbers set the order). Then tell Claude, who will run the prep script,
 connect the photos to the right spots and check how they look.

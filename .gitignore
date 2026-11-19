@@ -1,5 +1,7 @@
 .DS_Store
 photo-inbox/*
+# Full-size originals from the photo shoot (prepped copies live in assets/images/)
+8875 Qin Loop full size/
 !photo-inbox/README.md
 public/
 resources/_gen/

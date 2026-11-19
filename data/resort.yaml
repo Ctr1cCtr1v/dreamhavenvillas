@@ -12,21 +12,21 @@ intro:
     community in Kissimmee built for vacationing families. Enjoy the privacy
     of your own home and pool, then head to a 10,000 sq ft clubhouse packed
     with ways to play — and every bit of it is included with your stay.
-  image: resort/placeholder-clubhouse.jpg
+  image: resort/02-clubhouse-aerial.jpg
 
 # Perk cards, shown in this order. "image" is optional.
 perks:
   - name: Zero-Entry Resort Pool
     text: A huge resort-style pool you can walk right into, plus a hot tub for the grown-ups.
-    image: resort/placeholder-resort-pool.jpg
+    image: resort/05-resort-pool.jpg
 
   - name: Lazy River
     text: Grab a float and drift the afternoon away on the clubhouse lazy river.
-    image: resort/placeholder-lazy-river.jpg
+    image: resort/09-lazy-river.jpg
 
   - name: Waterslide & Splash Pad
     text: A waterslide and a kids' water playground the little ones won't want to leave.
-    image: resort/placeholder-resort-pool.jpg
+    image: resort/11-splash-pad.jpg
 
   - name: Tu Casa Bar & Lounge
     text: Poolside food and a full bar — pizzas, wings, nachos and frozen drinks. Grab a souvenir cup for discounted refills every time you bring it back.
@@ -38,11 +38,11 @@ perks:
 
   - name: Sports Courts & Fields
     text: A multi-sport court for basketball, volleyball and pickleball, plus a volleyball court and soccer field.
-    image: resort/placeholder-clubhouse.jpg
+    image: resort/10-lazy-river-aerial.jpg
 
   - name: Kids' Activity Center
     text: A one-of-a-kind activity center and game room for younger guests, plus a playground outside.
-    image: resort/placeholder-clubhouse.jpg
+    image: resort/17-activity-area.jpg
 
   - name: Quiet Phase 3 Pool
     text: Looking for something calmer? The Phase 3 pool is a peaceful spot to swim and sunbathe.

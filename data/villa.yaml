@@ -44,9 +44,8 @@ spaces:
       guest mode, so you're signed out automatically at check-out.
     features: [Large sectional, 85-inch TV, Open to the kitchen]
     photos:
-      - living/placeholder-living-1.jpg
-      - living/placeholder-living-2.jpg
-      - living/placeholder-living-3.jpg
+      - living/01-living-room.jpg
+      - living/02-living-room-kitchen.jpg
 
   - name: Kitchen & Coffee Bar
     tagline: Family feasts, made easy
@@ -64,9 +63,12 @@ spaces:
       - Dishwasher & garbage disposal
       - Pots, pans & cooking utensils
     photos:
-      - kitchen/placeholder-kitchen-1.jpg
-      - kitchen/placeholder-kitchen-2.jpg
-      - kitchen/placeholder-dining.jpg
+      - kitchen/01-kitchen.jpg
+      - kitchen/04-dining-table.jpg
+      - kitchen/03-kitchen-counters.jpg
+      - kitchen/05-dining-room.jpg
+      - kitchen/08-coffee-station.jpg
+      - kitchen/09-coffee-bar.jpg
 
   - name: Game Room
     tagline: Where friendly rivalries begin
@@ -76,8 +78,9 @@ spaces:
       the way.
     features: [Air hockey table, Big-screen TV]
     photos:
-      - game-room/placeholder-game-room-1.jpg
-      - game-room/placeholder-game-room-2.jpg
+      - game-room/01-game-room.jpg
+      - game-room/02-game-room-tv.jpg
+      - game-room/03-air-hockey.jpg
 
   - name: Upstairs Loft
     tagline: Movie nights and game nights, upstairs
@@ -94,8 +97,9 @@ spaces:
       - Closet full of board games
       - Disney movie posters
     photos:
-      - living/placeholder-loft-1.jpg
-      - living/placeholder-loft-2.jpg
+      - living/03-loft.jpg
+      - living/04-loft-sectional.jpg
+      - living/05-loft-games-table.jpg
 
   - name: Pool & Lanai
     tagline: Your own private resort
@@ -117,10 +121,12 @@ spaces:
       - Cornhole
       - Pool safety fence & door alarm
     photos:
-      - pool/placeholder-pool-1.jpg
-      - pool/placeholder-pool-2.jpg
-      - pool/placeholder-pool-3.jpg
-      - pool/placeholder-pool-4.jpg
+      - pool/01-pool-and-spa.jpg
+      - pool/02-pool-sunset.jpg
+      - pool/04-lanai-dining.jpg
+      - pool/05-lanai-sectional.jpg
+      - pool/03-pool-wide.jpg
+      - pool/10-loungers.jpg
 
 # ---------------------------------------------------------------------
 #  BEDROOMS — also builds the "Sleeping Arrangements" table automatically.
@@ -135,7 +141,7 @@ bedrooms:
     bath: Private en-suite
     description: A main-floor king suite with its own en-suite bathroom — no stairs needed.
     features: [Main floor, En-suite bathroom]
-    photos: [bedrooms/placeholder-bedroom-1.jpg]
+    photos: [bedrooms/01a-primary-suite.jpg, bedrooms/01b-primary-suite.jpg, bedrooms/01c-primary-bath.jpg]
 
   - name: Bedroom 2
     floor: First floor
@@ -143,7 +149,7 @@ bedrooms:
     bath: Private en-suite
     description: A main-floor queen room with its own en-suite bathroom, great for grandparents.
     features: [Main floor, En-suite bathroom]
-    photos: [bedrooms/placeholder-bedroom-2.jpg]
+    photos: [bedrooms/02a-bedroom-2.jpg, bedrooms/02b-bedroom-2.jpg, details/09-bedroom-2-bath.jpg]
 
   - name: Bedroom 3
     floor: Second floor
@@ -151,7 +157,7 @@ bedrooms:
     bath: Private vanity, shared jack-and-jill tub/shower & toilet
     description: An upstairs king room with its own vanity. It shares a jack-and-jill tub, shower and toilet with Bedroom 4.
     features: [Jack-and-jill bathroom]
-    photos: [bedrooms/placeholder-bedroom-3.jpg]
+    photos: [bedrooms/03a-bedroom-3.jpg, bedrooms/03b-bedroom-3.jpg, details/14-jack-and-jill-bath.jpg]
 
   - name: Bedroom 4
     floor: Second floor
@@ -159,7 +165,7 @@ bedrooms:
     bath: Private vanity, shared jack-and-jill tub/shower & toilet
     description: An upstairs king room with its own vanity. It shares a jack-and-jill tub, shower and toilet with Bedroom 3.
     features: [Jack-and-jill bathroom]
-    photos: [bedrooms/placeholder-bedroom-4.jpg]
+    photos: [bedrooms/04a-bedroom-4.jpg, bedrooms/04b-bedroom-4.jpg, details/13-jack-and-jill-bath.jpg]
 
   - name: Bedroom 5
     floor: Second floor
@@ -167,7 +173,7 @@ bedrooms:
     bath: Private en-suite
     description: An upstairs king room with its own en-suite bathroom.
     features: [En-suite bathroom]
-    photos: [bedrooms/placeholder-bedroom-5.jpg]
+    photos: [bedrooms/05a-bedroom-5.jpg, bedrooms/05b-bedroom-5.jpg, details/11-upstairs-bath.jpg]
 
   - name: Bedroom 6
     floor: Second floor
@@ -175,7 +181,7 @@ bedrooms:
     bath: Private en-suite
     description: An upstairs queen room with its own en-suite bathroom.
     features: [En-suite bathroom]
-    photos: [bedrooms/placeholder-bedroom-6.jpg]
+    photos: [bedrooms/06a-bedroom-6.jpg, bedrooms/06b-bedroom-6.jpg]
 
   - name: Cars Room
     floor: Second floor
@@ -183,7 +189,7 @@ bedrooms:
     bath: Shared double vanity, shower & toilet with the Moana Room
     description: A race-car themed kids' room with bunk beds. It shares a double vanity, shower and toilet with the Moana Room.
     features: [Themed kids' room]
-    photos: [bedrooms/placeholder-bedroom-7.jpg]
+    photos: [bedrooms/07a-cars-room.jpg, bedrooms/07b-cars-room.jpg, details/17-cars-pillows.jpg]
 
   - name: Moana Room
     floor: Second floor
@@ -191,7 +197,7 @@ bedrooms:
     bath: Shared double vanity, shower & toilet with the Cars Room
     description: An island-themed kids' room with two twin beds. It shares a double vanity, shower and toilet with the Cars Room.
     features: [Themed kids' room]
-    photos: [bedrooms/placeholder-bedroom-8.jpg]
+    photos: [bedrooms/08a-moana-room.jpg, bedrooms/08b-moana-room.jpg, details/19-moana-pillows.jpg]
 
 # ---------------------------------------------------------------------
 #  HOUSE INFO — "Good to know" panel. Delete a line to hide it.

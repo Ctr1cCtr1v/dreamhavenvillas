@@ -4,7 +4,7 @@
 **Property:** 8875 Qin Loop, Kissimmee, FL 34747 — Windsor at Westside (gated resort community). Luxury private 8-bedroom villa.
 **Hosting:** GitHub Pages (free, HTTPS, custom domain), built by GitHub Actions
 **Stack:** Hugo 0.168 (confirmed)
-**Last updated:** 2026-10-26
+**Last updated:** 2026-11-19
 
 ---
 
@@ -167,7 +167,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 - Remaining: flip `noindex: false` when the owner says go (after real photos/details). Domain verified (TXT `_github-pages-challenge-Ctr1cCtr1v`, keep that record in GoDaddy).
 
 ### Phase 9 — Real content
-- Personal photos as interim replacements → professional photos (shoot scheduled ~week of 2026-11-02).
+- ✅ Professional photos placed (2026-11-19). New gallery tab "Baths & Details" (`details/`).
 - Replace every `TODO:`; refine copy.
 
 ### Ongoing — Seasonal updates (documented in `EDITING.md`)
@@ -208,7 +208,7 @@ Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, 
 | Drive times | ✅ OpenStreetMap routing (Oct 2026) + Welcome Book |
 | Resort amenities & hours | ✅ From the Welcome Book |
 | Logo | ✅ Received (wide + square sticker). Ask designer for transparent PNG/SVG if available |
-| Photos | Placeholders now → personal photos → professional shoot |
+| Photos | ✅ Professional shoot added 2026-11-19 (97 photos; originals in `8875 Qin Loop full size/`, git-ignored). Still placeholder: Explore/area photos, resort Tu Casa, Fitness Center, Phase 3 pool. Bedroom 3–6 photo matching to confirm with owner |
 | Visitor stats (GoatCounter / Cloudflare) | Skipped for now (owner). Off |
 | GitHub repo | ✅ github.com/Ctr1cCtr1v/dreamhavenvillas (public), Pages via Actions |
 | Domain | ✅ dreamhavenvillas.com → GitHub Pages (DNS at GoDaddy), verified. www HTTPS cert pending |

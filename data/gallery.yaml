@@ -14,12 +14,111 @@ categories:
   - { folder: kitchen,   label: Kitchen & Dining }
   - { folder: bedrooms,  label: Bedrooms }
   - { folder: game-room, label: Game Room }
+  - { folder: details,   label: Baths & Details }
   - { folder: resort,    label: The Resort }
   - { folder: area,      label: The Area }
 
-# Optional captions, by file path. Photos without one show no caption.
+# Optional captions, by file path. Photos without one show the tab name.
+# Captions are also read aloud by screen readers, so describe the photo.
 captions:
-  pool/placeholder-pool-1.jpg: Private pool and lanai
+  exterior/01-front-dusk.jpg: The villa at dusk
+  exterior/02-front.jpg: Front of the villa
+  exterior/03-aerial-sunset.jpg: Sunset over Windsor at Westside
+
+  pool/01-pool-and-spa.jpg: Private pool and spa
+  pool/02-pool-sunset.jpg: The pool at sunset
+  pool/03-pool-wide.jpg: Screened pool and lanai
+  pool/04-lanai-dining.jpg: Outdoor dining for six, overlooking the pool
+  pool/05-lanai-sectional.jpg: Covered lanai with outdoor sectional
+  pool/07-lanai-pool-view.jpg: Lanai dining with pool view
+  pool/08-pool-length.jpg: Sunny, south-facing pool
+  pool/09-back-of-home.jpg: Back of the villa and pool enclosure
+  pool/10-loungers.jpg: Poolside loungers
+  pool/11-neon-sign.jpg: "\"Just keep swimming\" on the lanai"
+
+  living/01-living-room.jpg: Living room with sectional and 85-inch TV
+  living/02-living-room-kitchen.jpg: Living room, open to the kitchen
+  living/03-loft.jpg: Upstairs loft with sectional and 85-inch TV
+  living/04-loft-sectional.jpg: Movie nights in the upstairs loft
+  living/05-loft-games-table.jpg: Games table in the upstairs loft
+
+  kitchen/01-kitchen.jpg: Fully equipped kitchen with seating for 4 at the island
+  kitchen/03-kitchen-counters.jpg: Plenty of counter space
+  kitchen/04-dining-table.jpg: Dining table for 12
+  kitchen/05-dining-room.jpg: Dining room
+  kitchen/06-dining-and-living.jpg: Open dining and living area
+  kitchen/07-coffee-bar-dining.jpg: Coffee bar beside the dining table
+  kitchen/08-coffee-station.jpg: Coffee makers and toaster
+  kitchen/09-coffee-bar.jpg: The coffee bar
+  kitchen/10-coffee-syrups.jpg: Coffee syrups and teas
+  kitchen/11-cabinets.jpg: Dishes and glassware for a crowd
+  kitchen/12-cabinets-corner.jpg: Well-stocked cabinets
+  kitchen/13-spices.jpg: Spice rack
+  kitchen/14-utensils.jpg: Knives and cooking utensils
+  kitchen/15-welcome-banner.jpg: A warm welcome at the dining table
+
+  game-room/01-game-room.jpg: Game room with air hockey
+  game-room/02-game-room-tv.jpg: Game room with big-screen TV
+  game-room/03-air-hockey.jpg: Air hockey table
+
+  bedrooms/01a-primary-suite.jpg: Primary Suite (King)
+  bedrooms/01b-primary-suite.jpg: Primary Suite (King)
+  bedrooms/01c-primary-bath.jpg: Primary Suite en-suite bathroom
+  bedrooms/02a-bedroom-2.jpg: Bedroom 2 (Queen, main floor)
+  bedrooms/02b-bedroom-2.jpg: Bedroom 2 (Queen, main floor)
+  bedrooms/03a-bedroom-3.jpg: Bedroom 3 (King)
+  bedrooms/03b-bedroom-3.jpg: Bedroom 3 (King)
+  bedrooms/04a-bedroom-4.jpg: Bedroom 4 (King)
+  bedrooms/04b-bedroom-4.jpg: Bedroom 4 (King)
+  bedrooms/05a-bedroom-5.jpg: Bedroom 5 (King)
+  bedrooms/05b-bedroom-5.jpg: Bedroom 5 (King)
+  bedrooms/06a-bedroom-6.jpg: Bedroom 6 (Queen)
+  bedrooms/06b-bedroom-6.jpg: Bedroom 6 (Queen)
+  bedrooms/07a-cars-room.jpg: Cars Room with bunk beds
+  bedrooms/07b-cars-room.jpg: Cars Room with bunk beds
+  bedrooms/08a-moana-room.jpg: Moana Room with two twin beds
+  bedrooms/08b-moana-room.jpg: Moana Room with two twin beds
+
+  details/01-front-door.jpg: Front door
+  details/02-entry-hall.jpg: Entry hall
+  details/03-entry-stairs.jpg: Entry and stairs
+  details/04-entry-table.jpg: Entryway
+  details/05-entry-mirror.jpg: Entryway
+  details/06-entry-bench.jpg: Entry bench and cubbies
+  details/07-wreath.jpg: Front-door wreath
+  details/08-primary-bath.jpg: Primary bathroom with tub and shower
+  details/09-bedroom-2-bath.jpg: Bedroom 2 en-suite bathroom
+  details/10-upstairs-bath.jpg: Upstairs bathroom
+  details/11-upstairs-bath.jpg: Upstairs bathroom
+  details/12-jack-and-jill-bath.jpg: Jack-and-jill bathroom (Bedrooms 3 & 4)
+  details/13-jack-and-jill-bath.jpg: Jack-and-jill bathroom (Bedrooms 3 & 4)
+  details/14-jack-and-jill-bath.jpg: Jack-and-jill bathroom (Bedrooms 3 & 4)
+  details/15-shower-dispensers.jpg: Shampoo, conditioner and body wash in every shower
+  details/16-towels.jpg: Fresh towels
+  details/17-cars-pillows.jpg: Cars Room details
+  details/18-cars-pillows.jpg: Cars Room details
+  details/19-moana-pillows.jpg: Moana Room details
+  details/20-laundry.jpg: Laundry room with washer and dryer
+
+  resort/01-clubhouse.jpg: Windsor at Westside clubhouse
+  resort/02-clubhouse-aerial.jpg: The clubhouse and resort pools
+  resort/03-resort-aerial.jpg: Clubhouse, pools and lazy river from above
+  resort/04-resort-lake-aerial.jpg: The resort by the lake
+  resort/05-resort-pool.jpg: Zero-entry resort pool
+  resort/06-resort-pool-loungers.jpg: Resort pool loungers
+  resort/07-resort-pool.jpg: Resort pool
+  resort/08-hot-tub.jpg: Resort hot tub
+  resort/09-lazy-river.jpg: Lazy river
+  resort/10-lazy-river-aerial.jpg: Lazy river and sports court
+  resort/11-splash-pad.jpg: Waterslide and splash pad
+  resort/12-poolside-lounge.jpg: Poolside lounge
+  resort/13-clubhouse-lobby.jpg: Clubhouse lobby
+  resort/14-clubhouse-market.jpg: Clubhouse market
+  resort/15-clubhouse-game-room.jpg: Clubhouse game room
+  resort/16-clubhouse-lounge.jpg: Clubhouse lounge
+  resort/17-activity-area.jpg: Kids' activity area
+  resort/18-entrance.jpg: Windsor at Westside entrance
+  resort/19-community-aerial.jpg: Windsor at Westside from above
 
 # Videos (YouTube or Vimeo links). Leave the list empty to hide the section.
 videos: []

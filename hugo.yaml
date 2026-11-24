@@ -56,9 +56,9 @@ params:
       consent: "entry.458119458"    # Consent checkbox — its one option is "Yes"
 
   # --- Search engines ------------------------------------------------
-  # true = ask Google etc. NOT to list the site yet (use while it still has
-  # placeholder content). Set to false at launch.
-  noindex: true
+  # true = ask Google etc. NOT to list the site. false = listed (launched
+  # 2026-11-23).
+  noindex: false
 
   # --- Visitor stats (optional, privacy-friendly; leave "" for off) ---
   analytics:

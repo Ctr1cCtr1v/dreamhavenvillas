@@ -164,7 +164,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 - Set `noindex: false` in hugo.yaml so search engines can list the site (it's true while placeholders are up).
 - Enable Pages, custom domain, DNS records at registrar, enforce HTTPS, verify domain.
 - ✅ 2026-10-27: custom domain set on the repo (Settings → Pages). GoDaddy DNS: 4 A records `@` → 185.199.108–111.153, CNAME `www` → ctr1cctr1v.github.io (NS/SOA/_dmarc/_domainconnect left as-is). Certificate issued; HTTPS enforced. The deploy workflow picks up the domain automatically via `steps.pages.outputs.base_url`, so no CNAME file is needed.
-- Remaining: flip `noindex: false` when the owner says go (after real photos/details). Domain verified (TXT `_github-pages-challenge-Ctr1cCtr1v`, keep that record in GoDaddy).
+- ✅ 2026-11-23: `noindex: false` (owner approved). Domain verified (TXT `_github-pages-challenge-Ctr1cCtr1v`, keep that record in GoDaddy).
 
 ### Phase 9 — Real content
 - ✅ Professional photos placed (2026-11-19). New gallery tab "Baths & Details" (`details/`).
@@ -182,7 +182,7 @@ Each session: read `CLAUDE.md` + this plan → do the phase → update the statu
 - [x] Phase 5 — Resort & Explore
 - [x] Phase 6 — Book Direct & FAQ
 - [x] Phase 7 — Polish
-- [~] Phase 8 — Launch (domain live at https://dreamhavenvillas.com; `noindex` still on until real content)
+- [x] Phase 8 — Launch (domain live at https://dreamhavenvillas.com; `noindex` off 2026-11-23, site listed)
 - [ ] Phase 9 — Real content
 
 ## 9. Open Items

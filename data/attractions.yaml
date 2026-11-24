@@ -19,12 +19,12 @@ intro:
 # Categories: order = order on the page. color = map pin color.
 # image = the photo shown beside that category's list of places.
 categories:
-  - { name: Theme Parks,        color: "#C9A04E", image: area/placeholder-theme-parks.jpg }
-  - { name: Beaches,            color: "#3AA6C4", image: area/placeholder-beach.jpg }
-  - { name: Golf,               color: "#5E8C5A", image: area/placeholder-golf.jpg }
-  - { name: Dining & Shopping,  color: "#C2724E", image: area/placeholder-dining-shopping.jpg }
-  - { name: Day Trips,          color: "#8E6B2E", image: area/placeholder-beach.jpg }
-  - { name: Nature & Adventure, color: "#1F5F7A", image: area/placeholder-nature.jpg }
+  - { name: Theme Parks,        color: "#C9A04E", image: area/01-theme-parks.jpg }
+  - { name: Beaches,            color: "#3AA6C4", image: area/04-siesta-key.jpg }
+  - { name: Golf,               color: "#5E8C5A", image: area/03-golf.jpg }
+  - { name: Dining & Shopping,  color: "#C2724E", image: area/09-old-town-kissimmee.jpg }
+  - { name: Day Trips,          color: "#8E6B2E", image: area/07-anna-maria-island.jpg }
+  - { name: Nature & Adventure, color: "#1F5F7A", image: area/14-lake-apopka-wildlife-drive.jpg }
   - { name: Getting Here,       color: "#5E6B74" }
 
 places:

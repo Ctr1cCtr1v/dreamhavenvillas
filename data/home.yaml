@@ -77,7 +77,7 @@ sections:
       fireworks from the villa. Universal, Epic Universe and SeaWorld are an
       easy drive. Rope-drop the parks, head home for a midday swim, and go
       back rested for the fireworks.
-    image: area/placeholder-theme-parks.jpg
+    image: area/01-theme-parks.jpg
     link: { text: See drive times & the map, url: /explore/ }
 
   - eyebrow: Beyond the Parks
@@ -86,7 +86,7 @@ sections:
       Tee off at championship courses nearby, hunt for shark teeth on the Gulf
       coast, sink your toes in Siesta Key's cool white sand, or watch a rocket
       launch at Kennedy Space Center. Florida is your backyard.
-    image: area/placeholder-beach.jpg
+    image: area/02-beach.jpg
     link: { text: Things to do nearby, url: /explore/ }
 
 reviews:
@@ -98,9 +98,9 @@ reviews:
 tiles_heading: Explore Dream Haven
 tiles:
   - { label: The Villa,  image: exterior/01-front-dusk.jpg,     url: /the-villa/ }
-  - { label: Gallery,    image: game-room/01-game-room.jpg,   url: /gallery/ }
+  - { label: Gallery,    image: exterior/05-front-door.jpg,   url: /gallery/ }
   - { label: The Resort, image: resort/01-clubhouse.jpg,      url: /windsor-at-westside/ }
-  - { label: Explore,    image: area/placeholder-golf.jpg,         url: /explore/ }
+  - { label: Explore,    image: area/03-golf.jpg,               url: /explore/ }
 
 book_band:
   eyebrow: No booking-site fees
@@ -113,4 +113,4 @@ book_band:
     - No Airbnb or VRBO service fees
     - Direct line to our local team
     - Discounts for returning guests
-  image: pool/03-pool-wide.jpg
+  image: pool/15-pool-and-lanai.jpg

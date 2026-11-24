@@ -488,6 +488,9 @@ html:has(.subnav) { scroll-padding-top: calc(var(--header-h) + 72px); }
 .gallery__item { display: block; border-radius: var(--radius-sm); overflow: hidden; cursor: zoom-in; background: var(--cream); }
 .gallery__item img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform .6s var(--ease); }
 .gallery__item:hover img { transform: scale(1.03); }
+/* Single photos that open the viewer (resort page) */
+.zoomable { display: block; cursor: zoom-in; }
+.card__media .zoomable { height: 100%; }
 
 /* Videos */
 .video { margin: 0; }
@@ -659,3 +662,17 @@ html.lightbox-open { overflow: hidden; }
 .deal-form .btn { justify-self: start; }
 .deal-form__status { margin: 0; padding: 1rem 1.25rem; border-radius: 10px; background: #FBEDEA; color: #8A2E1D; font-weight: 600; }
 .deal-form__status.is-ok { background: #E7F2F5; color: var(--ocean); font-size: 1.1rem; }
+
+/* Deal Alerts form extras + popup */
+.field__optional { font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--muted); }
+.field__note { margin: 0; font-size: .82rem; line-height: 1.45; color: var(--muted); }
+.deal-popup { width: min(32rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); overflow-y: auto; padding: clamp(1.5rem, 5vw, 2.25rem); border: 0; border-radius: var(--radius); background: var(--white); color: var(--ink); box-shadow: var(--shadow); }
+.deal-popup::backdrop { background: rgba(6, 10, 24, .6); }
+.deal-popup[open] { animation: lb-in .3s var(--ease); }
+.deal-popup__head { text-align: center; margin-bottom: 1.25rem; }
+.deal-popup__head .sparkle { margin-bottom: .75rem; }
+.deal-popup__head h2 { margin: 0 0 .5rem; }
+.deal-popup__head p { margin: 0; color: var(--muted); }
+.deal-popup .deal-form { gap: 1rem; }
+.deal-popup__close { position: absolute; top: .5rem; right: .5rem; width: 2.75rem; height: 2.75rem; border: 0; background: none; font-size: 1.9rem; line-height: 1; color: var(--muted); cursor: pointer; }
+.deal-popup__skip { display: block; margin: 1rem auto 0; border: 0; background: none; color: var(--muted); text-decoration: underline; cursor: pointer; font: inherit; font-size: .9rem; padding: .5rem; }

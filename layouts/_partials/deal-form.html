@@ -1,0 +1,76 @@
+{{/*
+  Deal Alerts signup form, used on the /deals/ page and in the popup.
+  Wording: data/deals.yaml. Destination: hugo.yaml → params.dealAlerts
+  (a Google Form; field names are its entry IDs). Any Formspree-style
+  endpoint also works.
+
+  Usage: {{ partial "deal-form.html" (dict "id" "da") }}
+  Optional: compact (true = name, email and consent only, for the popup)
+*/}}
+{{- $d := hugo.Data.deals }}
+{{- $p := site.Params }}
+{{- $action := $p.dealAlerts.action }}
+{{- $f := $p.dealAlerts.fields | default dict }}
+{{- $google := strings.Contains $action "docs.google.com" }}
+{{- $id := .id }}
+{{/* A field with no entry ID yet (e.g. a question not added to the Google
+     Form) gets no name; deals.js adds its answer to the first-name answer
+     so nothing is lost. */}}
+{{- $nameOf := dict }}
+{{- range slice "lastName" "phone" }}{{ $nameOf = merge $nameOf (dict . (index $f . | default (cond $google "" .))) }}{{ end }}
+<form class="deal-form{{ if not .compact }} panel reveal{{ end }}" method="post" data-deal-form
+      action="{{ $action }}"{{ if not $action }} data-not-ready{{ end }}{{ if $google }} data-google{{ end }}>
+  <div class="field-row">
+    <div class="field">
+      <label for="{{ $id }}-name">First name</label>
+      <input id="{{ $id }}-name" name="{{ $f.name | default "name" }}" type="text" autocomplete="given-name" required data-first-name>
+    </div>
+    <div class="field">
+      <label for="{{ $id }}-last">Last name</label>
+      <input id="{{ $id }}-last" {{ with $nameOf.lastName }}name="{{ . }}"{{ else }}data-merge{{ end }} type="text" autocomplete="family-name" required>
+    </div>
+  </div>
+  <div class="field">
+    <label for="{{ $id }}-email">Email</label>
+    <input id="{{ $id }}-email" name="{{ $f.email | default "email" }}" type="email" autocomplete="email" required>
+  </div>
+  <div class="field">
+    <label for="{{ $id }}-phone">Mobile number for texts <span class="field__optional">(optional)</span></label>
+    <input id="{{ $id }}-phone" {{ with $nameOf.phone }}name="{{ . }}"{{ else }}data-merge="text"{{ end }} type="tel" autocomplete="tel" inputmode="tel" aria-describedby="{{ $id }}-phone-note">
+    {{- with $d.phone_note }}<p class="field__note" id="{{ $id }}-phone-note">{{ . }}</p>{{ end }}
+  </div>
+
+  {{- if not .compact }}
+  {{- with $d.interests }}
+  <fieldset class="field">
+    <legend>What deals interest you?</legend>
+    <div class="checks">
+      {{- range $i, $x := . }}
+      <label class="check"><input type="checkbox" name="{{ $f.interests | default "interests" }}" value="{{ $x }}"> {{ $x }}</label>
+      {{- end }}
+    </div>
+  </fieldset>
+  {{- end }}
+
+  {{- with $d.visit }}
+  <div class="field">
+    <label for="{{ $id }}-visit">When are you thinking of visiting?</label>
+    <select id="{{ $id }}-visit" name="{{ $f.visit | default "visit" }}">
+      {{- range . }}<option>{{ . }}</option>{{ end }}
+    </select>
+  </div>
+  {{- end }}
+  {{- end }}
+
+  <label class="check check--consent"><input type="checkbox" name="{{ $f.consent | default "consent" }}" value="Yes" required> {{ $d.consent }}</label>
+
+  {{/* Spam trap: hidden from people, bots fill it in */}}
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
+  {{- if not $google }}<input type="hidden" name="_subject" value="New Deal Alerts signup — {{ site.Title }}">{{ end }}
+
+  <button class="btn btn--lg" type="submit">{{ $d.button | default "Sign Me Up" }}</button>
+  <p class="deal-form__status" role="status" aria-live="polite" hidden></p>
+  <template data-msg="success">{{ $d.success }}</template>
+  <template data-msg="error">{{ $d.error }}{{ with $p.email }} ({{ . }}){{ end }}</template>
+  <template data-msg="not-ready">{{ $d.not_ready }}{{ with $p.email }} ({{ . }}){{ end }}</template>
+</form>

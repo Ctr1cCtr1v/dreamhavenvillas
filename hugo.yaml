@@ -16,8 +16,7 @@ params:
     resort community minutes from Walt Disney World. Book direct and save.
 
   # --- Booking -------------------------------------------------------
-  # TODO: replace with the management company's booking page for this home
-  bookingURL: https://example.com/TODO-booking-link
+  bookingURL: https://stay.floridavacationcollection.com/vrp/unit/Qin_Loop-200-15
   bookingButtonText: Book Direct & Save
 
   # --- Contact (leave a line blank "" to hide it on the site) -------
@@ -26,15 +25,19 @@ params:
   phone: "813-343-2660"
 
   # --- Location ------------------------------------------------------
+  # The street address is kept off the public site on purpose (guests get it
+  # after booking). Put it back in "street" to show it in the footer again.
   address:
-    street: 8875 Qin Loop
+    street: ""
     city: Kissimmee
     state: FL
     zip: "34747"
   community: Windsor at Westside
-  # Map pin (from US Census geocoder for 8875 Qin Loop)
-  latitude: 28.30885
-  longitude: -81.64318
+  # Map pin: deliberately approximate (the general area, not the house).
+  latitude: 28.31
+  longitude: -81.64
+  # "Directions" links on the Explore page start from here
+  directionsFrom: Windsor at Westside, Kissimmee, FL 34747
 
   # --- Deal Alerts signup form (the /deals/ page) --------------------
   # Signups go to a Google Form → Google Sheet. "action" is the form's
@@ -45,6 +48,11 @@ params:
     action: "https://docs.google.com/forms/d/e/1FAIpQLScIpPBkj5OFcrIVt7bD8fJ5qpYTTWCLPoBwFWY2Ud0FT5TCYQ/formResponse"
     fields:
       name: "entry.310902120"       # First name
+      # Not on the Google Form yet: add "Last name" and "Mobile number"
+      # questions there, then paste their entry IDs here. Until then the
+      # site adds those answers to the First name answer.
+      lastName: ""
+      phone: ""
       email: "entry.81894254"       # Email
       interests: "entry.2081486598" # Which deals (checkboxes)
       visit: "entry.511188422"      # When visiting (dropdown)

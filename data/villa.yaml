@@ -60,6 +60,7 @@ spaces:
       - Island seats 4
       - Coffee bar with Keurig & two drip makers
       - Mickey & Minnie waffle makers
+      - Crock-Pot, Instant Pot & electric sauté pan
       - Dishwasher & garbage disposal
       - Pots, pans & cooking utensils
     photos:
@@ -69,6 +70,20 @@ spaces:
       - kitchen/05-dining-room.jpg
       - kitchen/08-coffee-station.jpg
       - kitchen/09-coffee-bar.jpg
+      - kitchen/10-coffee-syrups.jpg
+      - kitchen/16-coffee-cabinet.jpg
+      - kitchen/23-dishes.jpg
+      - kitchen/24-glassware.jpg
+      - kitchen/11-cabinets.jpg
+      - kitchen/12-cabinets-corner.jpg
+      - kitchen/22-pots-and-pans.jpg
+      - kitchen/20-baking-pans.jpg
+      - kitchen/17-slow-cooker-saute-pan.jpg
+      - kitchen/19-pressure-cooker-blender.jpg
+      - kitchen/21-silverware.jpg
+      - kitchen/18-utensil-drawers.jpg
+      - kitchen/14-utensils.jpg
+      - kitchen/13-spices.jpg
 
   - name: Game Room
     tagline: Where friendly rivalries begin
@@ -100,6 +115,9 @@ spaces:
       - living/03-loft.jpg
       - living/04-loft-sectional.jpg
       - living/05-loft-games-table.jpg
+      - living/07-loft.jpg
+      - details/21-loft-pillow.jpg
+      - details/22-loft-pillow.jpg
 
   - name: Pool & Lanai
     tagline: Your own private resort
@@ -108,17 +126,20 @@ spaces:
       Your private screened pool and spa face south, so they get sun all day.
       Heat is available on request for winter swims (the spa shares the
       pool's temperature). Lounge on the pool loungers and the poolside
-      sectional, dine at the outdoor table for six, or play a game of
+      sectional, dine at the outdoor table, or play a game of
       cornhole. A pool door alarm and safety fence come set up on arrival.
     features:
       - Private pool & spa
       - South-facing, sun all day
-      - Heated on request ($50/day)
+      - Heated on request ($50/day, only needed in winter)
       - Screened enclosure
-      - Outdoor dining table for six
+      - Outdoor dining table
       - Outdoor sectional
       - Poolside sectional & loungers
       - Cornhole
+      - Café lights
+      - Colored pool deck lighting
+      - No close rear neighbors
       - Pool safety fence & door alarm
     photos:
       - pool/01-pool-and-spa.jpg
@@ -127,6 +148,12 @@ spaces:
       - pool/05-lanai-sectional.jpg
       - pool/03-pool-wide.jpg
       - pool/10-loungers.jpg
+      - pool/14-lanai-and-pool.jpg
+      - pool/15-pool-and-lanai.jpg
+      - pool/07-lanai-pool-view.jpg
+      - pool/08-pool-length.jpg
+      - pool/12-lanai-margaritas.jpg
+      - pool/13-cornhole.jpg
 
 # ---------------------------------------------------------------------
 #  BEDROOMS — also builds the "Sleeping Arrangements" table automatically.
@@ -141,7 +168,7 @@ bedrooms:
     bath: Private en-suite
     description: A main-floor king suite with its own en-suite bathroom — no stairs needed.
     features: [Main floor, En-suite bathroom]
-    photos: [bedrooms/01a-primary-suite.jpg, bedrooms/01b-primary-suite.jpg, bedrooms/01c-primary-bath.jpg]
+    photos: [bedrooms/01a-primary-suite.jpg, bedrooms/01b-primary-suite.jpg, bedrooms/01c-primary-bath.jpg, bedrooms/01d-primary-suite.jpg, details/08-primary-bath.jpg, details/23-primary-bed.jpg]
 
   - name: Bedroom 2
     floor: First floor
@@ -149,7 +176,7 @@ bedrooms:
     bath: Private en-suite
     description: A main-floor queen room with its own en-suite bathroom, great for grandparents.
     features: [Main floor, En-suite bathroom]
-    photos: [bedrooms/02a-bedroom-2.jpg, bedrooms/02b-bedroom-2.jpg, details/09-bedroom-2-bath.jpg]
+    photos: [bedrooms/02a-bedroom-2.jpg, bedrooms/02b-bedroom-2.jpg, details/09-bedroom-2-bath.jpg, details/24-bedroom-2-bed.jpg]
 
   - name: Bedroom 3
     floor: Second floor
@@ -157,7 +184,7 @@ bedrooms:
     bath: Private vanity, shared jack-and-jill tub/shower & toilet
     description: An upstairs king room with its own vanity. It shares a jack-and-jill tub, shower and toilet with Bedroom 4.
     features: [Jack-and-jill bathroom]
-    photos: [bedrooms/03a-bedroom-3.jpg, bedrooms/03b-bedroom-3.jpg, details/14-jack-and-jill-bath.jpg]
+    photos: [bedrooms/03a-bedroom-3.jpg, bedrooms/03b-bedroom-3.jpg, details/14-jack-and-jill-bath.jpg, details/12-jack-and-jill-bath.jpg, details/25-bedroom-3-bed.jpg]
 
   - name: Bedroom 4
     floor: Second floor
@@ -165,39 +192,39 @@ bedrooms:
     bath: Private vanity, shared jack-and-jill tub/shower & toilet
     description: An upstairs king room with its own vanity. It shares a jack-and-jill tub, shower and toilet with Bedroom 3.
     features: [Jack-and-jill bathroom]
-    photos: [bedrooms/04a-bedroom-4.jpg, bedrooms/04b-bedroom-4.jpg, details/13-jack-and-jill-bath.jpg]
+    photos: [bedrooms/04a-bedroom-4.jpg, bedrooms/04b-bedroom-4.jpg, details/13-jack-and-jill-bath.jpg, bedrooms/04c-bedroom-4.jpg, details/26-bedroom-4-bed.jpg]
 
-  - name: Bedroom 5
+  - name: Bedroom 5 – Star Wars
     floor: Second floor
     beds: [King]
-    bath: Private en-suite
-    description: An upstairs king room with its own en-suite bathroom.
+    bath: Private en-suite, double vanity
+    description: A Star Wars themed upstairs king room with its own en-suite bathroom and double vanity.
     features: [En-suite bathroom]
-    photos: [bedrooms/05a-bedroom-5.jpg, bedrooms/05b-bedroom-5.jpg, details/11-upstairs-bath.jpg]
+    photos: [bedrooms/05a-bedroom-5.jpg, bedrooms/05b-bedroom-5.jpg, details/11-upstairs-bath.jpg, bedrooms/05d-bedroom-5.jpg, details/27-bedroom-5-bed.jpg]
 
   - name: Bedroom 6
     floor: Second floor
     beds: [Queen]
-    bath: Private en-suite
-    description: An upstairs queen room with its own en-suite bathroom.
+    bath: Private en-suite, double vanity
+    description: An upstairs queen room with its own en-suite bathroom and double vanity.
     features: [En-suite bathroom]
-    photos: [bedrooms/06a-bedroom-6.jpg, bedrooms/06b-bedroom-6.jpg]
+    photos: [bedrooms/06a-bedroom-6.jpg, bedrooms/06b-bedroom-6.jpg, details/10-upstairs-bath.jpg, bedrooms/06c-bedroom-6.jpg, details/28-bedroom-6-bed.jpg]
 
-  - name: Cars Room
+  - name: Bedroom 7 – Cars
     floor: Second floor
     beds: [Bunk beds]
-    bath: Shared double vanity, shower & toilet with the Moana Room
-    description: A race-car themed kids' room with bunk beds. It shares a double vanity, shower and toilet with the Moana Room.
+    bath: Shared double vanity, shower & toilet with Bedroom 8
+    description: A race-car themed kids' room with bunk beds. It shares a double vanity, shower and toilet with Bedroom 8.
     features: [Themed kids' room]
-    photos: [bedrooms/07a-cars-room.jpg, bedrooms/07b-cars-room.jpg, details/17-cars-pillows.jpg]
+    photos: [bedrooms/07a-cars-room.jpg, bedrooms/07b-cars-room.jpg, details/17-cars-pillows.jpg, bedrooms/07c-cars-room.jpg, details/18-cars-pillows.jpg, details/29-cars-sign.jpg, details/30-cars-mural.jpg]
 
-  - name: Moana Room
+  - name: Bedroom 8 – Moana
     floor: Second floor
     beds: [Twin, Twin]
-    bath: Shared double vanity, shower & toilet with the Cars Room
-    description: An island-themed kids' room with two twin beds. It shares a double vanity, shower and toilet with the Cars Room.
+    bath: Shared double vanity, shower & toilet with Bedroom 7
+    description: An island-themed kids' room with two twin beds. It shares a double vanity, shower and toilet with Bedroom 7.
     features: [Themed kids' room]
-    photos: [bedrooms/08a-moana-room.jpg, bedrooms/08b-moana-room.jpg, details/19-moana-pillows.jpg]
+    photos: [bedrooms/08a-moana-room.jpg, bedrooms/08b-moana-room.jpg, details/19-moana-pillows.jpg, bedrooms/08c-moana-room.jpg, bedrooms/08e-moana-room.jpg, details/31-moana-mural.jpg, details/32-moana-chandelier.jpg]
 
 # ---------------------------------------------------------------------
 #  HOUSE INFO — "Good to know" panel. Delete a line to hide it.
@@ -218,6 +245,6 @@ house_rules:
   - No pets — this is a pet-free home for guests with allergies.
   - No parties. This is a family vacation home, not a party house.
   - Community quiet hours are 10 PM to 7 AM.
-  - Park only in the driveway or on the street — never blocking the sidewalk (the HOA fines and tows).
+  - Park only in the driveway or on the street — never blocking the sidewalk (see the diagram in your Welcome Guide).
   - No tape or adhesive on walls or doors. Use the banner holder for celebrations!
   - Life happens! Please report any damage right away.

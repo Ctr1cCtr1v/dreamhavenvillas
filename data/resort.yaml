@@ -30,11 +30,11 @@ perks:
 
   - name: Tu Casa Bar & Lounge
     text: Poolside food and a full bar — pizzas, wings, nachos and frozen drinks. Grab a souvenir cup for discounted refills every time you bring it back.
-    image: resort/placeholder-clubhouse.jpg
+    image: resort/20-tu-casa-bar.jpg
 
   - name: Fitness Center
     text: A full workout room, open early (6 AM) to late (9 PM) every day.
-    image: resort/placeholder-fitness.jpg
+    image: resort/22-fitness-center.jpg
 
   - name: Sports Courts & Fields
     text: A multi-sport court for basketball, volleyball and pickleball, plus a volleyball court and soccer field.
@@ -46,13 +46,14 @@ perks:
 
   - name: Quiet Phase 3 Pool
     text: Looking for something calmer? The Phase 3 pool is a peaceful spot to swim and sunbathe.
-    image: resort/placeholder-resort-pool.jpg
+    image: resort/21-phase-3-pool.jpg
 
 # Smaller "also included" list under the cards
 extras:
   - Guarded, gated entrance
   - Poolside grill — foot-long hot dogs & burgers (Wed–Sun, weather permitting)
   - Clubhouse right across from the front gate
+  - Order the best pizza in the area! Have it delivered or pick it up at the clubhouse!
   - Access on your check-out day too — perfect before a late flight
 
 access:

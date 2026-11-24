@@ -1,12 +1,18 @@
 {{/* The Resort — Windsor at Westside. Content: data/resort.yaml */}}
 {{ define "main" }}
 {{- $r := hugo.Data.resort }}
+{{- $captions := hugo.Data.gallery.captions | default dict }}
+{{/* Every photo on this page opens in one viewer ("resort" group). Photos
+     not already shown above are listed in the photo section at the end. */}}
+{{- $used := slice }}
+{{- with $r.intro.image }}{{ $used = $used | append . }}{{ end }}
+{{- range $r.perks }}{{ with .image }}{{ $used = $used | append . }}{{ end }}{{ end }}
 {{ partial "page-hero.html" . }}
 
 {{- with $r.intro }}
 <section class="section">
   <div class="container split">
-    <div class="split__media reveal">{{ partial "img.html" (dict "src" .image "alt" "Windsor at Westside clubhouse" "sizes" "(min-width: 860px) 55vw, 100vw") }}</div>
+    <div class="split__media reveal">{{ partial "photo-link.html" (dict "src" .image "group" "resort" "caption" (index $captions .image | default "Windsor at Westside clubhouse") "class" "zoomable" "sizes" "(min-width: 860px) 55vw, 100vw") }}</div>
     <div class="reveal">
       {{ with .eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
       <h2>{{ .heading }}</h2>
@@ -26,7 +32,8 @@
     <div class="grid perks">
       {{- range . }}
       <article class="card perk reveal">
-        {{- with .image }}<div class="card__media">{{ partial "img.html" (dict "src" . "alt" "" "sizes" "(min-width: 1080px) 25vw, (min-width: 600px) 50vw, 100vw") }}</div>{{ end }}
+        {{- $name := .name }}
+        {{- with .image }}<div class="card__media">{{ partial "photo-link.html" (dict "src" . "group" "resort" "caption" $name "class" "zoomable" "sizes" "(min-width: 1080px) 25vw, (min-width: 600px) 50vw, 100vw") }}</div>{{ end }}
         <div class="card__body">
           <h3>{{ .name }}</h3>
           <p>{{ .text }}</p>
@@ -44,7 +51,29 @@
 </section>
 {{- end }}
 
-<section class="section">
+{{- $more := slice }}
+{{- range sort (resources.Match "images/resort/*") "Name" }}
+  {{- $key := strings.TrimPrefix "/images/" .Name }}
+  {{- if and (not (hasPrefix (path.Base $key) "placeholder-")) (not (in $used $key)) }}{{ $more = $more | append $key }}{{ end }}
+{{- end }}
+{{- with $more }}
+<section class="section" id="photos">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Photo gallery</p>
+      <h2>More of the resort</h2>
+      <p class="lead">Tap any photo to see it full size.</p>
+    </div>
+    <div class="gallery">
+      {{- range . }}
+      {{ partial "photo-link.html" (dict "src" . "group" "resort" "caption" (index $captions . | default "Windsor at Westside") "class" "gallery__item" "sizes" "(min-width: 1100px) 33vw, 50vw") }}
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+<section class="section{{ if $more }} section--cream{{ end }}">
   <div class="container grid grid--2 resort-info">
     {{- with $r.access }}
     <div class="panel reveal">

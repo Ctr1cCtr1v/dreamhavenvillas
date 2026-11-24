@@ -28,7 +28,7 @@
 
     <div>
       <p class="footer-title">The Villa</p>
-      <p>{{ $p.address.street }}<br>{{ $p.address.city }}, {{ $p.address.state }} {{ $p.address.zip }}<br>{{ $p.community }}</p>
+      <p>{{ with $p.address.street }}{{ . }}<br>{{ end }}{{ $p.address.city }}, {{ $p.address.state }} {{ $p.address.zip }}<br>{{ $p.community }}</p>
       <p>Managed by {{ $p.managementCompany }}
         {{- with $p.email }}<br><a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
         {{- with $p.phone }}<br><a href="tel:{{ . }}">{{ . }}</a>{{ end }}

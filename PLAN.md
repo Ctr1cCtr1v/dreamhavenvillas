@@ -193,8 +193,8 @@ Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, 
 |---|---|
 | Owners | ✅ Tony & Aimee (OK to show; signs the home-page welcome) |
 | Management company | ✅ Florida Vacation Collection · help@tampavacationcollection.com · 813-343-2660 |
-| Booking URL | ❓ Not available yet (owner will provide). Booking terms live on that site, not ours |
-| Deal Alerts | ✅ Connected to Google Form → Sheet (entry IDs in hugo.yaml) |
+| Booking URL | ✅ stay.floridavacationcollection.com (2026-11-23). Booking terms live on that site, not ours |
+| Deal Alerts | ✅ Google Form → Sheet. Site form now asks last name + optional mobile; owner to add those questions to the Form (answers ride in First name until then) and move the Form/Sheet to dreamhavenvillas@gmail.com. 15-second signup popup on (data/deals.yaml → popup) |
 | Bedrooms | ✅ 4 King, 2 Queen, 2 kids' rooms. Baths: 4 en-suite, 2 jack-and-jill (Bedrooms 3 & 4), kids' rooms share one |
 | Sleeps | ✅ 16 |
 | Spa | ✅ Yes, shares the pool's heat |
@@ -212,7 +212,7 @@ Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, 
 | Visitor stats (GoatCounter / Cloudflare) | Skipped for now (owner). Off |
 | GitHub repo | ✅ github.com/Ctr1cCtr1v/dreamhavenvillas (public), Pages via Actions |
 | Domain | ✅ dreamhavenvillas.com → GitHub Pages (DNS at GoDaddy), verified. www HTTPS cert pending |
-| Map pin | ✅ 28.30885, -81.64318 (US Census geocoder) |
+| Map pin | Street address hidden from the public site (owner, 2026-11-23). Pin is approximate (28.31, -81.64); Directions start from "Windsor at Westside". Exact pin was 28.30885, -81.64318 |
 
 ### To do later (not on site yet)
 - **Facebook & Instagram accounts:** create them, then add the links to `hugo.yaml` → `social`. The footer icons appear automatically.

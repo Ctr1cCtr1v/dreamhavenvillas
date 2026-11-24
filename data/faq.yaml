@@ -39,7 +39,7 @@
     - q: Can I make special requests?
       a: >-
         Absolutely — pool heat, early check-in and more. Let us know a couple
-        of days before you arrive.
+        of days before you arrive, and we'll do our best to accommodate you.
 
 - group: Your Stay
   questions:
@@ -57,8 +57,8 @@
     - q: Are linens and towels provided?
       a: >-
         Yes — bed linens, extra pillows and blankets, bath, hand and makeup
-        towels, and pool towels. Shampoo, conditioner, body wash and a hair
-        dryer are provided too, and there's a washer and dryer with starter
+        towels, and pool towels. Shampoo, conditioner, body wash and hair
+        dryers are provided too, and there's a washer and dryer with starter
         detergent.
     - q: Is there Wi-Fi?
       a: >-
@@ -76,9 +76,8 @@
         the HOA is strict and will fine or tow.
     - q: Do you have baby gear?
       a: >-
-        There's a pack 'n play and a stroller you're welcome to use (no high
-        chair, so bring one if you need it). There's also a cooler for park
-        and beach days.
+        There's a pack 'n play and a stroller you're welcome to use, plus a
+        cooler for park and beach days.
 
 - group: The Resort
   questions:

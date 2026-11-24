@@ -1,0 +1,14 @@
+{{/* Deal Alerts popup: opens once per visitor after a short delay
+     (assets/js/deals.js). Wording and on/off: data/deals.yaml → popup. */}}
+{{- with hugo.Data.deals.popup }}{{ if and .enabled (ne $.Layout "deals") (ne $.Type "deals") }}
+<dialog class="deal-popup" data-deal-popup data-delay="{{ .delay_seconds | default 15 }}" aria-labelledby="dp-title">
+  <button class="deal-popup__close" type="button" data-close aria-label="Close">&times;</button>
+  <div class="deal-popup__head">
+    {{ partial "sparkle.html" }}
+    <h2 id="dp-title">{{ .heading }}</h2>
+    {{ with .text }}<p>{{ . }}</p>{{ end }}
+  </div>
+  {{ partial "deal-form.html" (dict "id" "dp" "compact" true) }}
+  <button class="deal-popup__skip" type="button" data-close>{{ .dismiss | default "No thanks" }}</button>
+</dialog>
+{{- end }}{{ end }}

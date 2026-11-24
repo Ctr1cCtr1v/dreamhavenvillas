@@ -1,0 +1,15 @@
+{{/*
+  One photo that opens in the full-screen viewer (lightbox).
+
+  Usage: {{ partial "photo-link.html" (dict "src" "resort/01-clubhouse.jpg" "group" "resort" "caption" "Clubhouse") }}
+  Optional: sizes, class (on the link)
+*/}}
+{{- with resources.Get (printf "images/%s" .src) }}
+  {{- $big := . }}
+  {{- if gt .Width 2000 }}{{ $big = .Resize "2000x webp" }}{{ else }}{{ $big = .Resize (printf "%dx webp" .Width) }}{{ end }}
+  <a {{ with $.class }}class="{{ . }}" {{ end }}href="{{ $big.RelPermalink }}" data-lightbox="{{ $.group }}" data-caption="{{ $.caption }}">
+    {{- partial "img.html" (dict "src" $.src "alt" $.caption "sizes" ($.sizes | default "100vw")) -}}
+  </a>
+{{- else }}
+  {{- warnf "photo-link: image not found assets/images/%s" .src }}
+{{- end }}

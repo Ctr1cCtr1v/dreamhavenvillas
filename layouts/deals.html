@@ -1,12 +1,7 @@
-{{/* Deal Alerts signup. Content: data/deals.yaml. Form destination:
-     hugo.yaml → params.dealAlerts (a Google Form; field names are its
-     entry IDs). Any Formspree-style endpoint also works. */}}
+{{/* Deal Alerts signup page. Content: data/deals.yaml. The form itself is
+     _partials/deal-form.html (also used by the popup). */}}
 {{ define "main" }}
 {{- $d := hugo.Data.deals }}
-{{- $p := site.Params }}
-{{- $action := $p.dealAlerts.action }}
-{{- $f := $p.dealAlerts.fields | default dict }}
-{{- $google := strings.Contains $action "docs.google.com" }}
 {{ partial "page-hero.html" . }}
 
 <section class="section">
@@ -22,51 +17,7 @@
       {{- end }}
     </div>
 
-    <form class="deal-form panel reveal" method="post" data-deal-form
-          action="{{ $action }}"{{ if not $action }} data-not-ready{{ end }}{{ if $google }} data-google{{ end }}>
-      <div class="field-row">
-        <div class="field">
-          <label for="da-name">First name</label>
-          <input id="da-name" name="{{ $f.name | default "name" }}" type="text" autocomplete="given-name" required>
-        </div>
-        <div class="field">
-          <label for="da-email">Email</label>
-          <input id="da-email" name="{{ $f.email | default "email" }}" type="email" autocomplete="email" required>
-        </div>
-      </div>
-
-      {{- with $d.interests }}
-      <fieldset class="field">
-        <legend>What deals interest you?</legend>
-        <div class="checks">
-          {{- range $i, $x := . }}
-          <label class="check"><input type="checkbox" name="{{ $f.interests | default "interests" }}" value="{{ $x }}"> {{ $x }}</label>
-          {{- end }}
-        </div>
-      </fieldset>
-      {{- end }}
-
-      {{- with $d.visit }}
-      <div class="field">
-        <label for="da-visit">When are you thinking of visiting?</label>
-        <select id="da-visit" name="{{ $f.visit | default "visit" }}">
-          {{- range . }}<option>{{ . }}</option>{{ end }}
-        </select>
-      </div>
-      {{- end }}
-
-      <label class="check check--consent"><input type="checkbox" name="{{ $f.consent | default "consent" }}" value="Yes" required> {{ $d.consent }}</label>
-
-      {{/* Spam trap: hidden from people, bots fill it in */}}
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
-      {{- if not $google }}<input type="hidden" name="_subject" value="New Deal Alerts signup — {{ site.Title }}">{{ end }}
-
-      <button class="btn btn--lg" type="submit">{{ $d.button | default "Sign Me Up" }}</button>
-      <p class="deal-form__status" role="status" aria-live="polite" hidden></p>
-      <template data-msg="success">{{ $d.success }}</template>
-      <template data-msg="error">{{ $d.error }}{{ with $p.email }} ({{ . }}){{ end }}</template>
-      <template data-msg="not-ready">{{ $d.not_ready }}{{ with $p.email }} ({{ . }}){{ end }}</template>
-    </form>
+    {{ partial "deal-form.html" (dict "id" "da") }}
   </div>
 </section>
 {{ end }}

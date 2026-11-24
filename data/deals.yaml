@@ -30,6 +30,12 @@ visit:
   - 6–12 months from now
   - More than a year out
 
+# Shown under the optional mobile-number box
+phone_note: >-
+  For last-minute deals and returning-guest discounts. By adding your number
+  you agree to occasional texts from Dream Haven Villas. Msg & data rates may
+  apply. Reply STOP to opt out.
+
 consent: Yes, email me Dream Haven Villas deals. I can unsubscribe anytime.
 button: Sign Me Up
 success: >-
@@ -40,3 +46,17 @@ error: >-
 not_ready: >-
   Deal Alerts signups open very soon. Please check back, or email us in the
   meantime.
+
+# ---------------------------------------------------------------------
+#  POPUP — a small signup box that opens once per visitor, a few seconds
+#  after they arrive (never on the Deal Alerts page, never after they sign
+#  up). Set enabled: false to turn it off.
+# ---------------------------------------------------------------------
+popup:
+  enabled: true
+  delay_seconds: 15
+  heading: Want first dibs on deals?
+  text: >-
+    Get last-minute openings, seasonal specials and returning-guest
+    discounts before anyone else.
+  dismiss: No thanks

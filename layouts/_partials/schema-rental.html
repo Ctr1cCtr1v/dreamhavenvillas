@@ -19,10 +19,11 @@
   "name" site.Title
   "description" $p.description
   "url" site.Home.Permalink
-  "address" (dict "@type" "PostalAddress" "streetAddress" $p.address.street "addressLocality" $p.address.city "addressRegion" $p.address.state "postalCode" $p.address.zip "addressCountry" "US")
+  "address" (dict "@type" "PostalAddress" "addressLocality" $p.address.city "addressRegion" $p.address.state "postalCode" $p.address.zip "addressCountry" "US")
   "geo" (dict "@type" "GeoCoordinates" "latitude" $p.latitude "longitude" $p.longitude)
   "containsPlace" $acc
 }}
+{{- with $p.address.street }}{{ $data = merge $data (dict "address" (merge $data.address (dict "streetAddress" .))) }}{{ end }}
 {{- with .image }}{{ $data = merge $data (dict "image" (slice .Permalink)) }}{{ end }}
 {{- with $amen }}{{ $data = merge $data (dict "amenityFeature" .) }}{{ end }}
 <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>

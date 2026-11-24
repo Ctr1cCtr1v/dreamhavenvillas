@@ -125,14 +125,16 @@ a while. Facebook's "Sharing Debugger" can refresh it.
 
 ## Deal Alerts signups
 
-The **Deal Alerts** page (`/deals/`, linked from the footer, the FAQ and the Book Direct page) collects first name, email, the kinds of deals someone wants, and roughly when they're thinking of visiting. Everyone must tick the consent box. The page keeps the website's own design. Behind the scenes it sends each signup to a **Google Form**, which saves them into a **Google Sheet** you own (free, no limit).
+The **Deal Alerts** page (`/deals/`, linked from the footer, the FAQ and the Book Direct page) collects first and last name, email, an optional mobile number for texts, the kinds of deals someone wants, and roughly when they're thinking of visiting. Everyone must tick the consent box. The page keeps the website's own design. Behind the scenes it sends each signup to a **Google Form**, which saves them into a **Google Sheet** you own (free, no limit).
 
 **Setting up the Google Form** (one time). The questions must match the website exactly:
 
 | Question | Type | Options (type them exactly) |
 |---|---|---|
 | First name | Short answer | — |
+| Last name | Short answer | — |
 | Email | Short answer | — |
+| Mobile number | Short answer (not required) | — |
 | Which deals interest you? | Checkboxes | Last-minute openings · Seasonal specials · Holidays & special events · Returning-guest offers |
 | When are you thinking of visiting? | Dropdown | Not sure yet · In the next 3 months · 3–6 months from now · 6–12 months from now · More than a year out |
 | Consent | Checkboxes | Yes |
@@ -148,6 +150,12 @@ If you change the checkbox or dropdown choices in `data/deals.yaml`, make the sa
 **Marketing to the list:** in the Google Sheet, choose File → Download → CSV, and import that into an email tool (MailerLite, Mailchimp, Brevo…). Marketing emails must include an unsubscribe link, which those tools add automatically.
 
 Until `action` is set, the form shows "signups open very soon" instead of sending.
+
+If `lastName` or `phone` is left blank in `hugo.yaml`, the site adds those answers to the First name answer (e.g. "Jane Doe · text: 407-555-0100"), so nothing is lost.
+
+**The signup popup** opens once per visitor, 15 seconds after they arrive (never on the Deal Alerts page, and never again after they sign up). It shows a short version of the form. Change its wording or delay, or switch it off, in `data/deals.yaml` → `popup`.
+
+**Texting the list:** people who add a mobile number agree to occasional texts (the wording under the box is in `data/deals.yaml` → `phone_note`). Use a texting tool that handles "Reply STOP" opt-outs automatically.
 
 ## Previewing changes on your computer
 

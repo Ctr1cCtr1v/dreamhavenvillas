@@ -201,17 +201,17 @@ Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, 
 | Game room | ✅ TV + air hockey (work in progress) |
 | Living rooms | ✅ Large sectionals and 85-inch TVs in both main and upstairs living rooms |
 | Kitchen | ✅ Dining seats 12, island seats 4 |
-| Outdoors | ✅ Outdoor table for 6, outdoor sectional, poolside sectional & loungers, cornhole. Grill later |
+| Outdoors | ✅ Outdoor table (seats 4), outdoor sectional, poolside sectional & loungers, cornhole. Grill later |
 | Baby gear | ✅ Pack 'n play, stroller, cooler. No high chair |
 | Social accounts | ❓ To create (Facebook, Instagram) |
 | Reviews | ✅ 2 direct reviews; more coming |
 | Drive times | ✅ OpenStreetMap routing (Oct 2026) + Welcome Book |
 | Resort amenities & hours | ✅ From the Welcome Book |
 | Logo | ✅ Received (wide + square sticker). Ask designer for transparent PNG/SVG if available |
-| Photos | ✅ Professional shoot added 2026-11-19 (102 photos; originals in `8875 Qin Loop full size/`, git-ignored). Still placeholder: Explore/area photos, resort Tu Casa, Fitness Center, Phase 3 pool. Bedroom 3–6 photo matching to confirm with owner |
+| Photos | ✅ Professional shoot added 2026-11-19 (102 photos; originals in `8875 Qin Loop full size/`, git-ignored). Owner's extra photos added 2026-11-23 (area, Tu Casa, Fitness, Phase 3, kitchen cabinets, room angles); no placeholders left. Bedroom matching confirmed by owner |
 | Visitor stats (GoatCounter / Cloudflare) | Skipped for now (owner). Off |
 | GitHub repo | ✅ github.com/Ctr1cCtr1v/dreamhavenvillas (public), Pages via Actions |
-| Domain | ✅ dreamhavenvillas.com → GitHub Pages (DNS at GoDaddy), verified. www HTTPS cert pending |
+| Domain | ✅ dreamhavenvillas.com → GitHub Pages (DNS at GoDaddy), verified. www HTTPS still fails (2026-11-23: certificate covers only dreamhavenvillas.com); re-add the custom domain in Settings → Pages to reissue |
 | Map pin | Street address hidden from the public site (owner, 2026-11-23). Pin is approximate (28.31, -81.64); Directions start from "Windsor at Westside". Exact pin was 28.30885, -81.64318 |
 
 ### To do later (not on site yet)

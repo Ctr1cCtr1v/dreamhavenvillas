@@ -194,7 +194,7 @@ Source of truth for house facts: the owners' **Dream Haven Welcome Book** (PDF, 
 | Owners | ✅ Tony & Aimee (OK to show; signs the home-page welcome) |
 | Management company | ✅ Florida Vacation Collection · help@tampavacationcollection.com · 813-343-2660 |
 | Booking URL | ✅ stay.floridavacationcollection.com (2026-11-23). Booking terms live on that site, not ours |
-| Deal Alerts | ✅ Google Form → Sheet. Site form now asks last name + optional mobile; owner to add those questions to the Form (answers ride in First name until then) and move the Form/Sheet to dreamhavenvillas@gmail.com. 15-second signup popup on (data/deals.yaml → popup) |
+| Deal Alerts | ✅ Google Form → Sheet. Site form now asks last name + optional mobile; Last name + Mobile number questions connected 2026-11-23. Owner may still move the Form/Sheet to dreamhavenvillas@gmail.com. 15-second signup popup on (data/deals.yaml → popup) |
 | Bedrooms | ✅ 4 King, 2 Queen, 2 kids' rooms. Baths: 4 en-suite, 2 jack-and-jill (Bedrooms 3 & 4), kids' rooms share one |
 | Sleeps | ✅ 16 |
 | Spa | ✅ Yes, shares the pool's heat |

@@ -48,11 +48,8 @@ params:
     action: "https://docs.google.com/forms/d/e/1FAIpQLScIpPBkj5OFcrIVt7bD8fJ5qpYTTWCLPoBwFWY2Ud0FT5TCYQ/formResponse"
     fields:
       name: "entry.310902120"       # First name
-      # Not on the Google Form yet: add "Last name" and "Mobile number"
-      # questions there, then paste their entry IDs here. Until then the
-      # site adds those answers to the First name answer.
-      lastName: ""
-      phone: ""
+      lastName: "entry.757257316"   # Last name
+      phone: "entry.732860519"      # Mobile number (optional)
       email: "entry.81894254"       # Email
       interests: "entry.2081486598" # Which deals (checkboxes)
       visit: "entry.511188422"      # When visiting (dropdown)

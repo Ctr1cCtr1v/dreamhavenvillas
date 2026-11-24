@@ -153,7 +153,7 @@ Until `action` is set, the form shows "signups open very soon" instead of sendin
 
 If `lastName` or `phone` is left blank in `hugo.yaml`, the site adds those answers to the First name answer (e.g. "Jane Doe · text: 407-555-0100"), so nothing is lost.
 
-**The signup popup** opens once per visitor, 15 seconds after they arrive (never on the Deal Alerts page, and never again after they sign up). It shows a short version of the form. Change its wording or delay, or switch it off, in `data/deals.yaml` → `popup`.
+**The signup popup** opens once per visitor, 15 seconds after they arrive (never on the Deal Alerts page, and never again after they sign up). It shows a short version of the form (no deal-type or visit questions), so popup signups are saved as all deal types and "Not sure yet". On the Deal Alerts page, ticking no deal types also counts as all of them. Change its wording or delay, or switch it off, in `data/deals.yaml` → `popup`.
 
 **Texting the list:** people who add a mobile number agree to occasional texts (the wording under the box is in `data/deals.yaml` → `phone_note`). Use a texting tool that handles "Reply STOP" opt-outs automatically.
 

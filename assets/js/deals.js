@@ -36,6 +36,11 @@
         });
         data.set(first.name, full);
       }
+      // The Google Form requires at least one deal type: no boxes ticked means all of them.
+      const picks = form.querySelectorAll('[data-interest]');
+      if (picks.length && !form.querySelector('[data-interest]:checked')) {
+        picks.forEach((el) => data.append(el.name, el.value));
+      }
       btn.disabled = true;
       try {
         if (bot) {

@@ -5,7 +5,7 @@
   endpoint also works.
 
   Usage: {{ partial "deal-form.html" (dict "id" "da") }}
-  Optional: compact (true = name, email and consent only, for the popup)
+  Optional: compact (true = names, email, mobile and consent only, for the popup)
 */}}
 {{- $d := hugo.Data.deals }}
 {{- $p := site.Params }}
@@ -46,7 +46,7 @@
     <legend>What deals interest you?</legend>
     <div class="checks">
       {{- range $i, $x := . }}
-      <label class="check"><input type="checkbox" name="{{ $f.interests | default "interests" }}" value="{{ $x }}"> {{ $x }}</label>
+      <label class="check"><input type="checkbox" data-interest name="{{ $f.interests | default "interests" }}" value="{{ $x }}"> {{ $x }}</label>
       {{- end }}
     </div>
   </fieldset>
@@ -60,6 +60,11 @@
     </select>
   </div>
   {{- end }}
+  {{- else }}
+  {{/* The popup doesn't ask these, and the Google Form requires them: a popup
+       signup counts as "all deals" and "not sure yet". */}}
+  {{- range $d.interests }}<input type="hidden" name="{{ $f.interests | default "interests" }}" value="{{ . }}">{{ end }}
+  {{- with $d.visit }}<input type="hidden" name="{{ $f.visit | default "visit" }}" value="{{ index . 0 }}">{{ end }}
   {{- end }}
 
   <label class="check check--consent"><input type="checkbox" name="{{ $f.consent | default "consent" }}" value="Yes" required> {{ $d.consent }}</label>
